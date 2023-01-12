@@ -11,6 +11,7 @@
     padding: 0.8rem, 0;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 .logo{
     cursor: pointer;
@@ -109,6 +110,18 @@
     display: none;
 }
 
+
+/* Footer */
+.bg-primary-color {
+    background-color: var(--button-color);
+}
+.footer-container {
+    display: flex;
+}
+.text-white {
+    color: #F0EFF4
+}
+
   
   @media screen and (max-width: 768px) {
 
@@ -166,9 +179,17 @@
   }
 
 
-  
-  
 
-  
+/* Footer */
 
- 
+@media only screen and (max-width: 991px) {
+    .display-none {
+        display: none !important;
+    }
+    .footer-container {
+        flex-direction: column;
+    }
+    .cursor-pointer {
+        cursor: pointer !important;
+    }
+}

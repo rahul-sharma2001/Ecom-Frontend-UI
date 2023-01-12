@@ -3,3 +3,6 @@ function handleToggle() {
     menues.classList.toggle('topnav-menue1');
 }
 
+function displayData(id) {
+    document.getElementById(id).classList.toggle("display-none")
+}
