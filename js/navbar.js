@@ -4,5 +4,5 @@ function handleToggle() {
 }
 
 function displayData(id) {
-    document.getElementById(id).classList.toggle("display-none")
+    document.getElementById(id).classList.toggle("display-none-for-responsive")
 }

@@ -115,6 +115,9 @@
 .bg-primary-color {
     background-color: var(--button-color);
 }
+.bg-blue {
+    background-color: var(--nav-color);
+}
 .footer-container {
     display: flex;
 }
@@ -183,13 +186,13 @@
 /* Footer */
 
 @media only screen and (max-width: 991px) {
-    .display-none {
+    .display-none-for-responsive {
         display: none !important;
     }
     .footer-container {
         flex-direction: column;
     }
-    .cursor-pointer {
+    .cursor-pointer-for-footer {
         cursor: pointer !important;
     }
 }
