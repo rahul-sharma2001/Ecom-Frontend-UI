@@ -26,11 +26,16 @@
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
+  --nav-color: #032e63;
+  --button-color: #C00156;
+  --background-color: #f0eff4;
+  --hightlight-color: #D6B109;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
+  --font-family-menu: Arial,sans-serif;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
