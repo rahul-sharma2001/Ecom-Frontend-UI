@@ -2,182 +2,578 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Better Buy</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Better Buy</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+  <!-- Top Header  -->
+  <div class="header navbar navbar-expand-sm" id="topnav">
+    <div class="logo d-flex justify-content-center align-items-center mr-2">
+      <img src="./images/logo1.png" width="110" class="logo-img">
+    </div>
+    <div class="search shadow px-2">
+      <input type="text" placeholder="Search for products brand & more.." name="category" id="category"
+        onchange="handleSearch()">
+      <i class="fa fa-search pr-2 pb-1 " id="search-icon"></i>
+    </div>
+    <div class="responsive">
+      <div class="button shadow" id="btn">
+        <button class="login--button"><b>Login</b></button>
+      </div>
+      <div href="" class="icon" onclick="handleToggle()">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+    <ul class="navbar-nav topnav-menue">
+      <li class="nav-item ">
+        <a class="nav-link text-light" href="#"><i class="fa fa-user"></i><strong> Profile</strong> </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#"> <i class="fa fa-shopping-cart"></i><strong> Cart</strong> </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#"><strong><i class="fa fa-heart-o"></i> Wishlist</strong></a>
+      </li>
+    </ul>
+  </div>
 
-    <!-- Top Header  -->
-    <div class="header navbar navbar-expand-sm" id="topnav">
-        <div class="logo">
-            <h2 class="text-light">Logo</h2>
+  <!--Products Menu Bar -->
+  <!-- 128 * 128 resolution of image -->
+  <div class="navbar navbar-expand-lg d-flex justify-content-center align-items-center py-4 w-100" id="menubar">
+    <div class="container" id="navContainer">
+      <div class="d-flex flex-column align-items-center " id="circle">
+        <img src="./images/grocery.png" width="50rem">
+        <span class="menu-name">Grocery</span>
+      </div>
+      <div class="d-flex flex-column align-items-center" id="circle">
+        <img src="./images/mobile.png" width="50rem">
+        <span class="menu-name">Mobile</span>
+      </div>
+      <div class="d-flex flex-column align-items-center dropdown " id="circle">
+        <img src="./images/fashion.png" width="50rem">
+        <span class="menu-name">Fashion <i class="fa fa-caret-down"></i></span>
+
+        <div class="dropdown-content">
+          <a href="#">Men's Wear</a>
+          <a href="#">Women's Wear</a>
+          <a href="#">Kids Wear</a>
         </div>
-        <div class="search shadow  px-2">
-            <input type="text" placeholder="Search for products brand & more..">
-            <i class="fa fa-search pr-2 pb-1 " id="search-icon"></i>
+      </div>
+      <div class="d-flex flex-column align-items-center dropdown" id="circle">
+        <img src="./images/electronics.png" width="50rem">
+        <span class="menu-name">Electronics <i class="fa fa-caret-down"></i></span>
+        <div class="dropdown-content">
+          <a href="#">Gaming </a>
+          <a href="#">Personal care</a>
+          <a href="#">Laptop & Desktop</a>
         </div>
-        <div class="responsive">
-            <div class="button shadow" id="btn">
-                <button class="login--button"><b>Login</b></button>
+      </div>
+
+      <div class="d-flex flex-column align-items-center dropdown " id="circle">
+        <img src="./images/home.jpg" width="50rem">
+        <span class="menu-name">Home <i class="fa fa-caret-down"></i></span>
+        <div class="dropdown-content">
+          <a href="#">Tools & Utility</a>
+          <a href="#">Furniture</a>
+          <a href="#">Powerbank</a>
+        </div>
+      </div>
+      <div class="d-flex flex-column align-items-center" id="circle">
+        <img src="./images/appliances.png" width="50rem">
+        <span class="menu-name">Appliances</span>
+      </div>
+
+      <div class="d-flex flex-column align-items-center" id="circle">
+        <img src="./images/topoffers.png" width="50rem">
+        <span class="menu-name">Offers</span>
+      </div>
+      <div class="d-flex flex-column align-items-center dropdown " id="circle">
+        <img src="./images/toys.png" width="50rem">
+        <span class="menu-name">Toys, more <i class="fa fa-caret-down"></i></span>
+        <div class="dropdown-content">
+          <a href="#">Foods & drinks</a>
+          <a href="#">Baby care</a>
+          <a href="#">Books</a>
+        </div>
+      </div>
+      <div class="d-flex flex-column align-items-center dropdown " id="circle">
+        <img src="./images/two-wheelers.png" width="50rem">
+        <span class="menu-name">2 wheelers <i class="fa fa-caret-down"></i></span>
+        <div class="dropdown-content">
+          <a href="#">Petrol Vehicles</a>
+          <a href="#">Electric Vehicles</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <!-- Carousel  -->
+  <!-- Image resolution 1688 × 280   -->
+  <div class="container-fluid mt-3" id="offersCarousel" onscroll="handleCarouselPosition()">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active carousel-image">
+          <img src="./images/bedsOffer.jpg" alt="Los Angeles">
+        </div>
+        <div class="carousel-item carousel-image">
+          <img src="./images/bedsOffer.jpg " alt="Chicago">
+        </div>
+        <div class="carousel-item carousel-image">
+          <img src="./images/bedsOffer.jpg" alt="New York">
+        </div>
+      </div>
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- DEAL OF THE DAY -->
+  <section class="container-fluid mt-5">
+    <div class="mb-3 p-4">
+      <h2 class="dealOfTheDay-heading">DEAL OF THE DAY</h2>
+      <hr>
+    </div>
+    <div class="row p-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 d-flex justify-content-center align-items-center">
+        <div class="card dealOfTheDay d-flex justify-content-center align-items-center">
+          <img class="card-img-top" src="./images/shoseB.jpeg" alt="Card image" width="100%">
+          <div class="bg">
+            <div class="card-content p-2">
+              <p>Shoes</p>
+              <strong>Min 40% off</strong>
             </div>
-            <div href="" class="icon" onclick="handleToggle()">
-                <i class="fa fa-bars"></i>
-            </div>
+          </div>
         </div>
-        <ul class="navbar-nav topnav-menue">
-            <li class="nav-item ">
-                <a class="nav-link text-light" href="#"><i class="fa fa-user"></i><strong> Profile</strong> </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="#"> <i class="fa fa-shopping-cart"></i><strong> Cart</strong> </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="#"><strong><i class="fa fa-heart-o"></i> Wishlist</strong></a>
-            </li>
-        </ul>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 d-flex justify-content-center align-items-center">
+        <div class="card dealOfTheDay d-flex justify-content-center align-items-center">
+          <img class="card-img-top" src="./images/shoseB.jpeg" alt="Card image" width="100%">
+          <div class="bg">
+            <div class="card-content p-2">
+              <p>Perfume</p>
+              <strong>Min 40% off</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 d-flex justify-content-center align-items-center">
+        <div class="card dealOfTheDay d-flex justify-content-center align-items-center">
+          <img class="card-img-top" src="./images/perfume.png" alt="Card image" width="100%">
+          <div class="bg">
+            <div class="card-content p-2">
+              <p>Watch</p>
+              <strong>Min 40% off</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 d-flex justify-content-center align-items-center">
+        <div class="card dealOfTheDay d-flex justify-content-center align-items-center">
+          <img class="card-img-top" src="./images/perfume.png" alt="Card image" width="100%">
+          <div class="bg">
+            <div class="card-content p-2">
+              <p>Mobile</p>
+              <strong>Min 40% off</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 d-flex justify-content-center align-items-center">
+        <div class="card dealOfTheDay d-flex justify-content-center align-items-center">
+          <img class="card-img-top" src="./images/perfume.png" alt="Card image" width="100%">
+          <div class="bg">
+            <div class="card-content p-2">
+              <p>Laptop</p>
+              <strong>Min 40% off</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 d-flex justify-content-center align-items-center">
+        <div class="card dealOfTheDay d-flex justify-content-center align-items-center">
+          <img class="card-img-top" src="./images/shoseB.jpeg" alt="Card image" width="100%">
+          <div class="bg">
+            <div class="card-content p-2">
+              <p>Kurti</p>
+              <strong>Min 40% off</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products carousel -->
+  <!-- 128 * 128 resolution of image -->
+  <div class="container-fluid ">
+    <div class="bg-light shadow-lg mt-5 w-100 p-4">
+      <div class="d-flex justify-content-start align-items-center w-100 px-4 pt-3">
+        <h2 class="p-2 text-dark" id="heading">BEST SELLING PRODUCTS</h2>
+      </div>
+      <hr>
+      <div class="d-flex justify-content-around align-items-center" id="bestSellingProducts">
+        <div class="d-flex flex-column align-items-center item card bestSellingProducts-card">
+          <img src="./images/appliances.png" class="p-img">
+          <div class="text-center w-100 pt-3">
+            <p class="p-price"><strong>₹1000</strong></p>
+            <p class="p-name"><strong>appliances</strong></p>
+          </div>
+        </div>
+        <div class="d-flex flex-column align-items-center item card bestSellingProducts-card">
+          <img src="./images/electronics.png" class="p-img">
+          <div class="text-center w-100 pt-3">
+            <p class="p-price"><strong>₹1000</strong></p>
+            <p class="p-name"><strong>Electronics</strong></p>
+          </div>
+        </div>
+        <div class="d-flex flex-column align-items-center item card bestSellingProducts-card">
+          <img src="./images/fashion.png" class="p-img">
+          <div class="text-center w-100 pt-3">
+            <p class="p-price"><strong>₹1000</strong></p>
+            <p class="p-name"><strong>Fashion</strong></p>
+          </div>
+        </div>
+        <div class="d-flex flex-column align-items-center item card bestSellingProducts-card">
+          <img src="./images/grocery.png" class="p-img">
+          <div class="text-center w-100 pt-3">
+            <p class="p-price"><strong>₹1000</strong></p>
+            <p class="p-name"><strong>Grocery</strong></p>
+          </div>
+        </div>
+        <div class="d-flex flex-column align-items-center item card bestSellingProducts-card">
+          <img src="./images/home.jpg" class="p-img">
+          <div class="text-center w-100 pt-3">
+            <p class="p-price"><strong>₹1000</strong></p>
+            <p class="p-name"><strong>Home</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Produts to bag -->
+  <!-- 128 * 128 resolution of image -->
+  <section class="container-fluid text-center mt-5">
+    <div class="text-center">
+      <h2>PRODUCTS TO BAG</h2>
+      <p>DISCOVER NEW FAVORITES</p>
     </div>
 
-    <!--Products Menu Bar -->
-    <div class="navbar navbar-expand-lg d-flex justify-content-center align-items-center py-4 w-100" id="menubar">
-        <div class="container">
-            <div class="d-flex flex-column align-items-center " id="circle">
-                <img src="./images/grocery.png" width="50rem">
-                <span class="menu-name">Grocery</span>
-            </div>
-            <div class="d-flex flex-column align-items-center" id="circle">
-                <img src="./images/mobile.png" width="50rem">
-                <span class="menu-name">Mobile</span>
-            </div>
-            <div class="d-flex flex-column align-items-center dropdown " id="circle">
-                <img src="./images/fashion.png" width="50rem">
-                <span class="menu-name">Fashion <i class="fa fa-caret-down"></i></span>
-
-                <div class="dropdown-content">
-                    <a href="#">Men's Wear</a>
-                    <a href="#">Women's Wear</a>
-                    <a href="#">Kids Wear</a>
-                </div>
-            </div>
-            <div class="d-flex flex-column align-items-center dropdown" id="circle">
-                <img src="./images/electronics.png" width="50rem">
-                <span class="menu-name">Electronics <i class="fa fa-caret-down"></i></span>
-                <div class="dropdown-content">
-                    <a href="#">Gaming </a>
-                    <a href="#">Personal care</a>
-                    <a href="#">Laptop & Desktop</a>
-                </div>
-            </div>
-
-            <div class="d-flex flex-column align-items-center dropdown " id="circle">
-                <img src="./images/home.jpg" width="50rem">
-                <span class="menu-name">Home <i class="fa fa-caret-down"></i></span>
-                <div class="dropdown-content">
-                    <a href="#">Tools & Utility</a>
-                    <a href="#">Furniture</a>
-                    <a href="#">Powerbank</a>
-                </div>
-            </div>
-            <div class="d-flex flex-column align-items-center" id="circle">
-                <img src="./images/appliances.png" width="50rem">
-                <span class="menu-name">Appliances</span>
-            </div>
-            <div class="d-flex flex-column align-items-center" id="circle">
-                <img src="./images/travle.png" width="50rem">
-                <span class="menu-name">Travle</span>
-            </div>
-            <div class="d-flex flex-column align-items-center" id="circle">
-                <img src="./images/topoffers.png" width="50rem">
-                <span class="menu-name">Offers</span>
-            </div>
-            <div class="d-flex flex-column align-items-center dropdown " id="circle">
-                <img src="./images/toys.png" width="50rem">
-                <span class="menu-name">Toys, more <i class="fa fa-caret-down"></i></span>
-                <div class="dropdown-content">
-                    <a href="#">Foods & drinks</a>
-                    <a href="#">Baby care</a>
-                    <a href="#">Books</a>
-                </div>
-            </div>
-            <div class="d-flex flex-column align-items-center dropdown " id="circle">
-                <img src="./images/two-wheelers.png" width="50rem">
-                <span class="menu-name">2 wheelers <i class="fa fa-caret-down"></i></span>
-                <div class="dropdown-content">
-                    <a href="#">Petrol Vehicles</a>
-                    <a href="#">Electric Vehicles</a>
-                </div>
-            </div>
+    <div class="mt-5 row text-center">
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
+        <div class="circles">
+          <img src="./images/mobile.png" class="pro">
+          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
         </div>
-    </div>
-    </div>
+      </div>
 
-    <!-- Footer -->
-    <footer class="container-fluid d-flex justify-content-center bg-blue">
-        <div class="w-75 my-5 justify-content-around footer-container">
-            <div class="justify-content-start text-white">
-                <div class="my-3 font-weight-bold fs-6 cursor-pointer-for-footer" onclick="displayData('aboutData')">
-                    About
-                </div>
-                <div id="aboutData" class="display-none-for-responsive mb-3">
-                    <div> <a href="#" class="text-white fs-7"> Contact Us </a> </div>
-                    <div> <a href="#" class="text-white fs-7"> About Us </a> </div>
-                    <div> <a href="#" class="text-white fs-7"> Careers </a> </div>
-                    <div> <a href="#" class="text-white fs-7"> Better Buy's Stories </a> </div>
-                    <div> <a href="#" class="text-white fs-7"> Corporate Information </a> </div>
-                </div>
-            </div>
-            <div class="justify-content-start text-white">
-                <div class="my-3 font-weight-bold fs-6 cursor-pointer-for-footer" onclick="displayData('categoriesData')">
-                    Top Categories
-                </div>
-                <div id="categoriesData" class="display-none-for-responsive mb-3">
-                    <div> <a href="#" class="text-white fs-7"> Men </a> </div>
-                    <div> <a href="#" class="text-white fs-7"> Women </a> </div>
-                    <div> <a href="#" class="text-white fs-7"> Kids </a> </div>
-                    <div> <a href="#" class="text-white fs-7"> Electronics </a> </div>
-                    <div> <a href="#" class="text-white fs-7"> Sports, Books & More</a> </div>
-                    <div> <a href="#" class="text-white fs-7"> Home & Furniture </a> </div>
-                    <div> <a href="#" class="text-white fs-7"> Grocery </a> </div>
-                </div>
-            </div>
-            <div class="justify-content-start text-white">
-                <div class="my-3 font-weight-bold fs-6 cursor-pointer-for-footer" onclick="displayData('helpData')">
-                    Help
-                </div>
-                <div id="helpData" class="display-none-for-responsive mb-3">
-                    <div> <a href="#" class="text-white fs-7"> Payment </a> </div>
-                    <div> <a href="#" class="text-white fs-7"> Shipping </a> </div>
-                    <div> <a href="#" class="text-white fs-7"> FAQ </a> </div>
-                    <div> <a href="#" class="text-white fs-7"> Cancellation & Return </a> </div>
-                    <div> <a href="#" class="text-white fs-7"> Customer Care</a> </div>
-                    <div> <a href="#" class="text-white fs-7"> Track Your Order </a> </div>
-                </div>
-            </div>
-            <div class="justify-content-start text-white">
-                <div class="my-3 font-weight-bold fs-6 cursor-pointer-for-footer" onclick="displayData('connectWithUsData')">
-                    Connect With Us
-                </div>
-                <div id="connectWithUsData" class="display-none-for-responsive mb-3">
-                    <div> <a href="#" class="text-white fs-7"> Facebook </a> </div>
-                    <div> <a href="#" class="text-white fs-7"> Instagram </a> </div>
-                    <div> <a href="#" class="text-white fs-7"> Twitter </a> </div>
-                </div>
-            </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
+        <div class="circles">
+          <img src="./images/appliances.png" class="pro">
+          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
         </div>
-    </footer>
+      </div>
 
-    <script type="text/javascript" src="./js/jquery.min.js">
-    </script>
-    <script type="text/javascript" src="./js/popper.min.js">
-    </script>
-    <script type="text/javascript" src="./js/bootstrap.min.js">
-    </script>
-    <script src="./js/navbar.js"></script>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
+        <div class="circles">
+          <img src="./images/grocery.png" class="pro">
+          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
+        <div class="circles">
+          <img src="./images/fashion.png" class="pro">
+          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
+        <div class="circles">
+          <img src="./images/electronics.png" class="pro">
+          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
+        <div class="circles">
+          <img src="./images/mobile.png" class="pro">
+          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
+        <div class="circles">
+          <img src="./images/appliances.png" class="pro">
+          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
+        <div class="circles">
+          <img src="./images/grocery.png" class="pro">
+          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
+        <div class="circles">
+          <img src="./images/fashion.png" class="pro">
+          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
+        <div class="circles">
+          <img src="./images/electronics.png" class="pro">
+          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
+        <div class="circles">
+          <img src="./images/appliances.png" class="pro">
+          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
+        <div class="circles">
+          <img src="./images/grocery.png" class="pro">
+          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop by category -->
+
+  <!-- 450 * 550 resolution of image -->
+
+  <section class="container-fluid mt-5 bg-light py-5">
+    <div>
+      <h2 class="text-center" id="heading-category">SHOP BY CATEGORY</h2>
+    </div>
+    <div class="row mt-4">
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
+        <div class="card category-card" onclick="handleCategoryClick()">
+          <img class="card-img-top" src="./images/top.jpg" alt="Card image" id="category-img">
+          <div class="text-center half-circle pt-3">
+            <h5 class="h5" value="Tops" id="tops">Tops</h5>
+            <h4>30-70% OFF</h4>
+            <h5>Shop Now</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
+        <div class="card category-card">
+          <img class="card-img-top" src="./images/mensKurta.webp" alt="Card image" id="category-img">
+          <div class="text-center half-circle pt-3">
+            <h5 class="h5" value="Shoes">Shoes</h5>
+            <h4>30-70% OFF</h4>
+            <h5>Shop Now</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
+        <div class="card category-card">
+          <img class="card-img-top" src="./images/saree.webp" alt="Card image" id="category-img">
+          <div class="text-center half-circle pt-3">
+            <h5 class="h5" value="Sarees">Sarees</h5>
+            <h4>30-70% OFF</h4>
+            <h5>Shop Now</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
+        <div class="card category-card">
+          <img class="card-img-top" src="./images/top.jpg" alt="Card image" id="category-img">
+          <div class="text-center half-circle pt-3">
+            <h5 class="h5" value="Kurti">kurti</h5>
+            <h4>30-70% OFF</h4>
+            <h5>Shop Now</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
+        <div class="card category-card">
+          <img class="card-img-top" src="./images/mensKurta.webp" alt="Card image" id="category-img">
+          <div class="text-center half-circle pt-3">
+            <h5 class="h5" value="Kurta">Kurta</h5>
+            <h4>30-70% OFF</h4>
+            <h5>Shop Now</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
+        <div class="card category-card">
+          <img class="card-img-top" src="./images/saree.webp" alt="Card image" id="category-img">
+          <div class="text-center half-circle pt-3">
+            <h5 class="h5" value="Sweatshirt">Sweatshirt</h5>
+            <h4>30-70% OFF</h4>
+            <h5>Shop Now</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
+        <div class="card category-card">
+          <img class="card-img-top" src="./images/mensKurta.webp" alt="Card image" id="category-img">
+          <div class="text-center half-circle pt-3">
+            <h5 class="h5" vaule="Shirt">Shirt</h5>
+            <h4>30-70% OFF</h4>
+            <h5>Shop Now</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
+        <div class="card category-card">
+          <img class="card-img-top" src="./images/mensKurta.webp" alt="Card image" id="category-img">
+          <div class="text-center half-circle pt-3">
+            <h5 class="h5" value="Jeans">Jeans</h5>
+            <h4>30-70% OFF</h4>
+            <h5>Shop Now</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
+        <div class="card category-card">
+          <img class="card-img-top" src="./images/mensKurta.webp" alt="Card image" id="category-img">
+          <div class="text-center half-circle pt-3">
+            <h5 class="h5" value="Trouser">Trouser</h5>
+            <h4>30-70% OFF</h4>
+            <h5>Shop Now</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
+        <div class="card category-card">
+          <img class="card-img-top" src="./images/mensKurta.webp" alt="Card image" id="category-img">
+          <div class="text-center half-circle pt-3">
+            <h5 class="h5" value="Dresses">Dresses</h5>
+            <h4>30-70% OFF</h4>
+            <h5>Shop Now</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
+        <div class="card category-card">
+          <img class="card-img-top" src="./images/saree.webp" alt="Card image" id="category-img">
+          <div class="text-center half-circle pt-3">
+            <h5 class="h5" value="Jewellery">Jewellery</h5>
+            <h4>30-70% OFF</h4>
+            <h5>Shop Now</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
+        <div class="card category-card">
+          <img class="card-img-top" src="./images/mensKurta.webp" alt="Card image" id="category-img">
+          <div class="text-center half-circle pt-3">
+            <h5 class="h5" value="Handbags">Handbags</h5>
+            <h4>30-70% OFF</h4>
+            <h5>Shop Now</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="container-fluid d-flex justify-content-center bg-blue mt-5">
+    <div class="w-75 my-5 justify-content-around footer-container">
+      <div class="justify-content-start text-white">
+        <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('aboutData')">
+          About
+        </div>
+        <div id="aboutData" class="display-none-for-responsive mb-3">
+          <div> <a href="#" class="text-white fs-7"> Contact Us </a> </div>
+          <div> <a href="#" class="text-white fs-7"> About Us </a> </div>
+          <div> <a href="#" class="text-white fs-7"> Careers </a> </div>
+          <div> <a href="#" class="text-white fs-7"> Better Buy's Stories </a> </div>
+          <div> <a href="#" class="text-white fs-7"> Corporate Information </a> </div>
+        </div>
+      </div>
+      <div class="justify-content-start text-white">
+        <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('categoriesData')">
+          Top Categories
+        </div>
+        <div id="categoriesData" class="display-none-for-responsive mb-3">
+          <div> <a href="#" class="text-white fs-7"> Men </a> </div>
+          <div> <a href="#" class="text-white fs-7"> Women </a> </div>
+          <div> <a href="#" class="text-white fs-7"> Kids </a> </div>
+          <div> <a href="#" class="text-white fs-7"> Electronics </a> </div>
+          <div> <a href="#" class="text-white fs-7"> Sports, Books & More</a> </div>
+          <div> <a href="#" class="text-white fs-7"> Home & Furniture </a> </div>
+          <div> <a href="#" class="text-white fs-7"> Grocery </a> </div>
+        </div>
+      </div>
+      <div class="justify-content-start text-white">
+        <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('helpData')">
+          Help
+        </div>
+        <div id="helpData" class="display-none-for-responsive mb-3">
+          <div> <a href="#" class="text-white fs-7"> Payment </a> </div>
+          <div> <a href="#" class="text-white fs-7"> Shipping </a> </div>
+          <div> <a href="#" class="text-white fs-7"> FAQ </a> </div>
+          <div> <a href="#" class="text-white fs-7"> Cancellation & Return </a> </div>
+          <div> <a href="#" class="text-white fs-7"> Customer Care</a> </div>
+          <div> <a href="#" class="text-white fs-7"> Track Your Order </a> </div>
+        </div>
+      </div>
+      <div class="justify-content-start text-white">
+        <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('connectWithUsData')">
+          Connect With Us
+        </div>
+        <div id="connectWithUsData" class="display-none-for-responsive mb-3">
+          <div> <a href="#" class="text-white fs-7"> Facebook </a> </div>
+          <div> <a href="#" class="text-white fs-7"> Instagram </a> </div>
+          <div> <a href="#" class="text-white fs-7"> Twitter </a> </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script type="text/javascript" src="./js/jquery.min.js">
+  </script>
+  <script type="text/javascript" src="./js/popper.min.js">
+  </script>
+  <script type="text/javascript" src="./js/bootstrap.min.js">
+  </script>
+  <script src="./js/navbar.js"></script>
+
 
 </body>
 
