@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">       
+</head>
+
+<body class="">
+    <div class="container-fuild">
+
+        <!-- HEADER -->
+        <!-- <header class="row px-5 pt-3 mt-1 text-secondary font-weight-bold border-bottom">
+            <div class="col-4 text-left mt-2">
+                <img class="logo--size" src="../images/logo.png" alt="logo" srcset="">
+            </div>
+            <div class="col-4 text-center mt-3">
+                <span class="fs-12px">CART</span>
+                <span class="fs-12px">- - - - - - - - - - - - - - -</span>
+                <span class="fs-12px">ADDRESS</span>
+                <span class="fs-12px">- - - - - - - - - - - - - - -</span>
+                <span class="fs-12px">PAYMENT</span>
+            </div>
+            <div class="col-4 text-right mt-3">
+                <img class="h-50 mr-2" src="../images/sprite-secure.png" alt="Secure" srcset="">
+                <span class="fs-12px">100% SECURE</span>
+            </div>
+        </header> -->  
+        <header
+        class="row d-flex justify-content-center align-items-center px-5 py-4 text-gray font-weight-bold border-bottom border-shadow">
+        <div class="logo display-none-for-logo text-left">
+            <img class="logo-img-size" src="../images/logo-for-white-bg.png" alt="logo" srcset="">
+        </div>
+        <div class="header-tags w-50 d-flex justify-content-between text-center mt-3">
+            <a id="header-cartTag" href="#" class="fs-8 fs-8-for-responsive text-gray">
+                CART
+            </a>
+            <!-- <span class="fs-8">--------</span> -->
+            <a id="header-addressTag" href="#" class="fs-8 fs-8-for-responsive text-gray">
+                ADDRESS
+            </a>
+            <!-- <span class="fs-8">---------</span> -->
+            <a id="header-paymentTag" href="#" class="fs-8 fs-8-for-responsive text-gray">
+                PAYMENT
+            </a>
+        </div>
+        <!-- <div class="col-4 text-right mt-3">
+        <img class="h-50 mr-2" src="../images/sprite-secure.png" alt="Secure" srcset="">
+        <span class="fs-8">100% SECURE</span>
+    </div> -->
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            
+            <!-- Main Container -->
+            <div class="main-container  container-fuild ">
+
+            <!-- Top Container -->            
+            <div class="top-container container boder  col-xl-10 col-lg-11 col-md-12 col-sm-12  d-flex  ">
+                <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12 mt-5 mr-2">
+                    <!-- Div-1-Name -->
+                    <div class="heading fs-3 font-weight-bold mb-3">Shopping Cart</div>
+
+                    <!-- Div-2- Avaliable Offers  -->
+                    <!-- <div class="avaliable-offers border p-3 mb-3">
+                        <div>
+                            <span class="mr-2"><img src="../images/discount.png" width="17px"></span>
+                            <span class="font-weight-bold fs-6">Avaliable Offers</span>
+                        </div>
+                        <div >
+                            <ul class="fs-7 pl-3 pt-3 text-secondary">
+                                <li>10% Instant Discount on Kotak Credit and Debit Cards on a min spend of Rs 3,000 TCA</li>
+                            </ul>
+                            <div class="text-primary-color pl-3 fs-7 font-weight-bold mt-2 ">Show More <img
+                            src="../images/down-arrow.png" alt="" width="10px"></div>
+                        </div>
+                    </div> -->
+
+                    <!-- Div-3 - Product Details   -->
+                    <div class="product-details-group">
+                        <!-- Card-1 --> 
+                        <!-- <div class="product-detail d-flex border p-3 mb-3 bg-white rounded  border-shadow">
+                            <div class="porduct-img-div mr-3 " >
+                                <img class="product-img"  width="120px" src="../images/product-1.webp" alt="">
+                            </div>
+                            <div>
+                                <div class="product-name fs-6 font-weight-bold">Puma</div>
+                                <div class="product-color fs-6 text-secondary">Men Cream Coloured and Orange Colourblocked Sneakers</div>
+                                <div class="product-manufacture fs-7 text-muted">Sold by Omnitech Retail </div>
+                                <div class="my-2 card-btn-group">
+
+                                    <div class="dropdown display-inline-block ">
+                                        <button class="product-quantity-dd btn btn-sm dropdown-toggle border-primary-color font-weight-bold mb-2 bg-white" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         Size:6
+                                        </button>
+                                        <div class="dropdown-menu border-primary-color  " aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item text-primary-color font-weight-bold " href="#">7</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">8</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">9</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">10</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">11</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown display-inline-block ">
+                                        <button class="product-quantity-dd btn btn-sm dropdown-toggle border-primary-color font-weight-bold mb-2 bg-white" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         Qty:1
+                                        </button>
+                                        <div class="dropdown-menu border-primary-color  " aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item text-primary-color font-weight-bold  "href="#">2</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">3</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">4</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">5</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">6</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="product-price-div fs-6 mb-2">
+                                    <span class="font-weight-bold"> ₹ 3,599 </span>
+                                    <span class="mx-1 text-decoration-line-through text-secondary">₹ 4,499</span>
+                                    <span class="highlight-color font-weight-bold">20% OFF</span>
+                                </div>
+                                <div class="fs-6 mb-3"> 
+                                    <span><img src="../images/exchange.png" width="20px" alt=""></span> 
+                                    <strong>30 days</strong> return available 
+                                </div>
+                                <div class="card-btn-group">
+                                    <button type="button" class="product-delete-btn btn btn-sm btn-danger font-weight-bold mb-2">Delete</button>
+                                    <button type="button" class=" btn btn-sm text-secondary-color bg-white border-secondary-color rounded font-weight-bold mb-2">
+                                    <i class="fa fa-heart-o " id="heart"></i>
+                                    <span class="fs-7 font-weight-bold">WISHLIST</span></button>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- Card-2 -->     
+                         <!-- <div class="product-detail d-flex border p-3 mb-3 bg-white rounded  border-shadow">
+                            <div class="porduct-img-div mr-3 " >
+                                <img class="product-img"  width="120px" src="../images/product-1.webp" alt="">
+                            </div>
+                            <div>
+                                <div class="product-name fs-6 font-weight-bold">Puma</div>
+                                <div class="product-color fs-6 text-secondary">Men Cream Coloured and Orange Colourblocked Sneakers</div>
+                                <div class="product-manufacture fs-7 text-muted">Sold by Omnitech Retail </div>
+                                <div class="my-2 card-btn-group">
+
+                                    <div class="dropdown display-inline-block ">
+                                        <button class="product-quantity-dd btn btn-sm dropdown-toggle border-primary-color font-weight-bold mb-2 bg-white" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         Size
+                                        </button>
+                                        <div class="dropdown-menu border-primary-color  " aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item text-primary-color font-weight-bold " href="#">7</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">8</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">9</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">10</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">11</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown display-inline-block ">
+                                        <button class="product-quantity-dd btn btn-sm dropdown-toggle border-primary-color font-weight-bold mb-2 bg-white" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         Qty:1
+                                        </button>
+                                        <div class="dropdown-menu border-primary-color  " aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item text-primary-color font-weight-bold  "href="#">2</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">3</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">4</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">5</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">6</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="product-price-div fs-6 mb-2">
+                                    <span class="font-weight-bold"> ₹ 3,599 </span>
+                                    <span class="mx-1 text-decoration-line-through text-secondary">₹ 4,499</span>
+                                    <span class="highlight-color font-weight-bold">20% OFF</span>
+                                </div>
+                                <div class="fs-6 mb-3"> 
+                                    <span><img src="../images/exchange.png" width="20px" alt=""></span> 
+                                    <strong>30 days</strong> return available 
+                                </div>
+                                <div class="card-btn-group">
+                                    <button type="button" class="product-delete-btn btn btn-sm btn-danger font-weight-bold mb-2">Delete</button>
+                                    <button type="button" class=" btn btn-sm text-secondary-color bg-white border-secondary-color rounded font-weight-bold mb-2">
+                                    <i class="fa fa-heart-o " id="heart"></i>
+                                    <span class="fs-7 font-weight-bold">WISHLIST</span></button>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- Card-3 -->
+                        <!-- <div class="product-detail d-flex border p-3 mb-3 bg-white rounded  border-shadow">
+                            <div class="porduct-img-div mr-3 " >
+                                <img class="product-img"  width="120px" src="../images/product-1.webp" alt="">
+                            </div>
+                            <div>
+                                <div class="product-name fs-6 font-weight-bold">Puma</div>
+                                <div class="product-color fs-6 text-secondary">Men Cream Coloured and Orange Colourblocked Sneakers</div>
+                                <div class="product-manufacture fs-7 text-muted">Sold by Omnitech Retail </div>
+                                <div class="my-2 card-btn-group">
+
+                                    <div class="dropdown display-inline-block ">
+                                        <button class="product-quantity-dd btn btn-sm dropdown-toggle border-primary-color font-weight-bold mb-2 bg-white" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         Size
+                                        </button>
+                                        <div class="dropdown-menu border-primary-color  " aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item text-primary-color font-weight-bold " href="#">7</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">8</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">9</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">10</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">11</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown display-inline-block ">
+                                        <button class="product-quantity-dd btn btn-sm dropdown-toggle border-primary-color font-weight-bold mb-2 bg-white" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         Qty:1
+                                        </button>
+                                        <div class="dropdown-menu border-primary-color  " aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item text-primary-color font-weight-bold  "href="#">2</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">3</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">4</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">5</a>
+                                          <a class="dropdown-item text-primary-color font-weight-bold" href="#">6</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="product-price-div fs-6 mb-2">
+                                    <span class="font-weight-bold"> ₹ 3,599 </span>
+                                    <span class="mx-1 text-decoration-line-through text-secondary">₹ 4,499</span>
+                                    <span class="highlight-color font-weight-bold">20% OFF</span>
+                                </div>
+                                <div class="fs-6 mb-3"> 
+                                    <span><img src="../images/exchange.png" width="20px" alt=""></span> 
+                                    <strong>30 days</strong> return available 
+                                </div>
+                                <div class="card-btn-group">
+                                    <button type="button" class="product-delete-btn btn btn-sm btn-danger font-weight-bold mb-2">Delete</button>
+                                    <button type="button" class=" btn btn-sm text-secondary-color bg-white border-secondary-color rounded font-weight-bold mb-2">
+                                    <i class="fa fa-heart-o " id="heart"></i>
+                                    <span class="fs-7 font-weight-bold">WISHLIST</span></button>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>   
+                </div>
+
+                <!-- Div-4 - Order Details -->
+                <div class="order-details col-xl-6 col-lg-6 col-md-12 col-sm-12 mt-5 ">
+                    <div class="container-fuild border bg-white border-shadow p-2">
+                    <div class="m-2 font-weight-bold fs-6">Order Details</div>
+                    <div class="m-2 d-flex justify-content-between">
+                        <div class="fs-7">Cart Total:</div>
+                        <div class="cart-total font-weight-bold fs-7">₹3,495.00</div>
+                    </div>
+                    <div class="m-2 d-flex justify-content-between">
+                        <div class="fs-7">Cart Discount:</div>
+                        <div class="cart discount  fs-7 font-weight-bold highlight-color">-₹1,398.00</div>
+                    </div>
+                    <div class="m-2 d-flex justify-content-between">
+                        <div class="fs-7">Delivery Fee:</div>
+                        <div class="delivery-fee"> <span class="highlight-color fs-7 font-weight-bold">Free</span> <span class="text-decoration-line-through fs-7 font-weight-bold">₹99.00</span></div>
+                    </div>
+                    <div class="m-4 d-flex justify-content-center" >
+                    <button type="button" class="btn btn-md bg-primary-color text-white font-weight-bold">PROCEES TO SHPPING</button>
+                    </div>
+                    </div>
+
+                    <!--Div-5 - COUPON -->
+                    <div class="mt-4 container-fuild  border-style-dashed border-success bg-white border-shadow p-2">
+                        <div class="m-2 font-weight-bold fs-6">Apply Coupon</div>
+                        <div class="m-2">
+                            <input class="w-75" type="text" name="" id="">
+                            <button class="coupon-apply-btn btn btn-sm text-secondary-color bg-white border-secondary-color font-weight-bold btn-outline">APPLY</button>
+                        </div>
+                        <div class="m-2 font-weight-bold fs-6">
+                            Applicable Coupons
+                        </div>
+                        <div class="coupon-list container-fuild height-20rem overflow-y-auto ml-3">
+                        <div class="coupon-body m-2 d-flex ">
+                            <div class="mr-2">
+                            <input type="checkbox" name="" id="">
+                            </div>
+                            <div>
+                                <div class="coupon-saving-amount fs-7">Savings : <span class="highlight-color font-weight-bold">₹384.45</span> </div>
+                                <div class="coupon-name fs-7 font-weight-bold">FIRSTBUY</div> 
+                                <div class="coupon-desc fs-8">Get Up To Extra 25% Off On ₹1490 On Your First Purchase. Max Discount Rs. 1500.View T & C</div> 
+                            </div>
+                        </div>
+                        <div class="coupon-body m-2 d-flex">
+                            <div class="mr-2">
+                            <input type="checkbox" name="" id="">
+                            </div>
+                            <div>
+                                <div class="coupon-saving-amount fs-7">Savings : <span class="highlight-color font-weight-bold">₹384.45</span> </div>
+                                <div class="coupon-name fs-7 font-weight-bold">FIRSTBUY</div> 
+                                <div class="coupon-desc fs-8">Get Up To Extra 25% Off On ₹1490 On Your First Purchase. Max Discount Rs. 1500.View T & C</div> 
+                            </div>
+                        </div>
+                        <div class="coupon-body  m-2 d-flex">
+                            <div class="mr-2">
+                            <input type="checkbox" name="" id="">
+                            </div>
+                            <div>
+                                <div class="coupon-saving-amount fs-7">Savings : <span class="highlight-color font-weight-bold">₹384.45</span> </div>
+                                <div class="coupon-name fs-7 font-weight-bold">FIRSTBUY</div> 
+                                <div class="coupon-desc fs-8">Get Up To Extra 25% Off On ₹1490 On Your First Purchase. Max Discount Rs. 1500.View T & C</div> 
+                            </div>
+                        </div>
+                        <div class="coupon-body m-2 d-flex">
+                            <div class="mr-2">
+                            <input type="checkbox" name="" id="">
+                            </div>
+                            <div>
+                                <div class="coupon-saving-amount fs-7">Savings : <span class="highlight-color font-weight-bold">₹384.45</span> </div>
+                                <div class="coupon-name fs-7 font-weight-bold">FIRSTBUY</div> 
+                                <div class="coupon-desc fs-8">Get Up To Extra 25% Off On ₹1490 On Your First Purchase. Max Discount Rs. 1500.View T & C</div> 
+                            </div>
+                        </div>
+                        <div class="coupon-body  m-2 d-flex">
+                            <div class="mr-2">
+                            <input type="checkbox" name="" id="">
+                            </div>
+                            <div>
+                                <div class="coupon-saving-amount fs-7">Savings : <span class="highlight-color font-weight-bold">₹384.45</span> </div>
+                                <div class="coupon-name fs-7 font-weight-bold">FIRSTBUY</div> 
+                                <div class="coupon-desc fs-8">Get Up To Extra 25% Off On ₹1490 On Your First Purchase. Max Discount Rs. 1500.View T & C</div> 
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Div-6 Return/Refund Policy -->
+                    <div class="mt-3 p-2 border bg-white border-shadow">
+                        <div class="font-weight-bold fs-7 ">Return/Refund policy </div>
+                        <div class="fs-8">In case of return, we ensure quick refunds. Full amount will be refunded excluding Convenience Fee</div>
+                        <div class="text-primary-color fs-8">Read Policy</div>
+                    </div>
+
+                </div>                  
+            </div>
+
+            
+            <!-- Bottom container -->
+            <div class="bottom-container container-fuild  p-3  m-4 ">
+                <div class="font-weight-bold fs-6 mt-4 ">You may also like:</div>
+              
+                <div class="row  d-flex  mb-5 ">
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6  mt-3 d-flex justify-content-center">
+                        <div class="card" style="width: 16.5rem; height: 26rem;">
+                            <img class="card-img-top h-60" src="../images/product-1.webp" alt="Card image cap"
+                                height="10rem" width="10rem">
+                         
+                            <div class="card-body p-2">
+                                <div class="card-product-name mt-2 font-weight-bold fs-7">Puma</div>
+                                <div style="width: 160px;" class="card-product-desc text-secondary fs-8"> Men Cream Coloured and Orange Colourblocked Sneakers</div>
+                                <div style="width: 160px;" class="fs-8 mb-2">
+                                    <span class="card-discounted-price font-weight-bold">₹ 3,599 </span>
+                                    <span class="card-price text-secondary text-decoration-line-through"> ₹ 4,499</span> 
+                                    <span class="card-discount highlight-color font-weight-bold">20% OFF</span> 
+                                </div>
+                                <button type="button" class="card-product-btn btn btn-sm text-secondary-color bg-white border-secondary-color font-weight-bold mb-3 btn-outline">ADD TO BAG</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6  mt-3 d-flex justify-content-center">
+                        <div class="card" style="width: 16.5rem; height: 26rem;">
+                            <img class="card-img-top h-60" src="../images/product-1.webp" alt="Card image cap"
+                                height="10rem" width="10rem">
+                         
+                            <div class="card-body p-2">
+                                <div class="card-product-name mt-2 font-weight-bold fs-7">Puma</div>
+                                <div style="width: 160px;" class="card-product-desc text-secondary fs-8"> Men Cream Coloured and Orange Colourblocked Sneakers</div>
+                                <div style="width: 160px;" class="fs-8 mb-2">
+                                    <span class="card-discounted-price font-weight-bold">₹ 3,599 </span>
+                                    <span class="card-price text-secondary text-decoration-line-through"> ₹ 4,499</span> 
+                                    <span class="card-discount highlight-color font-weight-bold">20% OFF</span> 
+                                </div>
+                                <button type="button" class="card-product-btn btn btn-sm text-secondary-color bg-white border-secondary-color font-weight-bold mb-3 btn-outline">ADD TO BAG</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6  mt-3 d-flex justify-content-center">
+                        <div class="card" style="width: 16.5rem; height: 26rem;">
+                            <img class="card-img-top h-60" src="../images/product-1.webp" alt="Card image cap"
+                                height="10rem" width="10rem">
+                         
+                            <div class="card-body p-2">
+                                <div class="card-product-name mt-2 font-weight-bold fs-7">Puma</div>
+                                <div style="width: 160px;" class="card-product-desc text-secondary fs-8"> Men Cream Coloured and Orange Colourblocked Sneakers</div>
+                                <div style="width: 160px;" class="fs-8 mb-2">
+                                    <span class="card-discounted-price font-weight-bold">₹ 3,599 </span>
+                                    <span class="card-price text-secondary text-decoration-line-through"> ₹ 4,499</span> 
+                                    <span class="card-discount highlight-color font-weight-bold">20% OFF</span> 
+                                </div>
+                                <button type="button" class="card-product-btn btn btn-sm text-secondary-color bg-white border-secondary-color font-weight-bold mb-3 btn-outline">ADD TO BAG</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6  mt-3 d-flex justify-content-center">
+                        <div class="card" style="width: 16.5rem; height: 26rem;">
+                            <img class="card-img-top h-60" src="../images/product-1.webp" alt="Card image cap"
+                                height="10rem" width="10rem">
+                         
+                            <div class="card-body p-2">
+                                <div class="card-product-name mt-2 font-weight-bold fs-7">Puma</div>
+                                <div style="width: 160px;" class="card-product-desc text-secondary fs-8"> Men Cream Coloured and Orange Colourblocked Sneakers</div>
+                                <div style="width: 160px;" class="fs-8 mb-2">
+                                    <span class="card-discounted-price font-weight-bold">₹ 3,599 </span>
+                                    <span class="card-price text-secondary text-decoration-line-through"> ₹ 4,499</span> 
+                                    <span class="card-discount highlight-color font-weight-bold">20% OFF</span> 
+                                </div>
+                                <button type="button" class="card-product-btn btn btn-sm text-secondary-color bg-white border-secondary-color font-weight-bold mb-3 btn-outline">ADD TO BAG</button>
+                            </div>
+                        </div>
+                    </div>
+
+                   <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6  mt-3 d-flex justify-content-center">
+                        <div class="card" style="width: 16.5rem; height: 26rem;">
+                            <img class="card-img-top h-60" src="../images/product-1.webp" alt="Card image cap"
+                                height="10rem" width="10rem">
+                         
+                            <div class="card-body p-2">
+                                <div class="card-product-name mt-2 font-weight-bold fs-7">Puma</div>
+                                <div style="width: 160px;" class="card-product-desc text-secondary fs-8"> Men Cream Coloured and Orange Colourblocked Sneakers</div>
+                                <div style="width: 160px;" class="fs-8 mb-2">
+                                    <span class="card-discounted-price font-weight-bold">₹ 3,599 </span>
+                                    <span class="card-price text-secondary text-decoration-line-through"> ₹ 4,499</span> 
+                                    <span class="card-discount highlight-color font-weight-bold">20% OFF</span> 
+                                </div>
+                                <button type="button" class="card-product-btn btn btn-sm text-secondary-color bg-white border-secondary-color font-weight-bold mb-3 btn-outline">ADD TO BAG</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6  mt-3 d-flex justify-content-center">
+                        <div class="card" style="width: 16.5rem; height: 26rem;">
+                            <img class="card-img-top h-60" src="../images/product-1.webp" alt="Card image cap"
+                                height="10rem" width="10rem">
+                         
+                            <div class="card-body p-2">
+                                <div class="card-product-name mt-2 font-weight-bold fs-7">Puma</div>
+                                <div style="width: 160px;" class="card-product-desc text-secondary fs-8"> Men Cream Coloured and Orange Colourblocked Sneakers</div>
+                                <div style="width: 160px;" class="fs-8 mb-2">
+                                    <span class="card-discounted-price font-weight-bold">₹ 3,599 </span>
+                                    <span class="card-price text-secondary text-decoration-line-through"> ₹ 4,499</span> 
+                                    <span class="card-discount highlight-color font-weight-bold">20% OFF</span> 
+                                </div>
+                                <button type="button" class="card-product-btn btn btn-sm text-secondary-color bg-white border-secondary-color font-weight-bold mb-3 btn-outline">ADD TO BAG</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            </div> 
+
+            <!-- Footer -->
+            <div class="footer-container my-5 container">
+                <div class="footer-group d-flex justify-content-between my-5">
+                    <div class="footer-body d-flex align-items-center">
+                        <img class="footer-img" src="../images/money.png" width="50px" alt=""> 
+                        <div class="footer-name ml-3 fs-5 text-primary-color">Return</div>
+                    </div>
+                    <div class="footer-body d-flex align-items-center">
+                        <img class="footer-img" src="../images/cash-on-delivery.png" width="50px" alt=""> 
+                        <div class="footer-name ml-3 fs-5 text-primary-color">Cash on delivery</div>
+                    </div>
+                    <div class="footer-body d-flex align-items-center">
+                        <img class="footer-img" src="../images/easy-return.png" width="50px" alt=""> 
+                        <div class="footer-name ml-3 fs-5 text-primary-color">Easy Return</div>
+                    </div>
+                    <div class="footer-body d-flex align-items-center">
+                        <img class="footer-img" src="../images/quality-assurance.png" width="50px" alt=""> 
+                        <div class="footer-name ml-3 fs-5 text-primary-color">Quality Assurance</div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="../js/cart.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="../js/popper.min.js">
+    </script>
+    <script type="text/javascript" src="../js/bootstrap.min.js">
+    </script>
+</body>
+</html>
