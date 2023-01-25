@@ -1,9 +1,3 @@
-/*!
- * Bootstrap v4.0.0 (https://getbootstrap.com)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -26,6 +20,10 @@
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
+  --nav-color: #032E63;
+  --button-color:#C00156;
+  --background-color: #F0EFF4;
+  --hightlight-color: #D6B109;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -586,6 +584,7 @@ pre code {
 }
 
 .container-fluid {
+
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -610,8 +609,8 @@ pre code {
 
 .no-gutters > .col,
 .no-gutters > [class*="col-"] {
-  padding-right: 0;
-  padding-left: 0;
+  padding-right:2rem;
+  padding-left: 2rem;
 }
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
@@ -2537,14 +2536,12 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #D6B109;
 }
 
 .btn-secondary:hover {
   color: #fff;
-  background-color: #5a6268;
-  border-color: #545b62;
+  background-color:#D6B109 ;
 }
 
 .btn-secondary:focus, .btn-secondary.focus {
@@ -2553,15 +2550,13 @@ fieldset:disabled a.btn {
 
 .btn-secondary.disabled, .btn-secondary:disabled {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #D6B109;
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
 .show > .btn-secondary.dropdown-toggle {
   color: #fff;
-  background-color: #545b62;
-  border-color: #4e555b;
+  background-color: #C00156;
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
@@ -3079,7 +3074,7 @@ fieldset:disabled a.btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
-  border-radius: 0.2rem;
+  border-radius: 0.4rem;
 }
 
 .btn-block {
@@ -4439,7 +4434,7 @@ tbody.collapse.show {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border-radius: 1rem;
 }
 
 .card > hr {
@@ -8973,3 +8968,9 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+/*!
+ * Bootstrap v4.0.0 (https://getbootstrap.com)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */

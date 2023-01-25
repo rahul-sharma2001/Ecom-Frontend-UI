@@ -1,0 +1,1452 @@
+[{
+  "_id": {
+    "$oid": "63c792f08c3acd2b146dff32"
+  },
+  "name": "Kurta",
+  "imageUrl": "https://m.media-amazon.com/images/I/51w7vLDofaL._UX679_.jpg",
+  "price": 999,
+  "discount": 10,
+  "sizes": [
+    "2XS",
+    "3XS",
+    "4XL",
+    "M",
+    "XL"
+  ],
+  "noOfProducts": 100,
+  "category": "kurtas",
+  "gender": "female",
+  "color": [
+    "black",
+    "red",
+    "white",
+    "gray"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Adidas"
+},{
+  "_id": {
+    "$oid": "63c7939e8c3acd2b146dff34"
+  },
+  "name": "Kurta",
+  "imageUrl": "https://m.media-amazon.com/images/I/31hFpoY7fBL._SX342_SY445_.jpg",
+  "price": 1500,
+  "discount": 20,
+  "sizes": [
+    "2XL",
+    "2XS",
+    "L",
+    "M",
+    "S",
+    "XL",
+    "XS"
+  ],
+  "noOfProducts": 50,
+  "category": "kurtas",
+  "gender": "female",
+  "color": [
+    "pink",
+    "red",
+    "white",
+    "gray",
+    "blue"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Puma"
+},{
+  "_id": {
+    "$oid": "63c793dd8c3acd2b146dff36"
+  },
+  "name": "Kurta",
+  "imageUrl": "https://m.media-amazon.com/images/I/51PD0BnTXjL._UX679_.jpg",
+  "price": 100,
+  "discount": 30,
+  "sizes": [
+    "3XL",
+    "S",
+    "XL",
+    "XS"
+  ],
+  "noOfProducts": 0,
+  "category": "kurtas",
+  "gender": "female",
+  "color": [
+    "pink",
+    "red",
+    "white",
+    "gray",
+    "violet"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Rebook"
+},{
+  "_id": {
+    "$oid": "63c7940c8c3acd2b146dff38"
+  },
+  "name": "Kurta",
+  "imageUrl": "https://m.media-amazon.com/images/I/31lRTbzdsJL._SY445_SX342_.jpg",
+  "price": 99,
+  "discount": 50,
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 99,
+  "category": "kurtas",
+  "gender": "female",
+  "color": [
+    "white",
+    "gray",
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Puma"
+},{
+  "_id": {
+    "$oid": "63c794608c3acd2b146dff3a"
+  },
+  "name": "Kurta",
+  "imageUrl": "https://m.media-amazon.com/images/I/51glqHA+jML._UX679_.jpg",
+  "price": 10000,
+  "discount": 60,
+  "sizes": [
+    "2XS",
+    "3XL",
+    "3XS",
+    "L",
+    "M",
+    "S",
+    "XL",
+    "XS"
+  ],
+  "noOfProducts": 5,
+  "category": "kurtas",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "white",
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Adidas"
+},{
+  "_id": {
+    "$oid": "63c794958c3acd2b146dff3c"
+  },
+  "name": "Kurta",
+  "imageUrl": "https://m.media-amazon.com/images/I/41L2ERvJ1iL._SX342_SY445_.jpg",
+  "price": 15000,
+  "discount": 70,
+  "sizes": [
+    "2XL",
+    "2XS",
+    "3XL",
+    "3XS",
+    "4XL",
+    "L",
+    "M"
+  ],
+  "noOfProducts": 10,
+  "category": "kurtas",
+  "gender": "female",
+  "color": [
+    "white",
+    "gray",
+    "blue"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Adidas"
+},{
+  "_id": {
+    "$oid": "63c7958f8c3acd2b146dff3e"
+  },
+  "name": "Sarees",
+  "imageUrl": "https://assets.ajio.com/medias/sys_master/root/20221011/Z22T/63450480aeb269659c39c503/-473Wx593H-465033361-grey-MODEL.jpg",
+  "price": 9999,
+  "discount": 10,
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 99,
+  "category": "sarees",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "red",
+    "white",
+    "gray"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Adidas"
+},{
+  "_id": {
+    "$oid": "63c795b68c3acd2b146dff40"
+  },
+  "name": "Sarees",
+  "imageUrl": "https://assets.ajio.com/medias/sys_master/root/20220921/2ZAN/632af68df997dd1f8d10718e/-473Wx593H-465033346-green-MODEL.jpg",
+  "price": 20000,
+  "discount": 30,
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 10,
+  "category": "sarees",
+  "gender": "female",
+  "color": [
+    "red",
+    "white",
+    "gray",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Puma"
+},{
+  "_id": {
+    "$oid": "63c795da8c3acd2b146dff42"
+  },
+  "name": "Sarees",
+  "imageUrl": "https://assets.ajio.com/medias/sys_master/root/20220921/jIsg/632af68df997dd1f8d107118/-473Wx593H-465033346-green-MODEL4.jpg",
+  "price": 5000,
+  "discount": 10,
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 150,
+  "category": "sarees",
+  "gender": "female",
+  "color": [
+    "black",
+    "red",
+    "blue",
+    "violet"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Rebook"
+},{
+  "_id": {
+    "$oid": "63c796018c3acd2b146dff44"
+  },
+  "name": "Sarees",
+  "imageUrl": "https://assets.ajio.com/medias/sys_master/root/20220921/vOrB/632a3019aeb269dbb3997662/-473Wx593H-465027319-purple-MODEL.jpg",
+  "price": 1000,
+  "discount": 10,
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 300,
+  "category": "sarees",
+  "gender": "female",
+  "color": [
+    "pink",
+    "gray",
+    "violet"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Nike"
+},{
+  "_id": {
+    "$oid": "63c796408c3acd2b146dff48"
+  },
+  "name": "Sarees",
+  "imageUrl": "https://assets.ajio.com/medias/sys_master/root/20220921/vOrB/632a3019aeb269dbb3997662/-473Wx593H-465027319-purple-MODEL.jpg",
+  "price": 50000,
+  "discount": 50,
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 5,
+  "category": "sarees",
+  "gender": "female",
+  "color": [
+    "pink",
+    "gray",
+    "violet"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Puma"
+},{
+  "_id": {
+    "$oid": "63c7969d8c3acd2b146dff4a"
+  },
+  "name": "Sarees",
+  "imageUrl": "https://assets.ajio.com/medias/sys_master/root/20221103/W528/6363faa0aeb269659c705257/-473Wx593H-465033361-white-MODEL.jpg",
+  "price": 25000,
+  "discount": 40,
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 10,
+  "category": "sarees",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "red",
+    "blue",
+    "violet"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Adidas"
+},{
+  "_id": {
+    "$oid": "63c796e18c3acd2b146dff4c"
+  },
+  "name": "Dress",
+  "imageUrl": "https://m.media-amazon.com/images/I/71U0Wo-rizL._UY741_.jpg",
+  "price": 1500,
+  "discount": 20,
+  "sizes": [
+    "L",
+    "M",
+    "S",
+    "XL",
+    "XS"
+  ],
+  "noOfProducts": null,
+  "category": "dresses",
+  "gender": "female",
+  "color": [
+    "red",
+    "white",
+    "gray",
+    "blue"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Puma"
+},{
+  "_id": {
+    "$oid": "63c796fe8c3acd2b146dff4e"
+  },
+  "name": "Dress",
+  "imageUrl": "https://m.media-amazon.com/images/I/81B3cKoPq1L._UY741_.jpg",
+  "price": 10000,
+  "discount": 30,
+  "sizes": [
+    "2XS",
+    "3XL",
+    "3XS",
+    "4XL"
+  ],
+  "noOfProducts": null,
+  "category": "dresses",
+  "gender": "female",
+  "color": [
+    "pink",
+    "blue",
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Adidas"
+},{
+  "_id": {
+    "$oid": "63c797288c3acd2b146dff50"
+  },
+  "name": "Dress",
+  "imageUrl": "https://assets.ajio.com/medias/sys_master/root/20220318/HBSV/62342213aeb26921afe285d5/-473Wx593H-463624230-blue-MODEL.jpg",
+  "price": 15000,
+  "discount": 50,
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 100,
+  "category": "dresses",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "red",
+    "white",
+    "gray",
+    "blue"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Puma"
+},{
+  "_id": {
+    "$oid": "63c7974e8c3acd2b146dff52"
+  },
+  "name": "Dress",
+  "imageUrl": "https://assets.ajio.com/medias/sys_master/root/20220318/Ley6/62342213aeb26921afe28567/-473Wx593H-463624230-blue-MODEL2.jpg",
+  "price": 2000,
+  "discount": 10,
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 10,
+  "category": "dresses",
+  "gender": "female",
+  "color": [
+    "blue",
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Rebook"
+},{
+  "_id": {
+    "$oid": "63c797b58c3acd2b146dff54"
+  },
+  "name": "Dress",
+  "imageUrl": "https://assets.ajio.com/medias/sys_master/root/20220318/Ley6/62342213aeb26921afe28567/-473Wx593H-463624230-blue-MODEL2.jpg",
+  "price": 150,
+  "discount": 5,
+  "sizes": [
+    "2XL",
+    "2XS",
+    "3XL",
+    "3XS",
+    "4XL",
+    "L",
+    "M",
+    "S",
+    "XL",
+    "XS"
+  ],
+  "noOfProducts": 1000,
+  "category": "dresses",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "red",
+    "white",
+    "gray",
+    "blue",
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Puma"
+},{
+  "_id": {
+    "$oid": "63c797d88c3acd2b146dff56"
+  },
+  "name": "Dress",
+  "imageUrl": "https://assets.ajio.com/medias/sys_master/root/20220817/qfVt/62fc1deef997dd394cf853a0/-473Wx593H-461671435-blue-MODEL.jpg",
+  "price": 3000,
+  "discount": 40,
+  "sizes": [
+    "L",
+    "M",
+    "S",
+    "XL"
+  ],
+  "noOfProducts": 100,
+  "category": "dresses",
+  "gender": "female",
+  "color": [
+    "pink",
+    "white",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Adidas"
+},{
+  "_id": {
+    "$oid": "63c7984c8c3acd2b146dff58"
+  },
+  "name": "Top",
+  "imageUrl": "https://m.media-amazon.com/images/I/61ixnJfhicL._UY741_.jpg",
+  "price": 500,
+  "discount": 10,
+  "sizes": [
+    "2XS",
+    "3XL",
+    "3XS"
+  ],
+  "noOfProducts": 100,
+  "category": "tops",
+  "gender": "female",
+  "color": [
+    "pink",
+    "white",
+    "blue",
+    "violet"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Adidas"
+},{
+  "_id": {
+    "$oid": "63c7986e8c3acd2b146dff5a"
+  },
+  "name": "Top",
+  "imageUrl": "https://m.media-amazon.com/images/I/619gAAzTJ4S._SY741._SX._UX._SY._UY_.jpg",
+  "price": 5000,
+  "discount": 40,
+  "sizes": [
+    "M",
+    "S",
+    "XL",
+    "XS"
+  ],
+  "noOfProducts": 50,
+  "category": "tops",
+  "gender": "female",
+  "color": [
+    "black",
+    "red",
+    "white",
+    "gray",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Puma"
+},{
+  "_id": {
+    "$oid": "63c798aa8c3acd2b146dff5c"
+  },
+  "name": "Top",
+  "imageUrl": "https://m.media-amazon.com/images/I/71dNA6Sz2qS._UX679_.jpg",
+  "price": 10000,
+  "discount": 80,
+  "sizes": [
+    "L",
+    "M",
+    "S",
+    "XL"
+  ],
+  "noOfProducts": 1000,
+  "category": "tops",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "red",
+    "violet"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Adidas"
+},{
+  "_id": {
+    "$oid": "63c798ef8c3acd2b146dff5e"
+  },
+  "name": "Top",
+  "imageUrl": "https://m.media-amazon.com/images/I/61gx+xJVjVS._UX679_.jpg",
+  "price": 3000,
+  "discount": 70,
+  "sizes": [
+    "2XS",
+    "4XL",
+    "XL",
+    "M"
+  ],
+  "noOfProducts": 8,
+  "category": "tops",
+  "gender": "female",
+  "color": [
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Nike"
+},{
+  "_id": {
+    "$oid": "63c799258c3acd2b146dff60"
+  },
+  "name": "Top",
+  "imageUrl": "https://m.media-amazon.com/images/I/41CxywOyyML.jpg",
+  "price": 99,
+  "discount": 0,
+  "sizes": [
+    "2XL",
+    "2XS",
+    "3XL",
+    "3XS",
+    "4XL",
+    "XL",
+    "L",
+    "M",
+    "S",
+    "XS"
+  ],
+  "noOfProducts": 10000,
+  "category": "tops",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "red",
+    "white",
+    "gray",
+    "blue",
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Puma"
+},{
+  "_id": {
+    "$oid": "63c799538c3acd2b146dff62"
+  },
+  "name": "Top",
+  "imageUrl": "https://m.media-amazon.com/images/I/41WxwpEdslL.._SX._UX._SY._UY_.jpg",
+  "price": 300,
+  "discount": 20,
+  "sizes": [
+    "2XS",
+    "3XS",
+    "XL",
+    "M",
+    "S"
+  ],
+  "noOfProducts": 10,
+  "category": "tops",
+  "gender": "female",
+  "color": [
+    "red",
+    "white",
+    "gray"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Adidas"
+},{
+  "_id": {
+    "$oid": "63c79ac68c3acd2b146dff64"
+  },
+  "name": "Jeans",
+  "imageUrl": "https://m.media-amazon.com/images/I/71R5gAepN6L._UY741_.jpg",
+  "price": 1000,
+  "discount": 10,
+  "sizes": [
+    "L",
+    "M",
+    "S",
+    "XS"
+  ],
+  "noOfProducts": 96,
+  "category": "jeans",
+  "gender": "female",
+  "color": [
+    "white",
+    "blue",
+    "violet"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0,
+  "brandName": "Puma"
+},{
+  "_id": {
+    "$oid": "63c79b828c3acd2b146dff68"
+  },
+  "name": "Jeans",
+  "imageUrl": "https://m.media-amazon.com/images/I/71VqSUOVeeL._SY741._SX._UX._SY._UY_.jpg",
+  "price": 5000,
+  "discount": 40,
+  "brandName": "Puma",
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 96,
+  "category": "jeans",
+  "gender": "female",
+  "color": [
+    "white",
+    "gray",
+    "blue"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79bd88c3acd2b146dff6a"
+  },
+  "name": "Jeans",
+  "imageUrl": "https://m.media-amazon.com/images/I/71QWAOHmnjL._UX679_.jpg",
+  "price": 9999,
+  "discount": 80,
+  "brandName": "Rebook",
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 91,
+  "category": "jeans",
+  "gender": "female",
+  "color": [
+    "pink",
+    "white",
+    "blue"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79bff8c3acd2b146dff6c"
+  },
+  "name": "Jeans",
+  "imageUrl": "https://m.media-amazon.com/images/I/813CQEu4PRL._UY741_.jpg",
+  "price": 99,
+  "discount": 0,
+  "brandName": "Nike",
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 9996,
+  "category": "jeans",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "red",
+    "white",
+    "gray",
+    "blue",
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79c3c8c3acd2b146dff6e"
+  },
+  "name": "Jeans",
+  "imageUrl": "https://m.media-amazon.com/images/I/81RwK63FsjL._UY741_.jpg",
+  "price": 999,
+  "discount": 20,
+  "brandName": "adidas",
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 150,
+  "category": "jeans",
+  "gender": "female",
+  "color": [
+    "pink",
+    "gray",
+    "blue",
+    "violet"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79cf48c3acd2b146dff70"
+  },
+  "name": "Trouser",
+  "imageUrl": "https://m.media-amazon.com/images/I/51CZ-KkxO7L._UY741_.jpg",
+  "price": 1999,
+  "discount": 20,
+  "brandName": "Puma",
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 70,
+  "category": "trousers",
+  "gender": "female",
+  "color": [
+    "pink",
+    "white",
+    "gray",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79d278c3acd2b146dff72"
+  },
+  "name": "Trouser",
+  "imageUrl": "https://m.media-amazon.com/images/I/41-LV8wokbL._UY741_.jpg",
+  "price": 7999,
+  "discount": 40,
+  "brandName": "Adidas",
+  "sizes": [
+    "2XS",
+    "4XL",
+    "M",
+    "S",
+    "XS"
+  ],
+  "noOfProducts": 190,
+  "category": "trousers",
+  "gender": "female",
+  "color": [
+    "white",
+    "gray",
+    "blue",
+    "violet"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79d528c3acd2b146dff74"
+  },
+  "name": "Trouser",
+  "imageUrl": "https://m.media-amazon.com/images/I/41BIB1ABP4L._UX569_.jpg",
+  "price": 199,
+  "discount": 0,
+  "brandName": "Rebook",
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 9999,
+  "category": "trousers",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "red",
+    "white",
+    "gray",
+    "blue",
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79d808c3acd2b146dff76"
+  },
+  "name": "Trouser",
+  "imageUrl": "https://m.media-amazon.com/images/I/61EegwK5+uL._UX679_.jpg",
+  "price": 1000,
+  "discount": 50,
+  "brandName": "puma",
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 99,
+  "category": "trousers",
+  "gender": "female",
+  "color": [
+    "black",
+    "red"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79da58c3acd2b146dff78"
+  },
+  "name": "Trouser",
+  "imageUrl": "https://m.media-amazon.com/images/I/61-nJhx0O1L._UX679_.jpg",
+  "price": 9999,
+  "discount": 80,
+  "brandName": "Adidas",
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 998,
+  "category": "trousers",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "white",
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79dc28c3acd2b146dff7a"
+  },
+  "name": "Trouser",
+  "imageUrl": "https://m.media-amazon.com/images/I/61JyG3gujUL._SX679._SX._UX._SY._UY_.jpg",
+  "price": 15000,
+  "discount": 90,
+  "brandName": "rebook",
+  "sizes": [
+    "FREE"
+  ],
+  "noOfProducts": 9999,
+  "category": "trousers",
+  "gender": "female",
+  "color": [
+    "pink",
+    "red",
+    "white",
+    "blue"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79e248c3acd2b146dff7c"
+  },
+  "name": "Jacket",
+  "imageUrl": "https://5.imimg.com/data5/YK/RI/OF/ANDROID-106820076/product-jpeg-500x500.jpg",
+  "price": 4999,
+  "discount": 20,
+  "brandName": "Adidas",
+  "sizes": [
+    "XL",
+    "L",
+    "M",
+    "S",
+    "XS"
+  ],
+  "noOfProducts": 90,
+  "category": "jackets",
+  "gender": "female",
+  "color": [
+    "black",
+    "red",
+    "white",
+    "gray"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79e6d8c3acd2b146dff7e"
+  },
+  "name": "Jacket",
+  "imageUrl": "https://m.media-amazon.com/images/I/714JWulajLL._UY741_.jpg",
+  "price": 11999,
+  "discount": 70,
+  "brandName": "Rebook",
+  "sizes": [
+    "L",
+    "M",
+    "S",
+    "XS"
+  ],
+  "noOfProducts": 1000,
+  "category": "jackets",
+  "gender": "female",
+  "color": [
+    "pink",
+    "red",
+    "white",
+    "gray",
+    "blue"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79e9e8c3acd2b146dff80"
+  },
+  "name": "Jacket",
+  "imageUrl": "https://m.media-amazon.com/images/I/61CmiRUgxqL._UX679_.jpg",
+  "price": 299,
+  "discount": 0,
+  "brandName": "Puma",
+  "sizes": [
+    "2XL",
+    "2XS",
+    "3XL",
+    "3XS",
+    "4XL",
+    "XL",
+    "L",
+    "M",
+    "S",
+    "XS"
+  ],
+  "noOfProducts": 7000,
+  "category": "jackets",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "red",
+    "white",
+    "gray",
+    "blue",
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79ec28c3acd2b146dff82"
+  },
+  "name": "Jacket",
+  "imageUrl": "https://m.media-amazon.com/images/I/61nexVHrWHL._UX679_.jpg",
+  "price": 1499,
+  "discount": 30,
+  "brandName": "adidas",
+  "sizes": [
+    "2XL",
+    "2XS",
+    "XL",
+    "L"
+  ],
+  "noOfProducts": 92,
+  "category": "jackets",
+  "gender": "female",
+  "color": [
+    "red",
+    "white",
+    "gray"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79eeb8c3acd2b146dff84"
+  },
+  "name": "Jacket",
+  "imageUrl": "https://m.media-amazon.com/images/I/71huPm8claL._UX679_.jpg",
+  "price": 12999,
+  "discount": 60,
+  "brandName": "Puma",
+  "sizes": [
+    "2XL",
+    "2XS",
+    "3XL",
+    "3XS",
+    "4XL",
+    "XL"
+  ],
+  "noOfProducts": 114,
+  "category": "jackets",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "red",
+    "gray"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79f108c3acd2b146dff86"
+  },
+  "name": "Jacket",
+  "imageUrl": "https://m.media-amazon.com/images/I/31CknBGfmlL._SX342_SY445_.jpg",
+  "price": 4999,
+  "discount": 50,
+  "brandName": "Rebook",
+  "sizes": [
+    "XL",
+    "L",
+    "M",
+    "S"
+  ],
+  "noOfProducts": 800,
+  "category": "jackets",
+  "gender": "female",
+  "color": [
+    "pink",
+    "red",
+    "violet"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79f608c3acd2b146dff88"
+  },
+  "name": "Sweater",
+  "imageUrl": "https://m.media-amazon.com/images/I/61QIgsc1xEL._UX569_.jpg",
+  "price": 6999,
+  "discount": 40,
+  "brandName": "Adidas",
+  "sizes": [
+    "XL",
+    "L",
+    "M",
+    "S",
+    "XS"
+  ],
+  "noOfProducts": 100,
+  "category": "sweaters",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "gray",
+    "blue"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79f868c3acd2b146dff8a"
+  },
+  "name": "Sweater",
+  "imageUrl": "https://m.media-amazon.com/images/I/71MEkGe4FlL._UX679_.jpg",
+  "price": 299,
+  "discount": 0,
+  "brandName": "Rebook",
+  "sizes": [
+    "2XL",
+    "2XS",
+    "3XL",
+    "3XS",
+    "XL",
+    "L",
+    "M",
+    "S",
+    "XS"
+  ],
+  "noOfProducts": 8000,
+  "category": "sweaters",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "red",
+    "white",
+    "gray",
+    "blue",
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79fac8c3acd2b146dff8c"
+  },
+  "name": "Sweater",
+  "imageUrl": "https://m.media-amazon.com/images/I/91jsMbmINDL._UX679_.jpg",
+  "price": 24999,
+  "discount": 80,
+  "brandName": "Adidas",
+  "sizes": [
+    "L",
+    "M",
+    "S"
+  ],
+  "noOfProducts": 100,
+  "category": "sweaters",
+  "gender": "female",
+  "color": [
+    "pink",
+    "white",
+    "gray",
+    "blue"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79fd38c3acd2b146dff8e"
+  },
+  "name": "Sweater",
+  "imageUrl": "https://m.media-amazon.com/images/I/71qsVGALPCL._UY879_.jpg",
+  "price": 1000,
+  "discount": 30,
+  "brandName": "Nike",
+  "sizes": [
+    "XL",
+    "L",
+    "M",
+    "XS"
+  ],
+  "noOfProducts": 1000,
+  "category": "sweaters",
+  "gender": "female",
+  "color": [
+    "pink",
+    "gray",
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c79ff08c3acd2b146dff90"
+  },
+  "name": "Sweater",
+  "imageUrl": "https://m.media-amazon.com/images/I/71ThdG7KP2L._UX679_.jpg",
+  "price": 1000,
+  "discount": 80,
+  "brandName": "Puma",
+  "sizes": [
+    "XL",
+    "L",
+    "M",
+    "S",
+    "XS"
+  ],
+  "noOfProducts": 88,
+  "category": "sweaters",
+  "gender": "female",
+  "color": [
+    "red",
+    "blue",
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c7a00e8c3acd2b146dff92"
+  },
+  "name": "Sweater",
+  "imageUrl": "https://m.media-amazon.com/images/I/41OvDYcsoJL._SY445_SX342_.jpg",
+  "price": 9999,
+  "discount": 50,
+  "brandName": "Puma",
+  "sizes": [
+    "3XL",
+    "3XS",
+    "4XL",
+    "XL",
+    "L"
+  ],
+  "noOfProducts": 100,
+  "category": "sweaters",
+  "gender": "female",
+  "color": [
+    "black",
+    "white",
+    "gray",
+    "blue"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c7a04c8c3acd2b146dff94"
+  },
+  "name": "Shirt",
+  "imageUrl": "https://m.media-amazon.com/images/I/813DxIwX1VL._UY741_.jpg",
+  "price": 499,
+  "discount": 10,
+  "brandName": "Puma",
+  "sizes": [
+    "XL",
+    "L",
+    "M",
+    "S",
+    "XS"
+  ],
+  "noOfProducts": 1000,
+  "category": "shirts",
+  "gender": "female",
+  "color": [
+    "pink",
+    "red",
+    "white",
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c7a0718c3acd2b146dff96"
+  },
+  "name": "Shirt",
+  "imageUrl": "https://m.media-amazon.com/images/I/715RMcLElLL._UX679_.jpg",
+  "price": 9999,
+  "discount": 50,
+  "brandName": "Adidas",
+  "sizes": [
+    "3XS",
+    "4XL",
+    "XL",
+    "M",
+    "S",
+    "XS"
+  ],
+  "noOfProducts": 2000,
+  "category": "shirts",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "violet"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c7a0968c3acd2b146dff98"
+  },
+  "name": "Shirt",
+  "imageUrl": "https://m.media-amazon.com/images/I/61K7Zgiaf0L._UX679_.jpg",
+  "price": 6000,
+  "discount": 45,
+  "brandName": "Nike",
+  "sizes": [
+    "XL",
+    "M",
+    "S",
+    "XS"
+  ],
+  "noOfProducts": 10000,
+  "category": "shirts",
+  "gender": "female",
+  "color": [
+    "red",
+    "white",
+    "gray",
+    "blue",
+    "violet"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c7a0b68c3acd2b146dff9a"
+  },
+  "name": "Shirt",
+  "imageUrl": "https://m.media-amazon.com/images/I/613JP6qMEvL._UX679_.jpg",
+  "price": 12999,
+  "discount": 75,
+  "brandName": "Adidas",
+  "sizes": [
+    "XL",
+    "L",
+    "M",
+    "S"
+  ],
+  "noOfProducts": 1000,
+  "category": "shirts",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "white",
+    "gray"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c7a0e98c3acd2b146dff9c"
+  },
+  "name": "Shirt",
+  "imageUrl": "https://m.media-amazon.com/images/I/61XQAajo8gL._SX679._SX._UX._SY._UY_.jpg",
+  "price": 199,
+  "discount": 0,
+  "brandName": "Rebook",
+  "sizes": [
+    "2XL",
+    "2XS",
+    "3XL",
+    "3XS",
+    "4XL",
+    "XL",
+    "L",
+    "M",
+    "S",
+    "XS"
+  ],
+  "noOfProducts": 100000,
+  "category": "shirts",
+  "gender": "female",
+  "color": [
+    "black",
+    "pink",
+    "red",
+    "white",
+    "gray",
+    "blue",
+    "violet",
+    "brown"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63c7a1058c3acd2b146dff9e"
+  },
+  "name": "Shirt",
+  "imageUrl": "https://m.media-amazon.com/images/I/61WfKFJPeiL._SX679._SX._UX._SY._UY_.jpg",
+  "price": 3999,
+  "discount": 50,
+  "brandName": "Puma",
+  "sizes": [
+    "XL",
+    "L",
+    "M",
+    "S"
+  ],
+  "noOfProducts": 3000,
+  "category": "shirts",
+  "gender": "female",
+  "color": [
+    "black",
+    "white",
+    "blue",
+    "violet"
+  ],
+  "materialDetails": "Best Quality",
+  "review": [],
+  "__v": 0
+}]
