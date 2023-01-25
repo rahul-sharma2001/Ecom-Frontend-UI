@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+    <!-- <div class="main-container bg-light"> -->
+    <div class="container-fluid bg-white mh-100">
+
+        <header
+            class="row d-flex justify-content-center align-items-center px-5 py-4 text-gray font-weight-bold border-bottom box-shadow">
+            <div class="logo display-none-for-logo text-left">
+                <img class="logo-img-size" src="../images/logo-for-white-bg.png" alt="logo" srcset="">
+            </div>
+
+            <div class="header-tags w-50 d-flex justify-content-between text-center">
+                <a id="header-cartTag" href="#" class="fs-8 fs-8-for-responsive text-gray">
+                    CART
+                </a>
+                <!-- <span class="fs-8">--------</span> -->
+                <a id="header-addressTag" href="/pages/addressPage.html" class="fs-8 fs-8-for-responsive text-gray">
+                    ADDRESS
+                </a>
+                <!-- <span class="fs-8">---------</span> -->
+                <a id="header-paymentTag" href="#" class="fs-8 fs-8-for-responsive text-gray anchor-disabled">
+                    PAYMENT
+                </a>
+            </div>
+
+            <!-- <div class="col-4 text-right mt-3">
+                <img class="h-50 mr-2" src="../images/sprite-secure.png" alt="Secure" srcset="">
+                <span class="fs-8">100% SECURE</span>
+            </div> -->
+
+        </header>
+
+        <main class="row container mx-auto mh-70">
+            <div class="col-lg-8 container-border-right p-4 bg-white mt-4 ">
+
+                <!-- delivery address -->
+                <div id="deliveryAddress">
+                    <div
+                        class="d-flex media-flex-column justify-content-between border rounded p-3 bg-white box-shadow">
+                        <div class="fs-8 text-gray">
+                            <div class="">Deliver to: Jay, 396360</div>
+                            <div class="">396, kesali mandir faliya, pramukh Swami nagar</div>
+                        </div>
+
+                        <div class="fs-8 mt-1 media-mt-3">
+                            <button type="button" onclick="changeAddress()"
+                                class="btn btn-outline-primary-color fs-10 font-weight-bold text-drak-gray">CHANGE
+                                ADDRESS</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- bank offer -->
+
+                <!-- items in cart -->
+
+
+                <!-- payment methods -->
+
+                <div class="fs-8 font-weight-bold my-3">Choose Payment Mode</div>
+
+                <div class="row border rounded mx-1 bg-white box-shadow">
+
+                    <div class="col-lg-4 col-md-4 px-0 bg-light-gray">
+
+                        <!-- cash on delivery -->
+                        <div id="cashOnDelivaryText"
+                            class="px-3 py-3 fs-7 font-weight-bold cursor-pointer border-bottom border-right paymentSelected"
+                            onclick="showPaymentMethods(id, 'cashOnDelivary')">
+                            Cash On Delivary
+                        </div>
+
+                        <!-- credit & debit cards payment -->
+                        <div id="credit&debitText"
+                            class="px-3 py-3 fs-7 font-weight-bold cursor-pointer border-bottom border-right"
+                            onclick="showPaymentMethods(id, 'credit&debit')">
+                            Credit/Debit Cards
+                        </div>
+
+                        <!-- UPI payment -->
+                        <div id="UPIText"
+                            class="px-3 py-3 fs-7 font-weight-bold cursor-pointer border-bottom border-right"
+                            onclick="showPaymentMethods(id, 'phonePeGpayPaytm')">
+                            UPI
+                        </div>
+
+                        <!-- wallet payment -->
+                        <!-- <div id="paytmWalletText"
+                            class="px-3 py-3 fs-7 font-weight-bold cursor-pointer border-bottom border-right"
+                            onclick="showPaymentMethods(id, 'paytmWallet')">
+                            Paytm wallets
+                        </div> -->
+
+
+                        <!-- Net Banking -->
+                        <div id="netBankingText"
+                            class="px-3 py-3 fs-7 font-weight-bold cursor-pointer border-bottom border-right"
+                            onclick="showPaymentMethods(id, 'netBanking')">
+                            Net Banking
+                        </div>
+
+                        <!-- EMI or Paylater -->
+                        <!-- <div id="emiPaylaterText"
+                            class="px-3 py-3 fs-7 font-weight-bold cursor-pointer border-bottom border-right"
+                            onclick="showPaymentMethods(id, 'emiPaylater')">
+                            EMI/Pay Later
+                        </div> -->
+
+                    </div>
+
+                    <div class="col-lg-8 col-md-8 bg-white">
+
+                        <!-- cash on delivery -->
+                        <div id="cashOnDelivary" class="m-3">
+                            <div class="fs-7 font-weight-bold pt-1">Pay on delivery(Cash/UPI)</div>
+
+                            <div class="d-flex flex-row align-items-center my-4">
+                                <div class="border border-secondary rounded">
+                                    <img class="w-100px-10vw" src="../images/randNo.png" alt="random Number" srcset="">
+                                </div>
+                                <div class="text-primary-color fs-8 font-weight-bold ml-4">
+                                    change Image
+                                </div>
+                            </div>
+
+                            <div class="border rounded p-1">
+                                <input class="w-100 border-0 p-2 fs-8" type="text" name="randCode" id="randCode"
+                                    placeholder="Enter code shown in above image*">
+                            </div>
+
+                            <div class="fs-10 my-2">
+                                You can pay via Cash or UPI enabled app at the time of delivery. Ask your delivery
+                                executive for these options.
+                            </div>
+
+                            <button type="button"
+                                class="btn btn-block font-weight-bold btn-sm bg-primary-color text-white py-2 my-4">PLACE
+                                ORDER</button>
+                        </div>
+
+
+
+
+
+                        <!-- credit & debit cards payment -->
+                        <div id="credit&debit" class="m-3 display-none">
+                            <div class="fs-7 font-weight-bold pt-1">CREDIT/DEBIT CARD</div>
+
+                            <div class="fs-8 text-gray my-2">Please ensure your card can be used for online
+                                transactions.</div>
+
+                            <div class="border rounded p-1 mt-4">
+                                <input class="w-100 border-0 p-2 fs-8" type="text" name="cardNo" id="cardNo"
+                                    placeholder="Card Number">
+                            </div>
+
+                            <div class="border rounded p-1 mt-4">
+                                <input class="w-100 border-0 p-2 fs-8" type="text" name="cardHolderName"
+                                    id="cardHolderName" placeholder="Card Holder Name">
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="border w-60 mr-2 rounded p-1 mt-4">
+                                    <input class="w-100 border-0 p-2 fs-8" type="text" name="validity" id="validity"
+                                        placeholder="Valid Thru (MM/YY)">
+                                </div>
+
+                                <div class="border w-40 ml-2 rounded p-1 mt-4">
+                                    <input class="w-100 border-0 p-2 fs-8" type="text" name="cvvNo" id="cvvNo"
+                                        placeholder="CVV">
+                                </div>
+                            </div>
+
+                            <button type="button"
+                                class="btn btn-block font-weight-bold btn-sm bg-primary-color text-white py-3 mt-5">PAY
+                                NOW</button>
+
+                        </div>
+
+
+
+
+
+
+                        <!-- UPI payment -->
+                        <div id="phonePeGpayPaytm" class="m-3 display-none">
+                            <div class="fs-7 font-weight-bold pt-1">Enter your UPI ID</div>
+
+                            <div class="fs-8 text-gray my-2">Pay instantly from your bank using your UPI ID.</div>
+
+                            <div class="border rounded p-1 mt-4">
+                                <input class="w-100 border-0 p-2 fs-8" type="text" name="upiId" id="upiId"
+                                    placeholder="1234567890@upi">
+                            </div>
+
+                            <button type="button"
+                                class="btn btn-block font-weight-bold btn-sm bg-primary-color text-white py-2 mt-4">PAY
+                                NOW</button>
+
+                        </div>
+
+
+
+
+
+                        <!-- wallet payment -->
+                        <!-- <div id="paytmWallet" class="m-3 display-none">
+                            <div class="fs-7 font-weight-bold pt-1">Select Wallet to Pay</div>
+
+                        </div> -->
+
+
+
+
+
+                        <!-- Net Banking -->
+                        <div id="netBanking" class="m-3 display-none">
+                            <div class="fs-7 font-weight-bold pt-1">Net Banking</div>
+
+                            <div class="fs-8 text-gray my-2">Pay instantly from your bank using Net Banking.</div>
+
+                            <select class="custom-select my-4">
+                                <option selected>Select Bank</option>
+                                <option value="">Axis Bank</option>
+                                <option value="">HDFC Bank</option>
+                                <option value="">ICICI Bank</option>
+                                <option value="">Kotak</option>
+                                <option value="">SBI</option>
+                            </select>
+
+                            <button type="button"
+                                class="btn btn-block font-weight-bold btn-sm bg-primary-color text-white py-2 mt-3">PAY
+                                NOW</button>
+                        </div>
+
+
+
+
+
+                        <!-- EMI or Paylater -->
+                        <!-- <div id="emiPaylater" class="m-3 display-none">
+                            <div class="fs-7 font-weight-bold pt-1">Select EMI Option</div>
+
+                        </div> -->
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 px-0">
+
+                <div class="card px-2 py-3 ml-3-responsive mt-4">
+
+                    <!-- Product List -->
+                    <div class="">
+                        <div class="d-flex align-items-center mt-3 mb-4">
+                            <img class="h-5vh" src="../images/Tshirt1.jpg" alt="image" srcset="">
+                            <div class="d-flex flex-column w-100">
+                                <div class="fs-8 ml-3 overflow-dotted" data-toggle="tooltip" data-placement="top" title="name" >
+                                    name Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
+                                    consectetur.
+                                </div>
+                                <div class="fs-8 font-weight-bold text-success ml-3">
+                                    ₹2000
+                                </div>
+                                <span class="fs-9 ml-3">
+                                    Qty: <span class="font-weight-bold">1</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center my-3 mb-4">
+                            <img class="h-5vh" src="../images/Tshirt2.webp" alt="image" srcset="">
+                            <div class="d-flex flex-column w-100">
+                                <div class="fs-8 ml-3 overflow-dotted" data-toggle="tooltip" data-placement="top" title="name" >
+                                    name Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
+                                    consectetur.
+                                </div>
+                                <div class="fs-8 font-weight-bold text-success ml-3">
+                                    ₹2000
+                                </div>
+                                <span class="fs-9 ml-3">
+                                    Qty: <span class="font-weight-bold">1</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- price details -->
+                    <div class="mt-2">
+                        <div class="fs-8 font-weight-bold mb-3">PRICE DETAILS (2 items)</div>
+
+                        <!-- price labels -->
+                        <div class="d-flex justify-content-between align-items-center fs-7 text-gray my-2">
+                            <div class="">
+                                Total MRP
+                            </div>
+                            <div class="">
+                                ₹4,798
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center fs-7 text-gray my-2">
+                            <div class="">
+                                Discount on MRP
+                            </div>
+                            <div class="text-success">
+                                -₹2,210
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center fs-7 text-gray my-2">
+                            <div class="">
+                                Convenience Fees
+                            </div>
+                            <div class="">
+                                <span class="text-decoration-line-through">₹99</span> <span
+                                    class="text-success">FREE</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="d-flex justify-content-between align-items-center fs-7 font-weight-bold text-drak-gray my-2 border-top py-3">
+                            <div class="">
+                                Total Amount
+                            </div>
+                            <div class="">
+                                ₹2,588
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- payment getways cards -->
+        <div class="row justify-content-center border-top mt-4">
+            <div class="d-flex container px-3 my-2 justify-content-between media-flex-column">
+                <div class="pb-4">
+                    <img src="../images/footer-bank-ssl.png" alt="image" srcset="" class="footer-image">
+                    <img src="../images/footer-bank-visa.png" alt="image" srcset="" class="footer-image">
+                    <img src="../images/footer-bank-mc.png" alt="image" srcset="" class="footer-image">
+                    <img src="../images/footer-bank-ae.png" alt="image" srcset="" class="footer-image">
+                    <img src="../images/footer-bank-dc.png" alt="image" srcset="" class="footer-image">
+                    <img src="../images/footer-bank-nb.png" alt="image" srcset="" class="footer-image">
+                    <img src="../images/footer-bank-cod.png" alt="image" srcset="" class="footer-image">
+                    <img src="../images/footer-bank-rupay.png" alt="image" srcset="" class="footer-image">
+                    <img src="../images/footer-bank-paypal.png" alt="image" srcset="" class="footer-image">
+                    <img src="../images/footer-bank-bhim.png" alt="image" srcset="" class="footer-image">
+                </div>
+
+                <a href="#" class="fs-7 font-weight-bold text-drak-gray">Need Help? Contact Us</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <footer id="footer" class="container-fluid d-flex justify-content-center bg-primary-color">
+            <div class="w-75 my-5 justify-content-around footer-container">
+                <div class="justify-content-start text-white">
+                    <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('aboutData')">
+                        About
+                    </div>
+
+                    <div id="aboutData" class="display-none mb-3">
+                        <div> <a href="#" class="text-white fs-7"> Contact Us </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> About Us </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Careers </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Better Buy's Stories </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Corporate Information </a> </div>
+                    </div>
+                </div>
+                <div class="justify-content-start text-white">
+                    <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('categoriesData')">
+                        Top Categories
+                    </div>
+
+                    <div id="categoriesData" class="display-none mb-3">
+                        <div> <a href="#" class="text-white fs-7"> Men </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Women </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Kids </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Electronics </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Sports, Books & More</a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Home & Furniture </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Grocery </a> </div>
+                    </div>
+                </div>
+                <div class="justify-content-start text-white">
+                    <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('helpData')">
+                        Help
+                    </div>
+
+                    <div id="helpData" class="display-none mb-3">
+                        <div> <a href="#" class="text-white fs-7"> Payment </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Shipping </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> FAQ </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Cancellation & Return </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Customer Care</a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Track Your Order </a> </div>
+                    </div>
+                </div>
+                <div class="justify-content-start text-white">
+                    <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('connectWithUsData')">
+                        Connect With Us
+                    </div>
+
+                    <div id="connectWithUsData" class="display-none mb-3">
+                        <div> <a href="#" class="text-white fs-7"> Facebook </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Instagram </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Twitter </a> </div>
+                    </div>
+                </div>
+            </div>
+        </footer> -->
+    <!-- </div> -->
+
+
+
+
+    <script type="text/javascript" src="../js/paymentScript.js">
+    </script>
+    <script type="text/javascript" src="../js/commonAddressPaymentScript.js">
+    </script>
+    <script type="text/javascript" src="../js/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="../js/popper.min.js">
+    </script>
+    <script type="text/javascript" src="../js/bootstrap.min.js">
+    </script>
+
+</body>
+
+</html>
