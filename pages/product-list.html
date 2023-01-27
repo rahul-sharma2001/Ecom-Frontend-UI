@@ -45,14 +45,6 @@
     <div class="container-fluid w-100">
         <div class="main_section d-flex" >
             <div class="sidebar border rounded">
-                <div class="sidebar_cancle-apply-btn">
-                    <div class="d-flex justify-content-between">
-                        <div class="m-2 btn btn-light border "><b>Apply</b></div>
-                        <div class="m-2 btn btn-light border" style="color:var(--button-color);" onclick="showFilters()">
-                            <b>Cancel</b>
-                        </div>
-                    </div>
-                </div>
                 <div class="filter-option">
                     <div class="filter_clearAll_option d-flex justify-content-between" style="height:3rem ;">
                         <div class="filter_btn m-2"><b>FILTER</b></div>
@@ -172,14 +164,14 @@
                     <input type="checkbox" class="mx-2 mb-3"> Include Out of Stock<br>
                 </div>
             </div>
-            <div class="product_section container-fluid ">
+            <div class="product_section container-fluid">
                 <div class="sortby_section">
                     <div class="sort-by-title font-weight-bold"><b>Sort By:</b></div>
-                    <div  onclick="showFilters()">
-                        <button class="filter-btn btn btn-secondary dropdown-toggle" >
-                            FILTER
+                    <p>
+                        <button class="filter-btn btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                          FILTER
                         </button>
-                    </div>
+                      </p>
 
                     <button class="dropdown btn btn-secondary dropdown-toggle sort-by" type="button"
                         id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -215,6 +207,126 @@
                                 <div class="grid-view__box"></div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class=" sidebar-toggle border rounded collapse" id="collapseExample">
+                    <div class="filter-option">
+                        <div class="filter_clearAll_option d-flex justify-content-between" style="height:3rem ;">
+                            <div class="filter_btn m-2"><b>FILTER</b></div>
+                            <div class="clearAll_btn m-2" style="color:var(--button-color);"><b>CLEAR ALL</b></div>
+                        </div>
+                    </div>
+                    <div class="gender filter-option">
+                        <div class="filter-name m-2"><b>GENDER</b></div>
+                        <input type="radio" class="mx-2 gender-option" onclick="filterOnGender(this.value)"  name="radio2" value="men">Men<br>
+                        <input type="radio" class="mx-2 gender-Option" onclick="filterOnGender(this.value)"  name="radio2" value="women">women<br>
+                        <input type="radio" class="mx-2 mb-3 gender-option" onclick="filterOnGender(this.value)"  name="radio2" value="all">All
+                    </div>
+                    <div class="filter-option">
+                        <div class="d-flex justify-content-between">
+                            <div class="filter-name m-2"><b>BRAND</b></div>
+                            <div class="clearAll_btn m-2" style="color:var(--button-color);"><b>CLEAR ALL</b></div>
+                        </div>
+                        <input type="checkbox" class="mx-2">Nike<br>
+                        <input type="checkbox" class="mx-2">Puma<br>
+                        <input type="checkbox" class="mx-2">Adidas<br>
+                        <input type="checkbox" class="mx-2 mb-3">Rebook<br>
+                    </div>
+                    <div class="filter-option">
+                        <header>
+                            <div class="filter-name m-2"><b>PRICE</b></div>
+                        </header>
+                        <div class="price-input d-flex justify-content-between align-items-center" style="width : 100%">
+                            <div class="field text-center">
+                                <p>Min</p>
+                                <input type="number" class="input-min" value="25000" oninput="filterOnPrice()"></input>
+                            </div>
+                            <div class="limit-separator text-center">-</div>
+                            <div class="field text-center">
+                                <p>Max</p>
+                                <input type="number" class="input-max" value="75000"  oninput="filterOnPrice()"></input>
+                            </div>
+                        </div>
+                        <div class="slider-section mt-5">
+                            <div class=" slider slider-toggle m-3">
+                                <div class="slider-range-toggle"></div>
+                            </div>
+                            <div class="range-input position-relative mb-3">
+                                <input type="range" class="range-min" min="0" max="100000" value="25000" step="100"  onmouseup="filterOnPrice()">
+                                <input type="range" class="range-max" min="0" max="100000" value="75000" step="100"  ondragleave="filterOnPrice()">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-option">
+                        <div class="filter-name m-2"><b>COLOR</b></div>
+                        <div class="colorfilter d-flex flex-row align-items-center "><input type="checkbox" class="ml-2">
+                            <div class="filterColor1 border border-secondary rounded-circle mx-2"
+                                style="background-color: black; height: 0.9rem; width: 0.9rem;"></div>black<br>
+                        </div>
+                        <div class="colorfilter d-flex flex-row align-items-center "><input type="checkbox" class="ml-2">
+                            <div class="filterColor1 border border-secondary rounded-circle mx-2"
+                                style="background-color: pink; height: 0.9rem; width: 0.9rem;"></div>pink<br>
+                        </div>
+                        <div class="colorfilter d-flex flex-row align-items-center "><input type="checkbox" class="ml-2">
+                            <div class="filterColor1 border border-secondary rounded-circle mx-2"
+                                style="background-color: red; height: 0.9rem; width: 0.9rem;"></div>red<br>
+                        </div>
+                        <div class="colorfilter d-flex flex-row align-items-center "><input type="checkbox" class="ml-2">
+                            <div class="filterColor1 border border-secondary rounded-circle mx-2"
+                                style="background-color: white; height: 0.9rem; width: 0.9rem;"></div>white
+                        </div>
+                        <div class="colorfilter d-flex flex-row align-items-center "><input type="checkbox" class="ml-2">
+                            <div class="filterColor1 border border-secondary rounded-circle mx-2"
+                                style="background-color: gray; height: 0.9rem; width: 0.9rem;"></div>gray
+                        </div>
+                        <div class="colorfilter d-flex flex-row align-items-center "><input type="checkbox" class="ml-2">
+                            <div class="filterColor1 border border-secondary rounded-circle mx-2"
+                                style="background-color: blue; height: 0.9rem; width: 0.9rem;"></div>blue
+                        </div>
+                        <div class="colorfilter d-flex flex-row align-items-center "><input type="checkbox" class="ml-2">
+                            <div class="filterColor1 border border-secondary rounded-circle mx-2"
+                                style="background-color: violet; height: 0.9rem; width: 0.9rem;"></div>violet
+                        </div>
+                        <div class="colorfilter d-flex flex-row align-items-center mb-3"><input type="checkbox" class="ml-2">
+                            <div class="filterColor1 border border-secondary rounded-circle mx-2 "
+                                style="background-color: brown; height: 0.9rem; width: 0.9rem;"></div><div >brown</div>
+                        </div>
+                    </div>
+                    <div class="filter-option px-2">
+                        <div class="filter-name m-2">
+                            <b>DISCOUNT RANGE</b>
+                        </div>
+                        <input type="radio" name="radio1" onclick="filterOnDiscount(this.value)" value ="10">10% and above <br>
+                        <input type="radio" name="radio1" onclick="filterOnDiscount(this.value)" value ="20">20% and above <br>
+                        <input type="radio" name="radio1" onclick="filterOnDiscount(this.value)" value ="30">30% and above <br>
+                        <input type="radio" name="radio1" onclick="filterOnDiscount(this.value)" value ="40">40% and above <br>
+                        <input type="radio" name="radio1" onclick="filterOnDiscount(this.value)" value ="50">50% and above <br>
+                        <input type="radio" name="radio1" onclick="filterOnDiscount(this.value)" value ="60">60% and above <br>
+                        <input type="radio" name="radio1" onclick="filterOnDiscount(this.value)" value ="70">70% and above <br>
+                        <input type="radio" name="radio1" onclick="filterOnDiscount(this.value)" value ="80" class="mb-3">80% and above
+                    </div>
+                    <div class=" filter-option">
+                        <div class="filter-name m-2"><b>SIZE</b></div>
+                        <input type="checkbox" class="mx-2"> 2XL<br>
+                        <input type="checkbox" class="mx-2"> 2XS<br>
+                        <input type="checkbox" class="mx-2"> 3XL<br>
+                        <input type="checkbox" class="mx-2"> 3XS<br>
+                        <input type="checkbox" class="mx-2"> 4XL<br>
+                        <input type="checkbox" class="mx-2"> FREE<br>
+                        <input type="checkbox" class="mx-2"> L<br>
+                        <input type="checkbox" class="mx-2"> M<br>
+                        <input type="checkbox" class="mx-2"> S<br>
+                        <input type="checkbox" class="mx-2"> XL<br>
+                        <input type="checkbox" class="mx-2 mb-3"> XS<br>
+                    </div>
+                    <div class="filter-option">
+                        <div class="filter-name m-2"><b>CUSTOMER RATING</b></div>
+                        <input type="checkbox" class="mx-2"> 4 & above<br>
+                        <input type="checkbox" class="mx-2 mb-3"> 3 & above<br>
+                    </div>
+                    <div class="filter-option">
+                        <div class="filter-name m-2"><b>AVAILABILITY</b></div>
+                        <input type="checkbox" class="mx-2 mb-3"> Include Out of Stock<br>
                     </div>
                 </div>
                 <div class="row p-2 " id="product-section">

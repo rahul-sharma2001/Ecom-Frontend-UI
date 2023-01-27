@@ -9,6 +9,7 @@ function handleToggle() {
 const rangeInput = document.querySelectorAll('.range-input input');
 const priceInput = document.querySelectorAll('.price-input input');
 const progress = document.querySelector('.slider .slider-range');
+const progressToggle = document.querySelector('.slider-toggle .slider-range-toggle');
 let cardDiv = document.getElementsByClassName('card-div');
 let cards = document.getElementsByClassName('card');
 let listType = document.getElementsByTagName('img');
@@ -18,6 +19,7 @@ let BoxOf4 = document.getElementsByClassName('grid-view')[0];
 let listBox = document.getElementsByClassName('list-view__box')[0];
 let ListView = document.getElementsByClassName('list-view')[0];
 let sortOption = document.getElementsByClassName('sort-option');
+let productDetails = document.getElementsByClassName('product-details');
 let priceGap = 10000;
 
 //set display of sidebar to none when we refresh the page
@@ -28,7 +30,9 @@ priceInput.forEach((input) => {
     input.addEventListener('input', e => {
 
         let minVal = parseInt(priceInput[0].value);
+        let minValToggle = parseInt(priceInput[2].value);
         let maxVal = parseInt(priceInput[1].value);
+        let maxValToggle = parseInt(priceInput[3].value)
 
         if ((maxVal - minVal >= priceGap) && maxVal <= 100000) {
             if (e.target.className === "input-min") {
@@ -37,6 +41,15 @@ priceInput.forEach((input) => {
             } else {
                 rangeInput[1].value = maxVal;
                 progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+            }
+            if ((maxValToggle - minValToggle >= priceGap) && maxValToggle < 100000) {
+                if (e.target.className === "input-min") {
+                    rangeInput[2].value = minValToggle;
+                    progressToggle.style.left = (minValToggle / rangeInput[2].max) * 100 + "%";
+                } else {
+                    rangeInput[3].value = maxValToggle;
+                    progressToggle.style.right = 100 - (maxValToggle / rangeInput[3].max) * 100 + "%";
+                }
             }
         }
     });
@@ -47,19 +60,27 @@ rangeInput.forEach((input) => {
     input.addEventListener('input', e => {
 
         let minVal = parseInt(rangeInput[0].value);
+        let minValToggle = parseInt(rangeInput[2].value);
         let maxVal = parseInt(rangeInput[1].value);
+        let maxValToggle = parseInt(rangeInput[3].value)
 
-        if (maxVal - minVal < priceGap) {
+        if (maxVal - minVal < priceGap || maxValToggle - minValToggle < priceGap) {
             if (e.target.className == "range-min") {
                 rangeInput[0].value = maxVal - priceGap;
+                rangeInput[2].value = maxValToggle - priceGap;
             } else {
                 rangeInput[1].value = minVal + priceGap;
+                rangeInput[3].value = minValToggle + priceGap;
             }
         } else {
             priceInput[0].value = minVal;
+            priceInput[2].value = minValToggle;
             priceInput[1].value = maxVal;
+            priceInput[3].value = maxValToggle;
             progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+            progressToggle.style.left = (minValToggle / rangeInput[2].max) * 100 + "%";
             progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+            progressToggle.style.right = 100 - (maxValToggle / rangeInput[3].max) * 100 + "%";
         }
     });
 });
@@ -76,32 +97,30 @@ function listView() {
         card.classList.add('card', 'd-flex', 'flex-row', 'justify-content-around', 'align-items-center', 'card--listview');
     })
     Array.from(listType).forEach((listItem) => {
-        listItem.classList.add('card__img--width','m-3');
+        listItem.classList.add('card__img--width', 'm-3');
+    })
+    Array.from(productDetails).forEach((productDetail) => {
+        productDetail.classList.add('w-25');
     })
 };
 
 // when grid optin is 4 column per row
 function boxOf4() {
-    let displayValueOfFilter = sidebar.classList.contains('sidebar-display');
-    // check the display value of filter if sidebar is block set col-12 otherwise col-6
-    if (displayValueOfFilter) {
-        Array.from(cardDiv).forEach((cardDiv) => {
-            cardDiv.classList.remove(...cardDiv.classList);
-            cardDiv.classList.add('card-div', 'col-xl-3', 'col-lg-4', 'col-md-6', 'col-12', 'p-3');
 
-        })
-    } else {
-        Array.from(cardDiv).forEach((cardDiv) => {
-            cardDiv.classList.remove(...cardDiv.classList);
-            cardDiv.classList.add('card-div', 'col-xl-3', 'col-lg-4', 'col-md-6', 'col-6', 'p-3');
-        })
-    }
+    Array.from(productDetails).forEach((productDetail) => {
+        console.log('hii')
+        productDetail.classList.remove('w-25');
+    })
+    Array.from(cardDiv).forEach((cardDiv) => {
+        cardDiv.classList.remove(...cardDiv.classList);
+        cardDiv.classList.add('card-div', 'col-xl-3', 'col-lg-4', 'col-md-6', 'col-6', 'p-3');
+    })
     Array.from(cards).forEach((card) => {
         card.classList.remove(...card.classList)
         card.classList.add('card', 'p-2');
     })
     Array.from(listType).forEach((listItem) => {
-        listItem.classList.remove('card__img--width','m-3');
+        listItem.classList.remove('card__img--width', 'm-3');
     })
 };
 
@@ -156,13 +175,13 @@ fetch('/products.json').then((u) => {
 function renderProducts(productList) {
     let HTML = '';
     let productDiv = document.getElementById('product-section');
-        productList.map((product) => {
+    productList.map((product) => {
 
-            HTML += `<div class="card-div col-xl-3 col-lg-4 col-md-6 col-6 p-3 d-flex justify-content-center align-items-center" id='${product._id.$oid}'>
-                 <div class="card p-2">
+        HTML += `<div class="card-div col-xl-3 col-lg-4 col-md-6 col-6 p-3 d-flex justify-content-center align-items-center" id='${product._id.$oid}'>
+                 <div class="card p-2 d-flex align-items-center">
                      <img class="card-img-top card__img"
                          src="${product.imageUrl}" alt="Card image cap">
-                     <div class="product-details mt-2 ml-1">
+                     <div class="product-details mt-2">
                      <div  class="d-flex justify-content-between mt-2">
                          <h5 class="product-brand">${product.brandName}</h5>
                          <i class="fa fa-heart-o " id="heart-icon" ></i>
@@ -178,14 +197,14 @@ function renderProducts(productList) {
                      </div>
                  </div>
              </div>`
-        });
-        productDiv.innerHTML = HTML;
-        let inList = document.getElementsByClassName('list-view')[0].classList.contains('active-view-option');
-         if(inList){
-            listView() ;
-         }
-    
-    
+    });
+    productDiv.innerHTML = HTML;
+    let inList = document.getElementsByClassName('list-view')[0].classList.contains('active-view-option');
+    if (inList) {
+        listView();
+    }
+
+
 }
 
 //function for getiing products that are displayed on the search
@@ -193,7 +212,7 @@ function getObjectList() {
     let objList = [];
     Array.from(cardDiv).forEach((cardDiv) => {
         Array.from(productList).forEach((product) => {
-            if(product._id.$oid == cardDiv.id){
+            if (product._id.$oid == cardDiv.id) {
                 objList.push(product);
             };
         });
