@@ -45,7 +45,7 @@
     <div class="container-fluid w-100">
         <div class="main_section d-flex" >
             <div class="sidebar border rounded">
-                <div class="cancelApplySection">
+                <div class="sidebar_cancle-apply-btn">
                     <div class="d-flex justify-content-between">
                         <div class="m-2 btn btn-light border "><b>Apply</b></div>
                         <div class="m-2 btn btn-light border" style="color:var(--button-color);" onclick="showFilters()">
@@ -53,22 +53,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="appliedFilterSection borderForFilterSection">
+                <div class="filter-option">
                     <div class="filter_clearAll_option d-flex justify-content-between" style="height:3rem ;">
                         <div class="filter_btn m-2"><b>FILTER</b></div>
                         <div class="clearAll_btn m-2" style="color:var(--button-color);"><b>CLEAR ALL</b></div>
                     </div>
-                    <div class="activeFilters"></div>
                 </div>
-                <div class="gender borderForFilterSection">
-                    <div class="filterName m-2"><b>GENDER</b></div>
-                    <input type="radio" class="mx-2 genderOption" onclick="filterOnGender(this.value)"  name="radio2" value="men">Men<br>
-                    <input type="radio" class="mx-2 genderOption" onclick="filterOnGender(this.value)"  name="radio2" value="women">women<br>
-                    <input type="radio" class="mx-2 mb-3 genderOption" onclick="filterOnGender(this.value)"  name="radio2" value="all">All
+                <div class="gender filter-option">
+                    <div class="filter-name m-2"><b>GENDER</b></div>
+                    <input type="radio" class="mx-2 gender-option" onclick="filterOnGender(this.value)"  name="radio2" value="men">Men<br>
+                    <input type="radio" class="mx-2 gender-Option" onclick="filterOnGender(this.value)"  name="radio2" value="women">women<br>
+                    <input type="radio" class="mx-2 mb-3 gender-option" onclick="filterOnGender(this.value)"  name="radio2" value="all">All
                 </div>
-                <div class="brandFilter borderForFilterSection">
-                    <div class="brandTitle d-flex justify-content-between">
-                        <div class="filterName m-2"><b>BRAND</b></div>
+                <div class="filter-option">
+                    <div class="d-flex justify-content-between">
+                        <div class="filter-name m-2"><b>BRAND</b></div>
                         <div class="clearAll_btn m-2" style="color:var(--button-color);"><b>CLEAR ALL</b></div>
                     </div>
                     <input type="checkbox" class="mx-2">Nike<br>
@@ -76,33 +75,33 @@
                     <input type="checkbox" class="mx-2">Adidas<br>
                     <input type="checkbox" class="mx-2 mb-3">Rebook<br>
                 </div>
-                <div class="price borderForFilterSection">
+                <div class="filter-option">
                     <header>
-                        <div class="filterName m-2"><b>PRICE</b></div>
+                        <div class="filter-name m-2"><b>PRICE</b></div>
                     </header>
-                    <div class="priceInput d-flex justify-content-between align-items-center" style="width : 100%">
+                    <div class="price-input d-flex justify-content-between align-items-center" style="width : 100%">
                         <div class="field text-center">
                             <p>Min</p>
-                            <input type="number" class="inputMin" value="25000" oninput="filterOnPrice()"></input>
+                            <input type="number" class="input-min" value="25000" oninput="filterOnPrice()"></input>
                         </div>
-                        <div class="limitSeparator text-center">-</div>
+                        <div class="limit-separator text-center">-</div>
                         <div class="field text-center">
                             <p>Max</p>
-                            <input type="number" class="inputMax" value="75000"  oninput="filterOnPrice()"></input>
+                            <input type="number" class="input-max" value="75000"  oninput="filterOnPrice()"></input>
                         </div>
                     </div>
-                    <div class="sliderSection mt-5">
+                    <div class="slider-section mt-5">
                         <div class="slider m-3">
-                            <div class="sliderbar"></div>
+                            <div class="slider-range"></div>
                         </div>
-                        <div class="rangeInput position-relative mb-3">
-                            <input type="range" class="rangeMin" min="0" max="100000" value="25000" step="100"  onmouseup="filterOnPrice()">
-                            <input type="range" class="rangeMax" min="0" max="100000" value="75000" step="100"  ondragleave="filterOnPrice()">
+                        <div class="range-input position-relative mb-3">
+                            <input type="range" class="range-min" min="0" max="100000" value="25000" step="100"  onmouseup="filterOnPrice()">
+                            <input type="range" class="range-max" min="0" max="100000" value="75000" step="100"  ondragleave="filterOnPrice()">
                         </div>
                     </div>
                 </div>
-                <div class="color borderForFilterSection">
-                    <div class="filterName m-2"><b>COLOR</b></div>
+                <div class="filter-option">
+                    <div class="filter-name m-2"><b>COLOR</b></div>
                     <div class="colorfilter d-flex flex-row align-items-center "><input type="checkbox" class="ml-2">
                         <div class="filterColor1 border border-secondary rounded-circle mx-2"
                             style="background-color: black; height: 0.9rem; width: 0.9rem;"></div>black<br>
@@ -136,8 +135,8 @@
                             style="background-color: brown; height: 0.9rem; width: 0.9rem;"></div><div >brown</div>
                     </div>
                 </div>
-                <div class="discountRange borderForFilterSection px-2">
-                    <div class="filterName m-2">
+                <div class="filter-option px-2">
+                    <div class="filter-name m-2">
                         <b>DISCOUNT RANGE</b>
                     </div>
                     <input type="radio" name="radio1" onclick="filterOnDiscount(this.value)" value ="10">10% and above <br>
@@ -149,8 +148,8 @@
                     <input type="radio" name="radio1" onclick="filterOnDiscount(this.value)" value ="70">70% and above <br>
                     <input type="radio" name="radio1" onclick="filterOnDiscount(this.value)" value ="80" class="mb-3">80% and above
                 </div>
-                <div class="size borderForFilterSection">
-                    <div class="filterName m-2"><b>SIZE</b></div>
+                <div class=" filter-option">
+                    <div class="filter-name m-2"><b>SIZE</b></div>
                     <input type="checkbox" class="mx-2"> 2XL<br>
                     <input type="checkbox" class="mx-2"> 2XS<br>
                     <input type="checkbox" class="mx-2"> 3XL<br>
@@ -163,21 +162,21 @@
                     <input type="checkbox" class="mx-2"> XL<br>
                     <input type="checkbox" class="mx-2 mb-3"> XS<br>
                 </div>
-                <div class="size borderForFilterSection">
-                    <div class="filterName m-2"><b>CUSTOMER RATING</b></div>
+                <div class="filter-option">
+                    <div class="filter-name m-2"><b>CUSTOMER RATING</b></div>
                     <input type="checkbox" class="mx-2"> 4 & above<br>
                     <input type="checkbox" class="mx-2 mb-3"> 3 & above<br>
                 </div>
-                <div class="size borderForFilterSection">
-                    <div class="filterName m-2"><b>AVAILABILITY</b></div>
+                <div class="filter-option">
+                    <div class="filter-name m-2"><b>AVAILABILITY</b></div>
                     <input type="checkbox" class="mx-2 mb-3"> Include Out of Stock<br>
                 </div>
             </div>
             <div class="product_section container-fluid ">
-                <div class="shortBy_section">
-                    <div class="sortBy"><b>Sort By:</b></div>
-                    <div class="FilterButton" onclick="showFilters()">
-                        <button class="btn btn-secondary dropdown-toggle">
+                <div class="sortby_section">
+                    <div class="sort-by-title font-weight-bold"><b>Sort By:</b></div>
+                    <div  onclick="showFilters()">
+                        <button class="filter-btn btn btn-secondary dropdown-toggle" >
                             FILTER
                         </button>
                     </div>
@@ -194,31 +193,31 @@
                     </div>
 
 
-                    <div class="shortOptions d-flex align-items-center ">
-                        <div class="popularity shortOption  activeShortOption mr-5" onclick="activeSortOption(this)" id="popularity">Popularity</div>
-                        <div class="lowToHigh shortOption mr-5" onclick="activeSortOption(this)" id="lowToHigh">Price--Low to High</div>
-                        <div class="highToLow shortOption mr-5" onclick="activeSortOption(this)" id="highToLow">Price--High to Low</div>
-                        <div class="whatsNew shortOption mr-5" onclick="activeSortOption(this)" id="whatsNew">what's New</div>
+                    <div class="sort-options d-flex align-items-center ">
+                        <div class="popularity  font-weight-bold sort-option  active-sort-option mr-5" onclick="activeSortOption(this)" id="popularity">Popularity</div>
+                        <div class="lowToHigh font-weight-bold sort-option mr-5" onclick="activeSortOption(this)" id="low-to-high">Price--Low to High</div>
+                        <div class="highToLow font-weight-bold sort-option mr-5" onclick="activeSortOption(this)" id="high-to-low">Price--High to Low</div>
+                        <div class="whatsNew font-weight-bold sort-option mr-5" onclick="activeSortOption(this)" id="whats-new">what's New</div>
                     </div>
 
-                    <div class="grid d-flex flex-row align-items-center">
-                        <div class="gridTitle"><b>grid:</b></div>
-                        <div class="gridOptions d-flex">
-                            <div class="gridbox  listView d-flex flex-row align-items-center justify-content-around"
+                    <div class=" d-flex flex-row align-items-center">
+                        <div class="grid-title"><b>grid:</b></div>
+                        <div class="grid-options d-flex">
+                            <div class=" list-view d-flex flex-row align-items-center justify-content-around"
                                 onclick="listView(); activeGridOption();">
-                                <div class="listBox"></div>
+                                <div class="list-view__box"></div>
                             </div>
-                            <div class="gridbox  boxOf4 d-flex flex-row align-items-center justify-content-around"
+                            <div class="grid-view d-flex flex-row align-items-center justify-content-around"
                                 onclick="boxOf4(); activeGridOption();">
-                                <div class="box"></div>
-                                <div class="box"></div>
-                                <div class="box"></div>
-                                <div class="box"></div>
+                                <div class="grid-view__box"></div>
+                                <div class="grid-view__box"></div>
+                                <div class="grid-view__box"></div>
+                                <div class="grid-view__box"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="productList row p-2" id="productDiv">
+                <div class="row p-2 " id="product-section">
 
                 </div>
                 <nav aria-label="Page navigation example ">

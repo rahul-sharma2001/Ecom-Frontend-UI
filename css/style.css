@@ -91,85 +91,11 @@
 }
 
 /* productlist css */
-.sortBy,
-.popularity,
-.lowToHigh,
-.highToLow,
-.whatsNew,
-.gridTitle {
-    font-size: 0.9rem;
-    text-align: center;
-    font-weight: bold;
-}
-
-.shortBy_section {
-    position: sticky;
-    top: 4.5rem;
-    height: 4rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 1;
-    background-color: white;
-}
-
-.cancelApplySection {
-    display: none !important;
-}
-
-.products-image {
-    height: 17rem;
-}
-
-.toToggle {
-    display: none;
-}
-
-.listView {
-    height: 1.5rem;
-    width: 1.8rem;
-    border: 1px solid black;
-}
-
-.boxOf4 {
-    height: 1.5rem;
-    width: 2.5rem;
-    border: 1px solid black;
-}
-
-.activeGridoptions {
-    border: 2px solid var(--button-color);
-}
-
-.listBox {
-    height: 0.6rem;
-    width: 1rem;
-    background-color: rgb(201, 197, 197);
-}
-
-.box {
-    height: 1rem;
-    width: 0.3rem;
-    background-color: rgb(201, 197, 197);
-}
-
-.activeBox {
-    background-color: var(--button-color);
-}
-
-.activeShortOption {
-    color: var(--button-color);
-    font-size: 1rem;
-}
-
-.borderForFilterSection {
-    border: 1px solid rgb(219, 216, 216);
-}
 
 :root {
     --font-family-menu: Roboto, Arial, sans-serif;
 }
-
+/*sidebar section*/
 .sidebar {
     background-color: white;
     position: sticky;
@@ -178,7 +104,18 @@
     overflow-y: scroll;
     line-height: 1.5rem;
 }
+.sidebar_cancle-apply-btn{
+    display: none !important;
+}
+.sidebar-display {
+    display: block !important;
+}
+.filter-option{
+    border: 1px solid rgb(219, 216, 216);
+}
 
+
+/*price input*/
 .field input {
     width: 80%;
     height: 120%;
@@ -189,8 +126,12 @@
     appearance: textfield;
     border: 1px solid gray;
 }
+.price-input {
+    width: 100%;
+    display: flex;
+}
 
-.limitSeparator {
+.limit-separator {
     width: 2rem;
     display: flex;
     align-items: center;
@@ -204,12 +145,8 @@
     position: relative;
 }
 
-.priceInput {
-    width: 100%;
-    display: flex;
-}
 
-.sliderbar {
+.slider-range{
     height: 0.5rem;
     background-color: var(--button-color);
     border-radius: 1rem;
@@ -218,11 +155,11 @@
     position: absolute;
 }
 
-.rangeInput {
+.range-input {
     position: relative;
 }
 
-.rangeInput input {
+.range-input input {
     position: absolute;
     top: -1.5rem;
     height: 0.5rem;
@@ -250,11 +187,6 @@ input[type="range"]::-moz-range-thumb {
     pointer-events: auto;
     border-radius: 50%;
 }
-
-.listViewUpdate {
-    width: 20vw;
-}
-
 input[type="checkbox"] {
     accent-color: var(--button-color);
 }
@@ -262,55 +194,113 @@ input[type="checkbox"] {
 input[type="radio"] {
     accent-color: var(--button-color);
 }
+/*sortby section*/
+.sortby_section {
+    position: sticky;
+    top: 4.5rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    background-color: white;
+}
 
+.list-view{
+    height: 1.5rem;
+    width: 1.8rem;
+    border: 1px solid black;
+}
+
+.grid-view{
+    height: 1.5rem;
+    width: 2.5rem;
+    border: 1px solid black;
+}
+
+.active-view-option {
+    border: 2px solid var(--button-color);
+}
+
+.list-view__box {
+    height: 0.6rem;
+    width: 1rem;
+    background-color: rgb(201, 197, 197);
+}
+
+.grid-view__box{
+    height: 1rem;
+    width: 0.3rem;
+    background-color: rgb(201, 197, 197);
+}
+
+.active-box {
+    background-color: var(--button-color);
+}
+
+.active-sort-option {
+    color: var(--button-color);
+    font-size: 1rem;
+}
+
+
+/* card css*/
 .card:hover {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow:var(--nav-color)0px 5px 15px;
 }
 
 .card {
     width: 14vw;
+    border-radius: 2rem;
 }
-
-.cardWidthInListView {
-    width: 60vw;
+.card_details{
+        line-height: 1.8rem;
 }
-
-.dropdown {
-    display: none;
+.card__img {
+    height: 17rem;
 }
-
-.FilterButton {
-    display: none;
+.card__img--width{
+    width: 20vw;
 }
-
-.viewSidebar {
-    display: block !important;
-}
-
-#heart {
+#heart-icon{
     font-size: 1.5rem;
     color: var(--button-color);
     margin-right: 1rem;
 }
-.add2cart {
+
+.card--listview{
+    width: 60vw;
+}
+.product-details{
+    width: 10rem;
+}
+
+.dropdown{
+    display: none;
     background-color: var(--button-color);
 }
-.buyNow{
+
+.filter-btn{
+    display: none;
     background-color: var(--button-color);
+     border-radius:0.5rem;
+     width: 22vw;
 }
-.productInfo{
-    line-height: 1.8rem;
-}
+
+
 @media(max-width:768px) {
-    .cardDiv {
+    .card__img {
+        width: 17rem;
+    }
+    .card-div {
         padding: 0.5rem !important;
     }
 
-    .shortOptions {
+    .sort-options {
         display: none !important;
     }
 
-    .sortBy {
+    .sort-by-title  {
         display: none !important;
     }
 
@@ -322,17 +312,17 @@ input[type="radio"] {
         display: none;
     }
 
-    .FilterButton {
+    .filter-btn{
         display: block;
         align-items: center;
     }
 
-    .cancelApplySection {
+    .sidebar_cancle-apply-btn {
         display: block !important;
     }
 
-    .shortBy_section {
-        top: 12.5rem;
+    .sortby_section {
+        top: 12.5rem !important;
     }
 }
 
@@ -341,7 +331,7 @@ input[type="radio"] {
         width: 18vw;
     }
 
-    .cardWidthInListView {
+    .card--listview {
         width: 55vw;
     }
 }
@@ -351,7 +341,7 @@ input[type="radio"] {
         width: 26vw;
     }
 
-    .cardWidthInListView {
+    .card--listview {
         width: 50vw;
     }
 }
@@ -361,15 +351,8 @@ input[type="radio"] {
         width: 42vw;
     }
 
-    .cardWidthInListView {
+    .card--listview {
         width: 65vw;
-    }
-
-    .FilterButton button {
-        width: 22vw;
-        font-size: 0.8rem;
-        font-weight: bold;
-        text-align: center;
     }
 
     .sort-by {
@@ -377,6 +360,9 @@ input[type="radio"] {
         font-size: 0.8rem;
         font-weight: bold;
         text-align: center;
+    }
+    .gridTitle {
+        font-size: 1rem;
     }
 
     .sidebar {
@@ -388,59 +374,24 @@ input[type="radio"] {
 
     .filter_btn,
     .clearAll_btn,
-    .filterName {
+    .filter-name {
         font-size: 0.8rem;
     }
-
-    .toToggle {
-        display: block;
-    }
-
-    .products-image {
+   .products-image {
         height: 14rem;
     }
 
-    .cardDetails {
-        flex-direction: column;
-    }
-
-    .brandName,
-    .gender,
-    .type,
-    .productPrice,
-    .discount {
-        font-size: 1rem;
-    }
-
-    pre {
-        display: none;
-    }
-
-    .productInfo {
-        margin-top: 1rem;
-    }
-
-    .gridTitle {
-        font-size: 1rem;
-    }
-
-    .cardWidthInListView {
+    .card--listview{
         width: 100%;
     }
 
-    .shortBy_section {
+    .sortby_section {
         width: 90vw;
     }
 }
-
-@media (max-width:1115px) {
-
-    .sortBy,
-    .popularity,
-    .lowToHigh,
-    .highToLow,
-    .whatsNew {
-        font-size: 0.8rem;
+@media (max-width:855px) {
+    .sortby_section {
+        top: 5rem;
     }
 }
 
@@ -448,7 +399,9 @@ input[type="radio"] {
     .products-image {
         height: 10rem;
     }
-
+    .card__img {
+        width: 12rem;
+    }
 }
 
 
@@ -457,13 +410,18 @@ input[type="radio"] {
     .display-none-for-responsive {
         display: none !important;
     }
-
+    .card__img {
+        width: 15rem;
+    }
     .footer-container {
         flex-direction: column;
     }
 
     .cursor-pointer-for-footer {
         cursor: pointer !important;
+    }
+    .sort-options div {
+        font-size: 0.8rem;
     }
 }
 

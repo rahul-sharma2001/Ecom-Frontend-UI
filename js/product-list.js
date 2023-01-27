@@ -6,22 +6,22 @@ function handleToggle() {
     menues.classList.toggle('topnav-menue1');
 }
 
-const rangeInput = document.querySelectorAll('.rangeInput input');
-const priceInput = document.querySelectorAll('.priceInput input');
-const progress = document.querySelector('.slider .sliderbar');
-let cardDiv = document.getElementsByClassName('cardDiv');
+const rangeInput = document.querySelectorAll('.range-input input');
+const priceInput = document.querySelectorAll('.price-input input');
+const progress = document.querySelector('.slider .slider-range');
+let cardDiv = document.getElementsByClassName('card-div');
 let cards = document.getElementsByClassName('card');
 let listType = document.getElementsByTagName('img');
 let sidebar = document.getElementsByClassName('sidebar')[0];
-let gridBoxs = document.getElementsByClassName('box');
-let BoxOf4 = document.getElementsByClassName('boxOf4')[0];
-let listBox = document.getElementsByClassName('listBox')[0];
-let ListView = document.getElementsByClassName('listView')[0];
-let shortOption = document.getElementsByClassName('shortOption');
+let gridBoxs = document.getElementsByClassName('grid-view__box');
+let BoxOf4 = document.getElementsByClassName('grid-view')[0];
+let listBox = document.getElementsByClassName('list-view__box')[0];
+let ListView = document.getElementsByClassName('list-view')[0];
+let sortOption = document.getElementsByClassName('sort-option');
 let priceGap = 10000;
 
 //set display of sidebar to none when we refresh the page
-sidebar.classList.remove('viewSidebar');
+sidebar.classList.remove('sidebar-display');
 
 //change slidbar base on input value 
 priceInput.forEach((input) => {
@@ -31,7 +31,7 @@ priceInput.forEach((input) => {
         let maxVal = parseInt(priceInput[1].value);
 
         if ((maxVal - minVal >= priceGap) && maxVal <= 100000) {
-            if (e.target.className === "inputMin") {
+            if (e.target.className === "input-min") {
                 rangeInput[0].value = minVal;
                 progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
             } else {
@@ -50,7 +50,7 @@ rangeInput.forEach((input) => {
         let maxVal = parseInt(rangeInput[1].value);
 
         if (maxVal - minVal < priceGap) {
-            if (e.target.className == "rangeMin") {
+            if (e.target.className == "range-min") {
                 rangeInput[0].value = maxVal - priceGap;
             } else {
                 rangeInput[1].value = minVal + priceGap;
@@ -69,31 +69,31 @@ function listView() {
 
     Array.from(cardDiv).forEach((cardDiv) => {
         cardDiv.classList.remove(...cardDiv.classList);
-        cardDiv.classList.add('cardDiv', 'inListView', 'col-12', 'p-3');
+        cardDiv.classList.add('card-div', 'inListView', 'col-12', 'p-3');
     });
     Array.from(cards).forEach((card) => {
         card.classList.remove(...card.classList)
-        card.classList.add('card', 'd-flex', 'flex-row', 'justify-content-around', 'align-items-center', 'cardWidthInListView');
+        card.classList.add('card', 'd-flex', 'flex-row', 'justify-content-around', 'align-items-center', 'card--listview');
     })
     Array.from(listType).forEach((listItem) => {
-        listItem.classList.add('listViewUpdate','m-3');
+        listItem.classList.add('card__img--width','m-3');
     })
 };
 
 // when grid optin is 4 column per row
 function boxOf4() {
-    let displayValueOfFilter = sidebar.classList.contains('viewSidebar');
+    let displayValueOfFilter = sidebar.classList.contains('sidebar-display');
     // check the display value of filter if sidebar is block set col-12 otherwise col-6
     if (displayValueOfFilter) {
         Array.from(cardDiv).forEach((cardDiv) => {
             cardDiv.classList.remove(...cardDiv.classList);
-            cardDiv.classList.add('cardDiv', 'col-xl-3', 'col-lg-4', 'col-md-6', 'col-12', 'p-3');
+            cardDiv.classList.add('card-div', 'col-xl-3', 'col-lg-4', 'col-md-6', 'col-12', 'p-3');
 
         })
     } else {
         Array.from(cardDiv).forEach((cardDiv) => {
             cardDiv.classList.remove(...cardDiv.classList);
-            cardDiv.classList.add('cardDiv', 'col-xl-3', 'col-lg-4', 'col-md-6', 'col-6', 'p-3');
+            cardDiv.classList.add('card-div', 'col-xl-3', 'col-lg-4', 'col-md-6', 'col-6', 'p-3');
         })
     }
     Array.from(cards).forEach((card) => {
@@ -101,13 +101,13 @@ function boxOf4() {
         card.classList.add('card', 'p-2');
     })
     Array.from(listType).forEach((listItem) => {
-        listItem.classList.remove('listViewUpdate','m-3');
+        listItem.classList.remove('card__img--width','m-3');
     })
 };
 
 //show filters when click on filter button
 function showFilters() {
-    sidebar.classList.toggle('viewSidebar');
+    sidebar.classList.toggle('sidebar-display');
     sidebar.classList.toggle('m-4');
     sidebar.classList.toggle('ml-0');
 };
@@ -117,28 +117,28 @@ function activeGridOption() {
     let card1 = document.getElementById(productList[0]._id.$oid);
     let isInListView = card1.classList.contains('inListView');
     if (isInListView) {
-        listBox.classList.add('activeBox');
-        ListView.classList.add('activeGridoptions');
+        listBox.classList.add('active-box');
+        ListView.classList.add('active-view-option');
         Array.from(gridBoxs).forEach((box) => {
-            box.classList.remove('activeBox');
+            box.classList.remove('active-box');
         })
-        BoxOf4.classList.remove('activeGridoptions');
+        BoxOf4.classList.remove('active-view-option');
     } else {
-        listBox.classList.remove('activeBox');
-        ListView.classList.remove('activeGridoptions');
+        listBox.classList.remove('active-box');
+        ListView.classList.remove('active-view-option');
         Array.from(gridBoxs).forEach((box) => {
-            box.classList.add('activeBox');
+            box.classList.add('active-box');
         })
-        BoxOf4.classList.add('activeGridoptions');
+        BoxOf4.classList.add('active-view-option');
     }
 };
 
 // function for active short option
 function activeSortOption(element) {
-    Array.from(shortOption).forEach((option) => {
-        option.classList.remove('activeShortOption');
+    Array.from(sortOption).forEach((option) => {
+        option.classList.remove('active-sort-option');
     });
-    element.classList.add('activeShortOption');
+    element.classList.add('active-sort-option');
     sortBy();
 };
 
@@ -155,25 +155,24 @@ fetch('/products.json').then((u) => {
 //print products on pages
 function renderProducts(productList) {
     let HTML = '';
-    let productDiv = document.getElementById('productDiv');
+    let productDiv = document.getElementById('product-section');
         productList.map((product) => {
 
-            //let discountPrice = product.price - ((product.price*product.discount)/100);
-            HTML += `<div class="cardDiv col-xl-3 col-lg-4 col-md-6 col-6 p-3 d-flex justify-content-center align-items-center" id='${product._id.$oid}'>
+            HTML += `<div class="card-div col-xl-3 col-lg-4 col-md-6 col-6 p-3 d-flex justify-content-center align-items-center" id='${product._id.$oid}'>
                  <div class="card p-2">
-                     <img class="card-img-top products-image"
+                     <img class="card-img-top card__img"
                          src="${product.imageUrl}" alt="Card image cap">
-                     <div class="productInfo ml-1">
-                     <div  class="heartBrandname d-flex justify-content-between mt-2">
-                         <h5 class="brandName">${product.brandName}</h5>
-                         <i class="fa fa-heart-o" id='heart'></i>
+                     <div class="product-details mt-2 ml-1">
+                     <div  class="d-flex justify-content-between mt-2">
+                         <h5 class="product-brand">${product.brandName}</h5>
+                         <i class="fa fa-heart-o " id="heart-icon" ></i>
                          </div>
-                         <div class="cardDetails d-flex " style="height:1.3rem">
-                             <div class="gender">${product.gender}</div>
-                             <div class="type ml-2">${product.category}</div>
+                         <div class="d-flex" style="height:1.3rem">
+                             <div class="product-gender">${product.gender}</div>
+                             <div class=" ml-2">${product.category}</div>
                          </div>
-                         <div class="productPrice"><b>Rs.${product.price}</b>
-                             <div class="discount text-success">(${product.discount}%OFF)</div>
+                         <div class="product-price"><b>Rs.${product.price}</b>
+                             <div class="product-discount text-success">(${product.discount}%OFF)</div>
                          </div>
                          <div class="alertSection"></div>
                      </div>
@@ -181,7 +180,7 @@ function renderProducts(productList) {
              </div>`
         });
         productDiv.innerHTML = HTML;
-        let inList = document.getElementsByClassName('listView')[0].classList.contains('activeGridoptions');
+        let inList = document.getElementsByClassName('list-view')[0].classList.contains('active-view-option');
          if(inList){
             listView() ;
          }
@@ -227,27 +226,24 @@ function filterOnDiscount(discountRate) {
 function sortBy() {
     let objList = getObjectList();
     let sortData;
-    let sortOption = document.getElementsByClassName('shortOption');
+    let sortOption = document.getElementsByClassName('sort-option');
     Array.from(sortOption).forEach((option) => {
-        if (option.classList.contains('activeShortOption')) {
+        if (option.classList.contains('active-sort-option')) {
             if (option.id == 'popularity') {
 
-            } else if (option.id == 'lowToHigh') {
+            } else if (option.id == 'low-to-high') {
                 sortData = Array.from(objList).sort((a, b) => {
                     return a.price - b.price;
                 });
                 renderProducts(sortData);
-            } else if (option.id == 'highToLow') {
+            } else if (option.id == 'high-to-low') {
                 sortData = Array.from(objList).sort((a, b) => {
                     return b.price - a.price;
                 });
                 renderProducts(sortData);
-            } else if (option.id == 'whatsNew') {
+            } else if (option.id == 'whats-new') {
                 sortData = Array.from(objList).sort((a, b) => {
-                    console.log('hii')
                     console.log(b._id.$oid - a._id.$oid)
-                    //if()
-                    //return b._id.$oid - a._id.$oid;
                 });
                 //renderProducts(sortData);
             }
