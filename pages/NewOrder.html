@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Order</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <!--Header Starts-->
+    <header></header>
+
+    <!--Main Container-->
+    <main>
+      <div class="container">
+        <!--Main Grid Container-->
+
+        <div class="order-main-container">
+          <!--This Div is to position the container div in the center to avoid the overriding of container-->
+          <!--Row 1 of container -->
+          <div class="row">
+            <div class="col-sm-5" id="navbar">
+              <div class="column1">
+                <!--Row 1 -Column 1-->
+                <div
+                  class="d-sm-flex flex-row justify-content-left align-items-center"
+                >
+                  <div><a href="#">Home ></a></div>
+                  <div><a href="#">My Account ></a></div>
+                  <div><a href="#">My Orders</a></div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-sm-7 d-sm-flex flex-row justify-content-end align-items-center"
+            >
+              <div class="filters-dropdown">
+                <div class="dropdown" id="dropdownMenu">
+                  <button
+                    class="btn btn-secondary dropdown-toggle temp"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Filter Orders
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <a class="dropdown-item" href="#"> Last 30 days</a>
+                    <a class="dropdown-item" href="#">2022 </a>
+                    <a class="dropdown-item" href="#">2021</a>
+                    <a class="dropdown-item" href="#">2020</a>
+                    <a class="dropdown-item" href="#">2019</a>
+                    <a class="dropdown-item" href="#">Older</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2  of container class-->
+          <div class="row">
+            <div class="order-searchbar">
+              <nav class="navbar navbar-light w-100">
+                <form class="form-inline">
+                  <input
+                    class="inputsearch form-control md-sm"
+                    id="inputsearch"
+                    type="search"
+                    placeholder="Search Your Orders"
+                    aria-label="Search"
+                  />
+
+                  <button
+                    class="btn my-2 my-sm-0 button-search-order"
+                    id="button-search-order"
+                    type="submit"
+                  >
+                    Search Orders
+                  </button>
+                </form>
+              </nav>
+            </div>
+            <div class="col-sm-12 order-list-container">
+              <div class="empty-order-list">
+                <!--OrderList When orders are empty then this container display:none-->
+                <div
+                  class="flex-column justify-content-center align-items-center no-order-container"
+                >
+                  <div class="no-order-img">
+                    <img
+                      src="/images/NoOrders3.png"
+                      alt="no-orders-Image"
+                      class="no-order-image"
+                    />
+                  </div>
+
+                  <h3>You have no orders</h3>
+
+                  <div class="start-shopping-btn-container">
+                    <button class="btn button-start-shopping">
+                      Start Shopping
+                    </button>
+                  </div>
+                </div>
+
+                <!--Order list if orders are not empty-->
+
+                <div class="order-list-items" id="order-list-items"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--Main Container Ends-->
+
+    <!--Footer Starts-->
+    <footer></footer>
+    <!--Footer Ends-->
+
+    <script type="text/javascript" src="../js/popper.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script src="/js/Order.js"></script>
+  </body>
+</html>
