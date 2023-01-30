@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>wishlist</title>
+</head>
+
+<body>
+
+    <div class="wishlist__main-container">
+        <!--  navbar -->
+        <div class="header navbar navbar-expand-sm" id="topnav">
+            <div class="logo d-flex justify-content-center align-items-center">
+                <img src="../images/logo1.png" width="80" class="logo-img">
+            </div>
+            <div class="search shadow  px-2">
+                <input type="text" placeholder="Search for products brand & more.." name="category" id="category"
+                    onchange="handleSearch()">
+                <i class="fa fa-search pr-2 pb-1 " id="search-icon"></i>
+            </div>
+            <div class="responsive">
+                <div class="button shadow" id="btn">
+                    <button class="login--button"><b>Login</b></button>
+                </div>
+                <div href="" class="icon" onclick="handleToggle()">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+            <ul class="navbar-nav topnav-menue">
+                <li class="nav-item ">
+                    <a class="nav-link text-light" href="#"><i class="fa fa-user"></i><strong> Profile</strong> </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#"> <i class="fa fa-shopping-cart"></i><strong> Cart</strong>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#"><strong><i class="fa fa-heart-o"></i> Wishlist</strong></a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ... -->
+        <div class="wishlist__container">
+            <div class="wishlist__container-bg">
+                <h1 class="wishlist__container-heading">
+                    My wishlist 13 items</h1>
+                <div class="row d-flex mb-5 ">
+                            <div class="wishlist__card-div col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 mb-3 d-flex justify-content-center align-items-center" id='${product._id.$oid}'>
+                                <div class="card wishlist__card--secondary p-3">
+                                    <img  src="../images/download 9.jpeg" alt="Card image cap">
+                                        <!-- ${product.imageUrl} -->
+                                    <div class="wishlist__prod-details ml-1">
+                                    <div  class="wishlist__brand-cont d-flex justify-content-between mt-2">
+                                        <h5 class="wishlist__brand-name">Puma</h5>
+                                        <!-- ${product.brandName} -->
+                                        <i class="fa fa-heart-o" id='heart-icon'></i>
+                                        </div>
+                                        <div class="wishlist__category d-flex">
+                                            <div class="wishlist__category-gender">Female</div>
+                                            <!-- ${product.gender} -->
+                                            <div class="wishlist__category-prod-type ml-2">Shoes</div>
+                                            <!-- ${product.category} -->
+                                        </div>
+                                        <div class="wishlist__product-price"><b>₹ 3,599</b>
+                                            <!-- Rs.${product.price} -->
+                                            <div class="wishlist__discount text-success">20% OFF</div>
+                                            <!-- (${product.discount}%OFF) -->
+                                        </div>
+                                        <div class="wishlist__offer-alert">offer alert</div>
+                                        <div class="wishlist__btn-cart-del d-flex justify-content-between">
+                                            <button type="button" class="btn btn-sm text-white wislist__btn--add2cart-bg font-weight-bold">Add to
+                                                Cart</button>
+                                                <button type="button" class="btn btn-sm text-white wishlist__btn--del_btn font-weight-bold"
+                                    onclick="delete_card()"><i class="fa-solid fa-trash"></i> Delete</button>
+                                            </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist__card-div col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 mb-3 d-flex justify-content-center align-items-center" id='${product._id.$oid}'>
+                                <div class="card wishlist__card--secondary p-3">
+                                    <img  src="../images/download 9.jpeg" alt="Card image cap">
+                                        <!-- ${product.imageUrl} -->
+                                    <div class="wishlist__prod-details ml-1">
+                                    <div  class="wishlist__brand-cont d-flex justify-content-between mt-2">
+                                        <h5 class="wishlist__brand-name">Puma</h5>
+                                        <!-- ${product.brandName} -->
+                                        <i class="fa fa-heart-o" id='heart-icon'></i>
+                                        </div>
+                                        <div class="wishlist__category d-flex">
+                                            <div class="wishlist__category-gender">Female</div>
+                                            <!-- ${product.gender} -->
+                                            <div class="wishlist__category-prod-type ml-2">Shoes</div>
+                                            <!-- ${product.category} -->
+                                        </div>
+                                        <div class="wishlist__product-price"><b>₹ 3,599</b>
+                                            <!-- Rs.${product.price} -->
+                                            <div class="wishlist__discount text-success">20% OFF</div>
+                                            <!-- (${product.discount}%OFF) -->
+                                        </div>
+                                        <div class="wishlist__offer-alert">offer alert</div>
+                                        <div class="wishlist__btn-cart-del d-flex justify-content-between">
+                                            <button type="button" class="btn btn-sm text-white wislist__btn--add2cart-bg font-weight-bold">Add to
+                                                Cart</button>
+                                                <button type="button" class="btn btn-sm text-white wishlist__btn--del_btn font-weight-bold"
+                                    onclick="delete_card()"><i class="fa-solid fa-trash"></i> Delete</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist__card-div col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 mb-3 d-flex justify-content-center align-items-center" id='${product._id.$oid}'>
+                                <div class="card wishlist__card--secondary p-3">
+                                    <img  src="../images/download 9.jpeg" alt="Card image cap">
+                                        <!-- ${product.imageUrl} -->
+                                    <div class="wishlist__prod-details ml-1">
+                                    <div  class="wishlist__brand-cont d-flex justify-content-between mt-2">
+                                        <h5 class="wishlist__brand-name">Puma</h5>
+                                        <!-- ${product.brandName} -->
+                                        <i class="fa fa-heart-o" id='heart-icon'></i>
+                                        </div>
+                                        <div class="wishlist__category d-flex">
+                                            <div class="wishlist__category-gender">Female</div>
+                                            <!-- ${product.gender} -->
+                                            <div class="wishlist__category-prod-type ml-2">Shoes</div>
+                                            <!-- ${product.category} -->
+                                        </div>
+                                        <div class="wishlist__product-price"><b>₹ 3,599</b>
+                                            <!-- Rs.${product.price} -->
+                                            <div class="wishlist__discount text-success">20% OFF</div>
+                                            <!-- (${product.discount}%OFF) -->
+                                        </div>
+                                        <div class="wishlist__offer-alert">offer alert</div>
+                                        <div class="wishlist__btn-cart-del d-flex justify-content-between">
+                                            <button type="button" class="btn btn-sm text-white wislist__btn--add2cart-bg font-weight-bold">Add to
+                                                Cart</button>
+                                                <button type="button" class="btn btn-sm text-white wishlist__btn--del_btn font-weight-bold"
+                                    onclick="delete_card()"><i class="fa-solid fa-trash"></i> Delete</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist__card-div col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 mb-3 d-flex justify-content-center align-items-center" id='${product._id.$oid}'>
+                                <div class="card wishlist__card--secondary p-3">
+                                    <img  src="../images/download 9.jpeg" alt="Card image cap">
+                                        <!-- ${product.imageUrl} -->
+                                    <div class="wishlist__prod-details ml-1">
+                                    <div  class="wishlist__brand-cont d-flex justify-content-between mt-2">
+                                        <h5 class="wishlist__brand-name">Puma</h5>
+                                        <!-- ${product.brandName} -->
+                                        <i class="fa fa-heart-o" id='heart-icon'></i>
+                                        </div>
+                                        <div class="wishlist__category d-flex">
+                                            <div class="wishlist__category-gender">Female</div>
+                                            <!-- ${product.gender} -->
+                                            <div class="wishlist__category-prod-type ml-2">Shoes</div>
+                                            <!-- ${product.category} -->
+                                        </div>
+                                        <div class="wishlist__product-price"><b>₹ 3,599</b>
+                                            <!-- Rs.${product.price} -->
+                                            <div class="wishlist__discount text-success">20% OFF</div>
+                                            <!-- (${product.discount}%OFF) -->
+                                        </div>
+                                        <div class="wishlist__offer-alert">offer alert</div>
+                                        <div class="wishlist__btn-cart-del d-flex justify-content-between">
+                                            <button type="button" class="btn btn-sm text-white wislist__btn--add2cart-bg font-weight-bold">Add to
+                                                Cart</button>
+                                                <button type="button" class="btn btn-sm text-white wishlist__btn--del_btn font-weight-bold"
+                                    onclick="delete_card()"><i class="fa-solid fa-trash"></i> Delete</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist__card-div col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 mb-3 d-flex justify-content-center align-items-center" id='${product._id.$oid}'>
+                                <div class="card wishlist__card--secondary p-3">
+                                    <img  src="../images/download 9.jpeg" alt="Card image cap">
+                                        <!-- ${product.imageUrl} -->
+                                    <div class="wishlist__prod-details ml-1">
+                                    <div  class="wishlist__brand-cont d-flex justify-content-between mt-2">
+                                        <h5 class="wishlist__brand-name">Puma</h5>
+                                        <!-- ${product.brandName} -->
+                                        <i class="fa fa-heart-o" id='heart-icon'></i>
+                                        </div>
+                                        <div class="wishlist__category d-flex">
+                                            <div class="wishlist__category-gender">Female</div>
+                                            <!-- ${product.gender} -->
+                                            <div class="wishlist__category-prod-type ml-2">Shoes</div>
+                                            <!-- ${product.category} -->
+                                        </div>
+                                        <div class="wishlist__product-price"><b>₹ 3,599</b>
+                                            <!-- Rs.${product.price} -->
+                                            <div class="wishlist__discount text-success">20% OFF</div>
+                                            <!-- (${product.discount}%OFF) -->
+                                        </div>
+                                        <div class="wishlist__offer-alert">offer alert</div>
+                                        <div class="wishlist__btn-cart-del d-flex justify-content-between">
+                                            <button type="button" class="btn btn-sm text-white wislist__btn--add2cart-bg font-weight-bold">Add to
+                                                Cart</button>
+                                                <button type="button" class="btn btn-sm text-white wishlist__btn--del_btn font-weight-bold"
+                                    onclick="delete_card()"><i class="fa-solid fa-trash"></i> Delete</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist__card-div col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 mb-3 d-flex justify-content-center align-items-center" id='${product._id.$oid}'>
+                                <div class="card wishlist__card--secondary p-3">
+                                    <img  src="../images/download 9.jpeg" alt="Card image cap">
+                                        <!-- ${product.imageUrl} -->
+                                    <div class="wishlist__prod-details ml-1">
+                                    <div  class="wishlist__brand-cont d-flex justify-content-between mt-2">
+                                        <h5 class="wishlist__brand-name">Puma</h5>
+                                        <!-- ${product.brandName} -->
+                                        <i class="fa fa-heart-o" id='heart-icon'></i>
+                                        </div>
+                                        <div class="wishlist__category d-flex">
+                                            <div class="wishlist__category-gender">Female</div>
+                                            <!-- ${product.gender} -->
+                                            <div class="wishlist__category-prod-type ml-2">Shoes</div>
+                                            <!-- ${product.category} -->
+                                        </div>
+                                        <div class="wishlist__product-price"><b>₹ 3,599</b>
+                                            <!-- Rs.${product.price} -->
+                                            <div class="wishlist__discount text-success">20% OFF</div>
+                                            <!-- (${product.discount}%OFF) -->
+                                        </div>
+                                        <div class="wishlist__offer-alert">offer alert</div>
+                                        <div class="wishlist__btn-cart-del d-flex justify-content-between">
+                                        <button type="button" class="btn btn-sm text-white wislist__btn--add2cart-bg font-weight-bold">Add to
+                                            Cart</button>
+                                            <button type="button" class="btn btn-sm text-white wishlist__btn--del_btn font-weight-bold"
+                                onclick="delete_card()"><i class="fa-solid fa-trash"></i> Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wishlist__card-div col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 mb-3 d-flex justify-content-center align-items-center" id='${product._id.$oid}'>
+                                <div class="card wishlist__card--secondary p-3">
+                                    <img  src="../images/download 9.jpeg" alt="Card image cap">
+                                        <!-- ${product.imageUrl} -->
+                                    <div class="wishlist__prod-details ml-1">
+                                    <div  class="wishlist__brand-cont d-flex justify-content-between mt-2">
+                                        <h5 class="wishlist__brand-name">Puma</h5>
+                                        <!-- ${product.brandName} -->
+                                        <i class="fa fa-heart-o" id='heart-icon'></i>
+                                        </div>
+                                        <div class="wishlist__category d-flex">
+                                            <div class="wishlist__category-gender">Female</div>
+                                            <!-- ${product.gender} -->
+                                            <div class="wishlist__category-prod-type ml-2">Shoes</div>
+
+                                            <!-- ${product.category} -->
+                                        </div>
+                                        <div class="wishlist__product-price"><b>₹ 3,599</b>
+                                            <!-- Rs.${product.price} -->
+
+                                            <div class="wishlist__discount text-success">20% OFF</div>
+                                            <!-- (${product.discount}%OFF) -->
+
+                                        </div>
+                                       
+                                        <div class="wishlist__offer-alert">offer alert</div>
+                                        <div class="wishlist__btn-cart-del d-flex justify-content-between">
+                                            <button type="button" class="btn btn-sm text-white wislist__btn--add2cart-bg font-weight-bold">Add to
+                                                Cart</button>
+                                                <button type="button" class="btn btn-sm text-white wishlist__btn--del_btn font-weight-bold"
+                                    onclick="delete_card()"><i class="fa-solid fa-trash"></i> Delete</button>
+                                            </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- carousol sliding -->
+        <div class="wishlist__slider-wrap wishlist_carousol">
+            <div>
+                <h1 class="font_family">You May Also Like</h1>
+            </div>
+            <div class="wishlist__main-slideshow-container">
+                <div class="wishlist__slideshow-container d-flex py-5">
+                    <div id="wishlist__slideshow-container" class="d-flex card_width">
+                        <div class="wishlist__card-div wishlist_card-div--width col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 p-1 m-2 wishlist__mySlides" id='${product._id.$oid}'>
+                            <div class="card wishlist__card--secondary p-2">
+                                <img  src="../images/download 9.jpeg" alt="Card image cap">
+                                    <!-- ${product.imageUrl} -->
+                                <div class="wishlist__prod-details ml-1">
+                                <div  class="wishlist__brand-cont d-flex justify-content-between mt-2">
+                                    <h5 class="wishlist__brand-name">Puma</h5>
+                                    <!-- ${product.brandName} -->
+                                    <i class="fa fa-heart-o" id='heart-icon'></i>
+                                    </div>
+                                    <div class="wishlist__category d-flex">
+                                        <div class="wishlist__category-gender">Female</div>
+                                        <!-- ${product.gender} -->
+                                        <div class="wishlist__category-prod-type ml-2">Shoes</div>
+                                        <!-- ${product.category} -->
+                                    </div>
+                                    <div class="wishlist__product-price"><b>₹ 3,599</b>
+                                        <!-- Rs.${product.price} -->
+                                        <div class="wishlist__discount text-success">20% OFF</div>
+                                        <!-- (${product.discount}%OFF) -->
+                                    </div>
+                                    <div class="wishlist__offer-alert">offer alert</div>
+                                    <button type="button" class="btn btn-sm text-white wislist__btn--add2cart-bg font-weight-bold">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wishlist__card-div wishlist_card-div--width col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 p-1 m-2 wishlist__mySlides" id='${product._id.$oid}'>
+                            <div class="card wishlist__card--secondary p-2">
+                                <img  src="../images/download 9.jpeg" alt="Card image cap">
+                                    <!-- ${product.imageUrl} -->
+                                <div class="wishlist__prod-details ml-1">
+                                <div  class="wishlist__brand-cont d-flex justify-content-between mt-2">
+                                    <h5 class="wishlist__brand-name">Puma</h5>
+                                    <!-- ${product.brandName} -->
+                                    <i class="fa fa-heart-o" id='heart-icon'></i>
+                                    </div>
+                                    <div class="wishlist__category d-flex">
+                                        <div class="wishlist__category-gender">Female</div>
+                                        <!-- ${product.gender} -->
+                                        <div class="wishlist__category-prod-type ml-2">Shoes</div>
+                                        <!-- ${product.category} -->
+                                    </div>
+                                    <div class="wishlist__product-price"><b>₹ 3,599</b>
+                                        <!-- Rs.${product.price} -->
+                                        <div class="wishlist__discount text-success">20% OFF</div>
+                                        <!-- (${product.discount}%OFF) -->
+                                    </div>
+                                    <div class="wishlist__offer-alert">offer alert</div>
+                                    <button type="button" class="btn btn-sm text-white wislist__btn--add2cart-bg font-weight-bold">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wishlist__card-div wishlist_card-div--width col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 p-1 m-2 wishlist__mySlides" id='${product._id.$oid}'>
+                            <div class="card wishlist__card--secondary p-2">
+                                <img  src="../images/download 9.jpeg" alt="Card image cap">
+                                    <!-- ${product.imageUrl} -->
+                                <div class="wishlist__prod-details ml-1">
+                                <div  class="wishlist__brand-cont d-flex justify-content-between mt-2">
+                                    <h5 class="wishlist__brand-name">Puma</h5>
+                                    <!-- ${product.brandName} -->
+                                    <i class="fa fa-heart-o" id='heart-icon'></i>
+                                    </div>
+                                    <div class="wishlist__category d-flex">
+                                        <div class="wishlist__category-gender">Female</div>
+                                        <!-- ${product.gender} -->
+                                        <div class="wishlist__category-prod-type ml-2">Shoes</div>
+                                        <!-- ${product.category} -->
+                                    </div>
+                                    <div class="wishlist__product-price"><b>₹ 3,599</b>
+                                        <!-- Rs.${product.price} -->
+                                        <div class="wishlist__discount text-success">20% OFF</div>
+                                        <!-- (${product.discount}%OFF) -->
+                                    </div>
+                                    <div class="wishlist__offer-alert">offer alert</div>
+                                    <button type="button" class="btn btn-sm text-white wislist__btn--add2cart-bg font-weight-bold">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wishlist__card-div wishlist_card-div--width col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 p-1 m-2 wishlist__mySlides" id='${product._id.$oid}'>
+                            <div class="card wishlist__card--secondary p-2">
+                                <img  src="../images/download 9.jpeg" alt="Card image cap">
+                                    <!-- ${product.imageUrl} -->
+                                <div class="wishlist__prod-details ml-1">
+                                <div  class="wishlist__brand-cont d-flex justify-content-between mt-2">
+                                    <h5 class="wishlist__brand-name">Puma</h5>
+                                    <!-- ${product.brandName} -->
+                                    <i class="fa fa-heart-o" id='heart-icon'></i>
+                                    </div>
+                                    <div class="wishlist__category d-flex">
+                                        <div class="wishlist__category-gender">Female</div>
+                                        <!-- ${product.gender} -->
+                                        <div class="wishlist__category-prod-type ml-2">Shoes</div>
+                                        <!-- ${product.category} -->
+                                    </div>
+                                    <div class="wishlist__product-price"><b>₹ 3,599</b>
+                                        <!-- Rs.${product.price} -->
+                                        <div class="wishlist__discount text-success">20% OFF</div>
+                                        <!-- (${product.discount}%OFF) -->
+                                    </div>
+                                    <div class="wishlist__offer-alert">offer alert</div>
+                                    <button type="button" class="btn btn-sm text-white wislist__btn--add2cart-bg font-weight-bold">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wishlist__card-div wishlist_card-div--width col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 p-1 m-2 wishlist__mySlides" id='${product._id.$oid}'>
+                            <div class="card wishlist__card--secondary p-2">
+                                <img  src="../images/download (1).jpeg" alt="Card image cap">
+                                    <!-- ${product.imageUrl} -->
+                                <div class="wishlist__prod-details ml-1">
+                                <div  class="wishlist__brand-cont d-flex justify-content-between mt-2">
+                                    <h5 class="wishlist__brand-name">Puma</h5>
+                                    <!-- ${product.brandName} -->
+                                    <i class="fa fa-heart-o" id='heart-icon'></i>
+                                    </div>
+                                    <div class="wishlist__category d-flex">
+                                        <div class="wishlist__category-gender">Female</div>
+                                        <!-- ${product.gender} -->
+                                        <div class="wishlist__category-prod-type ml-2">Shoes</div>
+                                        <!-- ${product.category} -->
+                                    </div>
+                                    <div class="wishlist__product-price"><b>₹ 3,599</b>
+                                        <!-- Rs.${product.price} -->
+                                        <div class="wishlist__discount text-success">20% OFF</div>
+                                        <!-- (${product.discount}%OFF) -->
+                                    </div>
+                                    <div class="wishlist__offer-alert">offer alert</div>
+                                    <button type="button" class="btn btn-sm text-white wislist__btn--add2cart-bg font-weight-bold">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wishlist__card-div wishlist_card-div--width col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 p-1 m-2 wishlist__mySlides" id='${product._id.$oid}'>
+                            <div class="card wishlist__card--secondary p-2">
+                                <img  src="../images/download 9.jpeg" alt="Card image cap">
+                                    <!-- ${product.imageUrl} -->
+                                <div class="wishlist__prod-details ml-1">
+                                <div  class="wishlist__brand-cont d-flex justify-content-between mt-2">
+                                    <h5 class="wishlist__brand-name">Puma</h5>
+                                    <!-- ${product.brandName} -->
+                                    <i class="fa fa-heart-o" id='heart-icon'></i>
+                                    </div>
+                                    <div class="wishlist__category d-flex">
+                                        <div class="wishlist__category-gender">Female</div>
+                                        <!-- ${product.gender} -->
+                                        <div class="wishlist__category-prod-type ml-2">Shoes</div>
+                                        <!-- ${product.category} -->
+                                    </div>
+                                    <div class="wishlist__product-price"><b>₹ 3,599</b>
+                                        <!-- Rs.${product.price} -->
+                                        <div class="wishlist__discount text-success">20% OFF</div>
+                                        <!-- (${product.discount}%OFF) -->
+                                    </div>
+                                    <div class="wishlist__offer-alert">offer alert</div>
+                                    <button type="button" class="btn btn-sm text-white wislist__btn--add2cart-bg font-weight-bold">Add to
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <a class="wishlist_carousol__prev" onclick="prev()">&#10094;</a>
+                    <a class="wishlist_carousol__next" onclick="next()">&#10095;</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- footer -->
+        <footer class="container-fluid d-flex justify-content-center bg-blue mt-5">
+            <div class="w-75 my-5 justify-content-around footer-container">
+                <div class="justify-content-start text-white">
+                    <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('aboutData')">
+                        About
+                    </div>
+                    <div id="aboutData" class="display-none-for-responsive mb-3">
+                        <div> <a href="#" class="text-white fs-7"> Contact Us </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> About Us </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Careers </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Better Buy's Stories </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Corporate Information </a> </div>
+                    </div>
+                </div>
+                <div class="justify-content-start text-white">
+                    <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('categoriesData')">
+                        Top Categories
+                    </div>
+                    <div id="categoriesData" class="display-none-for-responsive mb-3">
+                        <div> <a href="#" class="text-white fs-7"> Men </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Women </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Kids </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Electronics </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Sports, Books & More</a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Home & Furniture </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Grocery </a> </div>
+                    </div>
+                </div>
+                <div class="justify-content-start text-white">
+                    <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('helpData')">
+                        Help
+                    </div>
+                    <div id="helpData" class="display-none-for-responsive mb-3">
+                        <div> <a href="#" class="text-white fs-7"> Payment </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Shipping </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> FAQ </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Cancellation & Return </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Customer Care</a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Track Your Order </a> </div>
+                    </div>
+                </div>
+                <div class="justify-content-start text-white">
+                    <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('connectWithUsData')">
+                        Connect With Us
+                    </div>
+                    <div id="connectWithUsData" class="display-none-for-responsive mb-3">
+                        <div> <a href="#" class="text-white fs-7"> Facebook </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Instagram </a> </div>
+                        <div> <a href="#" class="text-white fs-7"> Twitter </a> </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- ....... -->
+     <!-- 
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 p-3 " id="card_del">
+                    <div class="card p-3 card_hover">
+                        <img class="card-img-top img-fluid img_height" src="../images/download 9.jpeg"
+                            alt="Card image cap">
+                        <div class="card-body ">
+                            <div class="fs-6 font-weight-bold">Puma</div>
+                            <div class="fs-7 text-muted">Men Sneakers</div>
+                            <div class=" fs-6 mb-2">
+                                <span class="font-weight-bold font_size"> ₹ 3,599 </span>
+                                <span class="mx-1 font_deco">₹ 4,499</span>
+                                <span class="off_clr">20% OFF</span>
+                            </div>
+                            <button type="button" class="btn btn-sm text-white add2cart font-weight-bold">Add to
+                                Cart</button>
+                            <button type="button" class="btn btn-sm text-white wishlist__btn--del_btn font-weight-bold"
+                                onclick="delete_card()"><i class="fa-solid fa-trash"></i> Delete</button>
+                        </div>
+                    </div>
+                </div> -->
+                    <!-- new card -->
+                    <!-- <div class="cardDiv col-xl-3 col-lg-4 col-md-6 col-6 col-sm-6 p-3 d-flex justify-content-center align-items-center"
+                        id='${product._id.$oid}'>
+                        <div class="card p-2">
+                            <img class="card-img-top products-image" src="../images/download 9.jpeg"
+                                alt="Card image cap">
+                             ${product.imageUrl} 
+                            <div class="productInfo ml-1">
+                                <div class="heartBrandname d-flex justify-content-between mt-2">
+                                    <h5 class="brandName">Puma</h5>
+                                     ${product.brandName} 
+                                    <i class="fa fa-heart-o" id='heart'></i>
+                                </div>
+                                <div class="cardDetails d-flex " style="height:1.3rem">
+                                    <div class="gender">Female</div>
+                                     ${product.gender}
+                                    <div class="type ml-2">Shoes</div>
+                                    ${product.category}
+                                </div>
+                                <div class="productPrice"><b>₹ 3,599</b>
+                                Rs.${product.price}
+                                    <div class="discount text-success">20% OFF</div>
+                                    (${product.discount}%OFF) 
+                                </div>
+                                <div class="alertSection">offer alert</div>
+                                <button type="button" class="btn btn-sm text-white add2cart font-weight-bold">Add to
+                                    Cart</button>
+                                <button type="button" class="btn btn-sm text-white wishlist__btn--del_btn font-weight-bold"
+                                    onclick="delete_card()"><i class="fa-solid fa-trash"></i> Delete</button>
+
+                            </div>
+                        </div>
+                    </div> -->
+ <!-- <div class="col-xl-2 col-lg-3 col-md-4 m-2 col-sm-6 col-6 card p-0 m-2 wishlist__mySlides">
+                            <img class="card-img-top img-fluid  img_height" src="../images/download (2).jpeg"
+                                alt="Card image cap">
+                            <div class="card-body ">
+                                <div class="fs-6 font-weight-bold">Puma</div>
+                                <div class="fs-7 text-muted">Men Sneakers</div>
+                                <div class=" fs-6 mb-2">
+                                    <span class="font-weight-bold font_size"> ₹ 3,599 </span>
+                                    <span class="mx-1 font_deco">₹ 4,499</span>
+                                    <span class="off_clr">20% OFF</span>
+                                </div>
+                                <button type="button" class="btn btn-sm text-white add2cart font-weight-bold">Add to
+                                    Cart</button>
+                            </div>
+                        </div> -->
+                      
+    <!-- ........... -->
+    <script type="text/javascript" src="../js/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="../js/popper.min.js">
+    </script>
+    <script type="text/javascript" src="../js/bootstrap.min.js">
+    </script>
+
+    <script src="wishlist.js"></script>
+</body>
+
+</html>
