@@ -1,3 +1,36 @@
+// -----------------------------header tags--------------------------
+let isSignUp = getSessionStorageDataByKey("isSignUp", true)
+let isOutOfCart = getSessionStorageDataByKey("isOutOfCart", false);
+let isAddressSelected = getSessionStorageDataByKey("isAddressSelected", false)
+let isPaymentDone = getSessionStorageDataByKey("isPaymentDone", false)
+// console.log("add = ", typeof isAddressSelected);
+function setHeaderTagIcons(isOutOfCart, isAddressSelected, isPaymentDone) {
+    const cartTag = document.getElementById("header-cartTag")
+    const addressTag = document.getElementById("header-addressTag")
+    const paymentTag = document.getElementById("header-paymentTag")
+    cartTag.innerHTML = `<img class="header-cart__image" src="../images/${!isOutOfCart ? "edit-icon.svg" : "tick-icon.svg"}" alt="1" srcset="">
+                            CART`
+    addressTag.innerHTML = ` <img class="header-cart__image" src="../images/${(!isOutOfCart && !isAddressSelected) ? "2.png" : (isOutOfCart && !isAddressSelected) ? "edit-icon.svg" : isOutOfCart ? "tick-icon.svg" : "2.png"}" alt="2" srcset="">
+                            ADDRESS`
+    paymentTag.innerHTML = ` <img class="header-cart__image" src="../images/${(isOutOfCart && !isAddressSelected && !isPaymentDone) ? "3.png" : (isOutOfCart && isAddressSelected && !isPaymentDone) ? "edit-icon.svg" : (isOutOfCart && isAddressSelected) ? "tick-icon.svg" : "3.png"}" alt="3" srcset="">
+                            PAYMENT`
+}
+setHeaderTagIcons(isOutOfCart, isAddressSelected, isPaymentDone)
+// get data from the sessionStorage by key. if not exist then return default value which given by user otherwise undefined
+function getSessionStorageDataByKey(key, defaultValue = undefined) {
+    let data = sessionStorage.getItem(key);
+    if (data) {
+        try {
+            return JSON.parse(data)
+        } catch (error) {
+            return data
+        }
+    }
+    else {
+        return defaultValue;
+    }
+}
+
 let cartProductArr = [
     {
         "_id": {
@@ -153,13 +186,11 @@ console.log("ProductInCart", productInCart)
 
 function render(){
 productInCart.map((element, index) => {
-    // console.log("element", element.imageUrl , "index", index)
-    // productInCart.push(element)
     productsDetailsGroup.innerHTML+=
     `
                         <div class="card-product-details d-flex border p-3 mb-3 bg-white rounded">
                             <div class="card-product-details__figure mr-3" >
-                                <img class="card-product-details__img"  width="120px" src="${element.imageUrl}" alt="">
+                                <img class="card-product-details__img"  width="120px"  src="${element.imageUrl}" alt="">
                             </div>
                             <div class="card-product-details__body">
                                 <div class="card-product-details__name fs-6 font-weight-bold">${element.brandName}</div>

@@ -7,7 +7,6 @@
 }
 body{
     font-family: Arial !important;
-    background-color:var(--background-color) !important;
 }
 .fs-3 {
     font-size: 1.75rem !important;
@@ -25,6 +24,31 @@ body{
     font-size: 0.8rem !important;
 }
 
+/* Header */
+.header-cart__logo {
+    position: absolute;
+    left: 3vw;
+}
+.header-cart__cart-image {
+    height: max(90px, 8vw);
+    max-height: 130px;
+}
+.header-cart__tag {
+    font-size: 0.8rem;
+    color: var(--nav-color);
+}
+.header-cart {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1) !important;
+}
+.header-cart__image {
+    height: max(30px, 3vw);
+    max-height: 40px;
+    margin-right: 0.25rem;
+    padding: 0.25rem 0;
+}
+.tag--disabled {
+    pointer-events: none;
+}
 
 /* Product Details */
 .card-product-details{
@@ -35,6 +59,9 @@ body{
 }
 .card-product-details__discount-per{
     color: var(--hightlight-color);
+}
+.product-delete-btn:focus, .product-wishlist-btn:focus{
+    box-shadow: 0 0 0 0 !important; 
 }
 .product-wishlist-btn{
     color:var(--button-color);
@@ -67,6 +94,9 @@ body{
 .dropdown-btn{
     border-color:var(--nav-color);
 }
+.dropdown-btn:focus{
+    box-shadow: 0 0 0 0;
+}
 .dropdown-menu {
     min-width: 73px !important;
     border-color:var(--nav-color);
@@ -87,6 +117,9 @@ body{
     background-color: var(--button-color);
     color: var(--background-color);
 }
+.order-details__shipping-btn:focus{
+    box-shadow: 0 0 0 0;
+}
 
 
 /* Coupon */
@@ -103,6 +136,9 @@ body{
 .coupon-apply-btn{
     color:var(--button-color);
     border-color: var(--button-color);
+}
+.coupon-apply-btn:focus{
+    box-shadow: 0 0 0 0;
 }
 .coupon-apply-btn:hover{
     background-color: var(--button-color) !important;
@@ -124,6 +160,9 @@ body{
 .similar-product__add2cart-btn {
     background-color: var(--button-color);
     color:var(--background-color);
+}
+.similar-product__add2cart-btn:focus{
+    box-shadow: 0 0 0 0;
 }
 .similar-product__card:hover {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.3) !important;
@@ -151,7 +190,6 @@ body{
 }
 
 
-
 /* Media Queries */
 @media only screen and (max-width: 1199px) {
     .similar-product__card{
@@ -170,8 +208,13 @@ body{
     }
 }
 
-
 @media only screen and (max-width:776px ){
+    .header-cart__tags {
+        width: 100% !important;
+    }
+    .header-cart__logo {
+        display: none !important;
+    }
     .footer-cart__logo{
         flex-direction: column;
         justify-content: center;
@@ -194,12 +237,12 @@ body{
     .similar-product-div__wrapper {
         margin: 0 !important;
     }
-    
 }
 
 @media only screen and (max-width:500px ){
     .card-product-details{
         flex-direction: column;
+      
     }
     .card-product-details__img{
         display: flex !important;
