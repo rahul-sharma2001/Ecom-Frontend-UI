@@ -10,7 +10,7 @@ function closeWindow(id, childNodeId = undefined) {
 
     const ele = document.getElementById(id);
 
-    let toggle = ele.classList.toggle("display-none")
+    let toggle = ele.classList.toggle("d-none")
 
     const body = document.querySelector('body')
     // body.scrollTop = body.scrollHeight
@@ -263,7 +263,7 @@ loadAllAddress()
 function loadAddress(addressObj) {
     document.getElementById('addresses').innerHTML += `
                 <div class="col-lg-6 col-12">
-                    <div class="card d-flex flex-row card-body my-2 box-shadow">
+                    <div class="card d-flex flex-row card-body my-2">
                         <div class="custom-control custom-radio mr-1">
                             <!-- name same for all radio buttons -->
                             <input type="radio" id="${addressObj.id}" name="addressSelect" onclick="addressSelected(id)"
@@ -274,28 +274,28 @@ function loadAddress(addressObj) {
                                         <div class="fs-7 font-weight-bold my-1 text-drak-gray">${addressObj.name}</div>
                                         
                                         <div
-                                            class="fs-10 m-1 tag-outline-green border-radius-100 text-success px-2 mt-2">
+                                            class="address-tag m-1 px-2 mt-2">
                                             ${addressObj.typeOfAddress}
                                         </div>
         
                                         ${addressObj.defaultAddress
             ?
-            '<div class="fs-10 m-1 tag-outline-green border-radius-100 text-success px-2 mt-2">Default</div>'
+            '<div class="address-tag m-1 px-2 mt-2">Default</div>'
             :
             ""
         }
                                     </div>
                                     <div class="mt-2">
-                                        <div class="fs-8 text-gray">
+                                        <div class="fs-8 text-secondary">
                                             ${addressObj.address}
                                         </div>
-                                        <div class="fs-8 text-gray">${addressObj.city + ", " + addressObj.state} - <span>${addressObj.pincode}</span>
+                                        <div class="fs-8 text-secondary">${addressObj.city + ", " + addressObj.state} - <span>${addressObj.pincode}</span>
                                         </div>
-                                        <div class="fs-8 text-gray mt-2">
+                                        <div class="fs-8 text-secondary mt-2">
                                             <span>Mobile:</span>
                                             <span class="font-weight-bold fs-7 text-drak-gray">${addressObj.phoneNo}</span>
                                         </div>
-                                        <div class="mt-3 fs-7 text-gray">
+                                        <div class="mt-3 fs-7 text-secondary">
                                             <span>•</span>
                                             Cash on Delivery available
                                         </div>
@@ -316,7 +316,7 @@ function loadAddress(addressObj) {
                     </div>
                 </div>
             `
-            
+
 }
 
 
@@ -328,8 +328,8 @@ function addressSelected(id) {
 
     const addressObjList = getLocalStorageDataByKey("deliveryAddressList", []);
 
-    for(let i = 0 ; i < addressObjList.length ; i++) {
-        if(addressObjList[i].id == id) {
+    for (let i = 0; i < addressObjList.length; i++) {
+        if (addressObjList[i].id == id) {
             console.log("selected address = ", addressObjList[i]);
             localStorage.setItem("selectedAddress", JSON.stringify(addressObjList[i]))
             break;

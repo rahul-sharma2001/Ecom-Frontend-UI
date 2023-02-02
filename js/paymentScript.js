@@ -15,12 +15,12 @@ function showPaymentMethods(textId, id) {
     console.log(" prev = ", previousClickedPaymentMethodId);
     console.log(" prevText = ", previousClickedPaymentMethodText);
 
-    document.getElementById(textId).classList.add("paymentSelected")
-    document.getElementById(id).classList.remove("display-none");
+    document.getElementById(textId).classList.add("payment-selected")
+    document.getElementById(id).classList.remove("d-none");
 
     if (previousClickedPaymentMethodId != id) {
-        document.getElementById(previousClickedPaymentMethodId).classList.add("display-none")
-        document.getElementById(previousClickedPaymentMethodText).classList.remove("paymentSelected");
+        document.getElementById(previousClickedPaymentMethodId).classList.add("d-none")
+        document.getElementById(previousClickedPaymentMethodText).classList.remove("payment-selected");
     }
 
     sessionStorage.setItem("previousClickedPaymentMethodText", textId);
@@ -45,20 +45,20 @@ function setSelectedAddress() {
 
     const { name, pincode, address, locality } = selectedAddress;
     document.getElementById("deliveryAddress").innerHTML = `
-            <div class="d-flex media-flex-column justify-content-between border rounded p-3 bg-white box-shadow">
-                <div class="fs-8 text-gray">
+            <div class="d-flex justify-content-between border rounded p-3 bg-white box-shadow">
+                <div class="fs-8 text-secondary">
                     <div class="">Deliver to: ${name}, ${pincode}</div>
                     <div class=""> ${address + ", " + locality} </div>
                 </div>
 
-                <div class="fs-8 mt-1 media-mt-3">
+                <div class="fs-8 mt-1">
                     <button type="button" onclick="changeAddress()"
-                        class="btn btn-outline-primary-color fs-10 font-weight-bold text-drak-gray">CHANGE
-                        ADDRESS</button>
+                        class="btn btn-outline-pink bg-pink fs-10 font-weight-bold text-drak-gray">CHANGE ADDRESS</button>
                 </div>
             </div>
     `
 }
+setSelectedAddress()    
 
 
 // $(document).ready( function () {

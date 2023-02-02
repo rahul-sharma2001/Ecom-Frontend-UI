@@ -14,11 +14,11 @@ function setHeaderTagIcons(isOutOfCart, isAddressSelected, isPaymentDone) {
     const addressTag = document.getElementById("header-addressTag")
     const paymentTag = document.getElementById("header-paymentTag")
 
-    cartTag.innerHTML = `<img class="h-3vw mr-1 py-1" src="../images/${!isOutOfCart ? "edit-icon.svg" : "tick-icon.svg"}" alt="1" srcset="">
+    cartTag.innerHTML = `<img class="header-payment__image" src="../images/${!isOutOfCart ? "edit-icon.svg" : "tick-icon.svg"}" alt="1" srcset="">
                             CART`
-    addressTag.innerHTML = ` <img class="h-3vw mr-1 py-1" src="../images/${(!isOutOfCart && !isAddressSelected) ? "2.png" : (isOutOfCart && !isAddressSelected) ? "edit-icon.svg" : isOutOfCart ? "tick-icon.svg" : "2.png"}" alt="2" srcset="">
+    addressTag.innerHTML = ` <img class="header-payment__image" src="../images/${(!isOutOfCart && !isAddressSelected) ? "2.png" : (isOutOfCart && !isAddressSelected) ? "edit-icon.svg" : isOutOfCart ? "tick-icon.svg" : "2.png"}" alt="2" srcset="">
                             ADDRESS`
-    paymentTag.innerHTML = ` <img class="h-3vw mr-1 py-1" src="../images/${(isOutOfCart && !isAddressSelected && !isPaymentDone) ? "3.png" : (isOutOfCart && isAddressSelected && !isPaymentDone) ? "edit-icon.svg" : (isOutOfCart && isAddressSelected) ? "tick-icon.svg" : "3.png"}" alt="3" srcset="">
+    paymentTag.innerHTML = ` <img class="header-payment__image" src="../images/${(isOutOfCart && !isAddressSelected && !isPaymentDone) ? "3.png" : (isOutOfCart && isAddressSelected && !isPaymentDone) ? "edit-icon.svg" : (isOutOfCart && isAddressSelected) ? "tick-icon.svg" : "3.png"}" alt="3" srcset="">
                             PAYMENT`
 }
 
@@ -42,6 +42,6 @@ function getSessionStorageDataByKey(key, defaultValue = undefined) {
 
 
 // ------------------ for footer ---------------
-function displayData(id) {
-    document.getElementById(id).classList.toggle("display-none-for-responsive")
-}
+// function displayData(id) {
+//     document.getElementById(id).classList.toggle("footer-items-container")
+// }
