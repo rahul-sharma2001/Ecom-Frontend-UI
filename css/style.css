@@ -184,7 +184,7 @@ input:focus {
 
 /* -----------------------------payment footer---------------- */
 
-.footer-payment-image {
+.footer-payment img {
     height: 30px;
     width: 40px;
 }
