@@ -13,20 +13,20 @@
 
 <body>
   <!-- Top Header  -->
-  <div class="header navbar navbar-expand-sm" id="topnav">
-    <div class="logo d-flex justify-content-center align-items-center mr-2">
+  <div class="main-header navbar navbar-expand-sm" id="topnav">
+    <div class="main-logo d-flex justify-content-center align-items-center mr-2">
       <img src="./images/logo1.png" width="110" class="logo-img">
     </div>
-    <div class="search shadow px-2">
+    <div class="search-box shadow px-2">
       <input type="text" placeholder="Search for products brand & more.." name="category" id="category"
         onchange="handleSearch()">
       <i class="fa fa-search pr-2 pb-1 " id="search-icon"></i>
     </div>
     <div class="responsive">
       <div class="button shadow" id="btn">
-        <button class="login--button"><b>Login</b></button>
+        <button class="login-button"><b>Login</b></button>
       </div>
-      <div href="" class="icon" onclick="handleToggle()">
+      <div href="" class="hamburger-icon" onclick="handleToggle()">
         <i class="fa fa-bars"></i>
       </div>
     </div>
@@ -45,17 +45,17 @@
 
   <!--Products Menu Bar -->
   <!-- 128 * 128 resolution of image -->
-  <div class="navbar navbar-expand-lg d-flex justify-content-center align-items-center py-4 w-100" id="menubar">
-    <div class="container" id="navContainer">
-      <div class="d-flex flex-column align-items-center " id="circle">
+  <div class="navbar navbar-expand-lg menu-box d-flex justify-content-center align-items-center py-4 w-100">
+    <div class="container" id="menu_box--container">
+      <div class="d-flex flex-column align-items-center menu_box--circle">
         <img src="./images/grocery.png" width="50rem">
         <span class="menu-name">Grocery</span>
       </div>
-      <div class="d-flex flex-column align-items-center" id="circle">
+      <div class="d-flex flex-column align-items-center menu_box--circle">
         <img src="./images/mobile.png" width="50rem">
         <span class="menu-name">Mobile</span>
       </div>
-      <div class="d-flex flex-column align-items-center dropdown " id="circle">
+      <div class="d-flex flex-column align-items-center dropdown menu_box--circle">
         <img src="./images/fashion.png" width="50rem">
         <span class="menu-name">Fashion <i class="fa fa-caret-down"></i></span>
 
@@ -65,7 +65,7 @@
           <a href="#">Kids Wear</a>
         </div>
       </div>
-      <div class="d-flex flex-column align-items-center dropdown" id="circle">
+      <div class="d-flex flex-column align-items-center dropdown menu_box--circle">
         <img src="./images/electronics.png" width="50rem">
         <span class="menu-name">Electronics <i class="fa fa-caret-down"></i></span>
         <div class="dropdown-content">
@@ -75,7 +75,7 @@
         </div>
       </div>
 
-      <div class="d-flex flex-column align-items-center dropdown " id="circle">
+      <div class="d-flex flex-column align-items-center dropdown menu_box--circle">
         <img src="./images/home.jpg" width="50rem">
         <span class="menu-name">Home <i class="fa fa-caret-down"></i></span>
         <div class="dropdown-content">
@@ -84,16 +84,16 @@
           <a href="#">Powerbank</a>
         </div>
       </div>
-      <div class="d-flex flex-column align-items-center" id="circle">
+      <div class="d-flex flex-column align-items-center menu_box--circle">
         <img src="./images/appliances.png" width="50rem">
         <span class="menu-name">Appliances</span>
       </div>
 
-      <div class="d-flex flex-column align-items-center" id="circle">
+      <div class="d-flex flex-column align-items-center menu_box--circle">
         <img src="./images/topoffers.png" width="50rem">
         <span class="menu-name">Offers</span>
       </div>
-      <div class="d-flex flex-column align-items-center dropdown " id="circle">
+      <div class="d-flex flex-column align-items-center dropdown menu_box--circle">
         <img src="./images/toys.png" width="50rem">
         <span class="menu-name">Toys, more <i class="fa fa-caret-down"></i></span>
         <div class="dropdown-content">
@@ -102,7 +102,7 @@
           <a href="#">Books</a>
         </div>
       </div>
-      <div class="d-flex flex-column align-items-center dropdown " id="circle">
+      <div class="d-flex flex-column align-items-center dropdown menu_box--circle">
         <img src="./images/two-wheelers.png" width="50rem">
         <span class="menu-name">2 wheelers <i class="fa fa-caret-down"></i></span>
         <div class="dropdown-content">
@@ -117,7 +117,7 @@
 
   <!-- Carousel  -->
   <!-- Image resolution 1688 × 280   -->
-  <div class="container-fluid mt-3" id="offersCarousel" onscroll="handleCarouselPosition()">
+  <div class="container-fluid mt-3 main-carousel" onscroll="handleCarouselPosition()">
     <div id="demo" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ul class="carousel-indicators">
@@ -151,14 +151,14 @@
   <!-- DEAL OF THE DAY -->
   <section class="container-fluid mt-5">
     <div class="mb-3 p-4">
-      <h2 class="dealOfTheDay-heading">DEAL OF THE DAY</h2>
+      <h2 class="day_deal-heading">DEAL OF THE DAY</h2>
       <hr>
     </div>
     <div class="row p-4">
       <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 d-flex justify-content-center align-items-center">
-        <div class="card dealOfTheDay d-flex justify-content-center align-items-center">
+        <div class="card day_deal--card d-flex justify-content-center align-items-center">
           <img class="card-img-top" src="./images/shoseB.jpeg" alt="Card image" width="100%">
-          <div class="bg">
+          <div class="w-100">
             <div class="card-content p-2">
               <p>Shoes</p>
               <strong>Min 40% off</strong>
@@ -168,9 +168,9 @@
       </div>
 
       <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 d-flex justify-content-center align-items-center">
-        <div class="card dealOfTheDay d-flex justify-content-center align-items-center">
+        <div class="card day_deal--card d-flex justify-content-center align-items-center">
           <img class="card-img-top" src="./images/shoseB.jpeg" alt="Card image" width="100%">
-          <div class="bg">
+          <div class="w-100">
             <div class="card-content p-2">
               <p>Perfume</p>
               <strong>Min 40% off</strong>
@@ -180,9 +180,9 @@
       </div>
 
       <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 d-flex justify-content-center align-items-center">
-        <div class="card dealOfTheDay d-flex justify-content-center align-items-center">
+        <div class="card day_deal--card d-flex justify-content-center align-items-center">
           <img class="card-img-top" src="./images/perfume.png" alt="Card image" width="100%">
-          <div class="bg">
+          <div class="w-100">
             <div class="card-content p-2">
               <p>Watch</p>
               <strong>Min 40% off</strong>
@@ -192,9 +192,9 @@
       </div>
 
       <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 d-flex justify-content-center align-items-center">
-        <div class="card dealOfTheDay d-flex justify-content-center align-items-center">
+        <div class="card day_deal--card d-flex justify-content-center align-items-center">
           <img class="card-img-top" src="./images/perfume.png" alt="Card image" width="100%">
-          <div class="bg">
+          <div class="w-100">
             <div class="card-content p-2">
               <p>Mobile</p>
               <strong>Min 40% off</strong>
@@ -204,9 +204,9 @@
       </div>
 
       <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 d-flex justify-content-center align-items-center">
-        <div class="card dealOfTheDay d-flex justify-content-center align-items-center">
+        <div class="card day_deal--card d-flex justify-content-center align-items-center">
           <img class="card-img-top" src="./images/perfume.png" alt="Card image" width="100%">
-          <div class="bg">
+          <div class="w-100">
             <div class="card-content p-2">
               <p>Laptop</p>
               <strong>Min 40% off</strong>
@@ -216,9 +216,9 @@
       </div>
 
       <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-2 d-flex justify-content-center align-items-center">
-        <div class="card dealOfTheDay d-flex justify-content-center align-items-center">
+        <div class="card day_deal--card d-flex justify-content-center align-items-center">
           <img class="card-img-top" src="./images/shoseB.jpeg" alt="Card image" width="100%">
-          <div class="bg">
+          <div class="w-100">
             <div class="card-content p-2">
               <p>Kurti</p>
               <strong>Min 40% off</strong>
@@ -229,48 +229,48 @@
     </div>
   </section>
 
-  <!-- Products carousel -->
+  <!-- Best selling products -->
   <!-- 128 * 128 resolution of image -->
   <div class="container-fluid ">
     <div class="bg-light shadow-lg mt-5 w-100 p-4">
       <div class="d-flex justify-content-start align-items-center w-100 px-4 pt-3">
-        <h2 class="p-2 text-dark" id="heading">BEST SELLING PRODUCTS</h2>
+        <h2 class="p-2 text-dark best_selling--heading">BEST SELLING PRODUCTS</h2>
       </div>
       <hr>
-      <div class="d-flex justify-content-around align-items-center" id="bestSellingProducts">
-        <div class="d-flex flex-column align-items-center item card bestSellingProducts-card">
-          <img src="./images/appliances.png" class="p-img">
+      <div class="d-flex justify-content-around align-items-center best_selling--box">
+        <div class="d-flex flex-column align-items-center item card best_selling_box--card">
+          <img src="./images/appliances.png" class="product-img">
           <div class="text-center w-100 pt-3">
-            <p class="p-price"><strong>₹1000</strong></p>
-            <p class="p-name"><strong>appliances</strong></p>
+            <p class="product-price"><strong>₹1000</strong></p>
+            <p class="product-name"><strong>appliances</strong></p>
           </div>
         </div>
-        <div class="d-flex flex-column align-items-center item card bestSellingProducts-card">
-          <img src="./images/electronics.png" class="p-img">
+        <div class="d-flex flex-column align-items-center item card best_selling_box--card">
+          <img src="./images/electronics.png" class="product-img">
           <div class="text-center w-100 pt-3">
-            <p class="p-price"><strong>₹1000</strong></p>
-            <p class="p-name"><strong>Electronics</strong></p>
+            <p class="product-price"><strong>₹1000</strong></p>
+            <p class="product-name"><strong>Electronics</strong></p>
           </div>
         </div>
-        <div class="d-flex flex-column align-items-center item card bestSellingProducts-card">
-          <img src="./images/fashion.png" class="p-img">
+        <div class="d-flex flex-column align-items-center item card best_selling_box--card">
+          <img src="./images/fashion.png" class="product-img">
           <div class="text-center w-100 pt-3">
-            <p class="p-price"><strong>₹1000</strong></p>
-            <p class="p-name"><strong>Fashion</strong></p>
+            <p class="product-price"><strong>₹1000</strong></p>
+            <p class="product-name"><strong>Fashion</strong></p>
           </div>
         </div>
-        <div class="d-flex flex-column align-items-center item card bestSellingProducts-card">
-          <img src="./images/grocery.png" class="p-img">
+        <div class="d-flex flex-column align-items-center item card best_selling_box--card">
+          <img src="./images/grocery.png" class="product-img">
           <div class="text-center w-100 pt-3">
-            <p class="p-price"><strong>₹1000</strong></p>
-            <p class="p-name"><strong>Grocery</strong></p>
+            <p class="product-price"><strong>₹1000</strong></p>
+            <p class="product-name"><strong>Grocery</strong></p>
           </div>
         </div>
-        <div class="d-flex flex-column align-items-center item card bestSellingProducts-card">
-          <img src="./images/home.jpg" class="p-img">
+        <div class="d-flex flex-column align-items-center item card best_selling_box--card">
+          <img src="./images/home.jpg" class="product-img">
           <div class="text-center w-100 pt-3">
-            <p class="p-price"><strong>₹1000</strong></p>
-            <p class="p-name"><strong>Home</strong></p>
+            <p class="product-price"><strong>₹1000</strong></p>
+            <p class="product-name"><strong>Home</strong></p>
           </div>
         </div>
       </div>
@@ -288,85 +288,85 @@
 
     <div class="mt-5 row text-center">
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
-        <div class="circles">
-          <img src="./images/mobile.png" class="pro">
-          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        <div class="circle-box">
+          <img src="./images/mobile.png" class="circle_box--img">
+          <h4 class="text-light pb-3"><strong class="circle_box--price">Under 199/-</strong></h4>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
-        <div class="circles">
-          <img src="./images/appliances.png" class="pro">
-          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        <div class="circle-box">
+          <img src="./images/appliances.png" class="circle_box--img">
+          <h4 class="text-light pb-3"><strong class="circle_box--price">Under 199/-</strong></h4>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
-        <div class="circles">
-          <img src="./images/grocery.png" class="pro">
-          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        <div class="circle-box">
+          <img src="./images/grocery.png" class="circle_box--img">
+          <h4 class="text-light pb-3"><strong class="circle_box--price">Under 199/-</strong></h4>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
-        <div class="circles">
-          <img src="./images/fashion.png" class="pro">
-          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        <div class="circle-box">
+          <img src="./images/fashion.png" class="circle_box--img">
+          <h4 class="text-light pb-3"><strong class="circle_box--price">Under 199/-</strong></h4>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
-        <div class="circles">
-          <img src="./images/electronics.png" class="pro">
-          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        <div class="circle-box">
+          <img src="./images/electronics.png" class="circle_box--img">
+          <h4 class="text-light pb-3"><strong class="circle_box--price">Under 199/-</strong></h4>
         </div>
       </div>
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
-        <div class="circles">
-          <img src="./images/mobile.png" class="pro">
-          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
-        </div>
-      </div>
-
-      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
-        <div class="circles">
-          <img src="./images/appliances.png" class="pro">
-          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        <div class="circle-box">
+          <img src="./images/mobile.png" class="circle_box--img">
+          <h4 class="text-light pb-3"><strong class="circle_box--price">Under 199/-</strong></h4>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
-        <div class="circles">
-          <img src="./images/grocery.png" class="pro">
-          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        <div class="circle-box">
+          <img src="./images/appliances.png" class="circle_box--img">
+          <h4 class="text-light pb-3"><strong class="circle_box--price">Under 199/-</strong></h4>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
-        <div class="circles">
-          <img src="./images/fashion.png" class="pro">
-          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        <div class="circle-box">
+          <img src="./images/grocery.png" class="circle_box--img">
+          <h4 class="text-light pb-3"><strong class="circle_box--price">Under 199/-</strong></h4>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
-        <div class="circles">
-          <img src="./images/electronics.png" class="pro">
-          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        <div class="circle-box">
+          <img src="./images/fashion.png" class="circle_box--img">
+          <h4 class="text-light pb-3"><strong class="circle_box--price">Under 199/-</strong></h4>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
-        <div class="circles">
-          <img src="./images/appliances.png" class="pro">
-          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        <div class="circle-box">
+          <img src="./images/electronics.png" class="circle_box--img">
+          <h4 class="text-light pb-3"><strong class="circle_box--price">Under 199/-</strong></h4>
         </div>
       </div>
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
-        <div class="circles">
-          <img src="./images/grocery.png" class="pro">
-          <h4 class="text-light pb-3"><strong class="price">Under 199/-</strong></h4>
+        <div class="circle-box">
+          <img src="./images/appliances.png" class="circle_box--img">
+          <h4 class="text-light pb-3"><strong class="circle_box--price">Under 199/-</strong></h4>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center justify-content-center">
+        <div class="circle-box">
+          <img src="./images/grocery.png" class="circle_box--img">
+          <h4 class="text-light pb-3"><strong class="circle_box--price">Under 199/-</strong></h4>
         </div>
       </div>
     </div>
@@ -376,14 +376,14 @@
 
   <!-- 450 * 550 resolution of image -->
 
-  <section class="container-fluid mt-5 bg-light py-5">
+  <section class="container-fluid mt-5 bg-light py-5 category-box">
     <div>
-      <h2 class="text-center" id="heading-category">SHOP BY CATEGORY</h2>
+      <h2 class="text-center category_box--heading">SHOP BY CATEGORY</h2>
     </div>
     <div class="row mt-4">
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
         <div class="card category-card" onclick="handleCategoryClick()">
-          <img class="card-img-top" src="./images/top.jpg" alt="Card image" id="category-img">
+          <img class="card-img-top category-img" src="./images/top.jpg" alt="Card image">
           <div class="text-center half-circle pt-3">
             <h5 class="h5" value="Tops" id="tops">Tops</h5>
             <h4>30-70% OFF</h4>
@@ -393,7 +393,7 @@
       </div>
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
         <div class="card category-card">
-          <img class="card-img-top" src="./images/mensKurta.webp" alt="Card image" id="category-img">
+          <img class="card-img-top category-img" src="./images/mensKurta.webp" alt="Card image">
           <div class="text-center half-circle pt-3">
             <h5 class="h5" value="Shoes">Shoes</h5>
             <h4>30-70% OFF</h4>
@@ -403,7 +403,7 @@
       </div>
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
         <div class="card category-card">
-          <img class="card-img-top" src="./images/saree.webp" alt="Card image" id="category-img">
+          <img class="card-img-top category-img" src="./images/saree.webp" alt="Card image">
           <div class="text-center half-circle pt-3">
             <h5 class="h5" value="Sarees">Sarees</h5>
             <h4>30-70% OFF</h4>
@@ -414,7 +414,7 @@
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
         <div class="card category-card">
-          <img class="card-img-top" src="./images/top.jpg" alt="Card image" id="category-img">
+          <img class="card-img-top category-img" src="./images/top.jpg" alt="Card image">
           <div class="text-center half-circle pt-3">
             <h5 class="h5" value="Kurti">kurti</h5>
             <h4>30-70% OFF</h4>
@@ -425,7 +425,7 @@
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
         <div class="card category-card">
-          <img class="card-img-top" src="./images/mensKurta.webp" alt="Card image" id="category-img">
+          <img class="card-img-top category-img" src="./images/mensKurta.webp" alt="Card image">
           <div class="text-center half-circle pt-3">
             <h5 class="h5" value="Kurta">Kurta</h5>
             <h4>30-70% OFF</h4>
@@ -435,7 +435,7 @@
       </div>
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
         <div class="card category-card">
-          <img class="card-img-top" src="./images/saree.webp" alt="Card image" id="category-img">
+          <img class="card-img-top category-img" src="./images/saree.webp" alt="Card image">
           <div class="text-center half-circle pt-3">
             <h5 class="h5" value="Sweatshirt">Sweatshirt</h5>
             <h4>30-70% OFF</h4>
@@ -445,7 +445,7 @@
       </div>
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
         <div class="card category-card">
-          <img class="card-img-top" src="./images/mensKurta.webp" alt="Card image" id="category-img">
+          <img class="card-img-top category-img" src="./images/mensKurta.webp" alt="Card image">
           <div class="text-center half-circle pt-3">
             <h5 class="h5" vaule="Shirt">Shirt</h5>
             <h4>30-70% OFF</h4>
@@ -456,7 +456,7 @@
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
         <div class="card category-card">
-          <img class="card-img-top" src="./images/mensKurta.webp" alt="Card image" id="category-img">
+          <img class="card-img-top category-img" src="./images/mensKurta.webp" alt="Card image">
           <div class="text-center half-circle pt-3">
             <h5 class="h5" value="Jeans">Jeans</h5>
             <h4>30-70% OFF</h4>
@@ -467,7 +467,7 @@
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
         <div class="card category-card">
-          <img class="card-img-top" src="./images/mensKurta.webp" alt="Card image" id="category-img">
+          <img class="card-img-top category-img" src="./images/mensKurta.webp" alt="Card image">
           <div class="text-center half-circle pt-3">
             <h5 class="h5" value="Trouser">Trouser</h5>
             <h4>30-70% OFF</h4>
@@ -478,7 +478,7 @@
 
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
         <div class="card category-card">
-          <img class="card-img-top" src="./images/mensKurta.webp" alt="Card image" id="category-img">
+          <img class="card-img-top category-img" src="./images/mensKurta.webp" alt="Card image">
           <div class="text-center half-circle pt-3">
             <h5 class="h5" value="Dresses">Dresses</h5>
             <h4>30-70% OFF</h4>
@@ -488,7 +488,7 @@
       </div>
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
         <div class="card category-card">
-          <img class="card-img-top" src="./images/saree.webp" alt="Card image" id="category-img">
+          <img class="card-img-top category-img" src="./images/saree.webp" alt="Card image" id="category-img">
           <div class="text-center half-circle pt-3">
             <h5 class="h5" value="Jewellery">Jewellery</h5>
             <h4>30-70% OFF</h4>
@@ -498,7 +498,7 @@
       </div>
       <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 mt-2">
         <div class="card category-card">
-          <img class="card-img-top" src="./images/mensKurta.webp" alt="Card image" id="category-img">
+          <img class="card-img-top category-img" src="./images/mensKurta.webp" alt="Card image">
           <div class="text-center half-circle pt-3">
             <h5 class="h5" value="Handbags">Handbags</h5>
             <h4>30-70% OFF</h4>
@@ -511,13 +511,13 @@
 
 
   <!-- Footer -->
-  <footer class="container-fluid d-flex justify-content-center bg-blue mt-5">
-    <div class="w-75 my-5 justify-content-around footer-container">
+  <footer class="footer d-flex align-items-center">
+    <div class="w-75 my-5 mx-auto justify-content-around footer-container">
       <div class="justify-content-start text-white">
-        <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('aboutData')">
+        <div class="my-3 font-weight-bold fs-6 " onclick="displayData('aboutData')">
           About
         </div>
-        <div id="aboutData" class="display-none-for-responsive mb-3">
+        <div id="aboutData" class="footer-items-container mb-3">
           <div> <a href="#" class="text-white fs-7"> Contact Us </a> </div>
           <div> <a href="#" class="text-white fs-7"> About Us </a> </div>
           <div> <a href="#" class="text-white fs-7"> Careers </a> </div>
@@ -526,10 +526,10 @@
         </div>
       </div>
       <div class="justify-content-start text-white">
-        <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('categoriesData')">
+        <div class="my-3 font-weight-bold fs-6 " onclick="displayData('categoriesData')">
           Top Categories
         </div>
-        <div id="categoriesData" class="display-none-for-responsive mb-3">
+        <div id="categoriesData" class="footer-items-container mb-3">
           <div> <a href="#" class="text-white fs-7"> Men </a> </div>
           <div> <a href="#" class="text-white fs-7"> Women </a> </div>
           <div> <a href="#" class="text-white fs-7"> Kids </a> </div>
@@ -540,10 +540,10 @@
         </div>
       </div>
       <div class="justify-content-start text-white">
-        <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('helpData')">
+        <div class="my-3 font-weight-bold fs-6 " onclick="displayData('helpData')">
           Help
         </div>
-        <div id="helpData" class="display-none-for-responsive mb-3">
+        <div id="helpData" class="footer-items-container mb-3">
           <div> <a href="#" class="text-white fs-7"> Payment </a> </div>
           <div> <a href="#" class="text-white fs-7"> Shipping </a> </div>
           <div> <a href="#" class="text-white fs-7"> FAQ </a> </div>
@@ -553,10 +553,10 @@
         </div>
       </div>
       <div class="justify-content-start text-white">
-        <div class="my-3 font-weight-bold fs-6 cursor-pointer" onclick="displayData('connectWithUsData')">
+        <div class="my-3 font-weight-bold fs-6 " onclick="displayData('connectWithUsData')">
           Connect With Us
         </div>
-        <div id="connectWithUsData" class="display-none-for-responsive mb-3">
+        <div id="connectWithUsData" class="footer-items-container mb-3">
           <div> <a href="#" class="text-white fs-7"> Facebook </a> </div>
           <div> <a href="#" class="text-white fs-7"> Instagram </a> </div>
           <div> <a href="#" class="text-white fs-7"> Twitter </a> </div>
@@ -564,7 +564,6 @@
       </div>
     </div>
   </footer>
-
 
   <script type="text/javascript" src="./js/jquery.min.js">
   </script>

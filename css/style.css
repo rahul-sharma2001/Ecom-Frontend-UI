@@ -3,8 +3,8 @@
     margin: 0;
 }
 
-/* Top header */
-.header {
+/* Top main-header */
+.main-header {
     background-color: var(--nav-color);
     display: flex;
     justify-content: center;
@@ -15,15 +15,15 @@
     z-index: 1;
 }
 
-.logo {
+.main-logo {
     height: 2.8rem;
     cursor: pointer;
     text-align: center;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* Search */
-.search {
+/* search-box */
+.search-box {
     background-color: var(--white);
     width: 35%;
     height: 2.5rem;
@@ -36,7 +36,7 @@
 }
 
 /* Input filed */
-.search input {
+.search-box input {
     border: none;
     width: 100%;
     outline: none;
@@ -44,7 +44,7 @@
     border-radius: 0.2;
 }
 
-/* Search icon */
+/* search-box icon */
 #search-icon {
     color: var(--nav-color);
 }
@@ -60,7 +60,7 @@
     margin-left: 2rem;
 }
 
-.login--button {
+.login-button {
     border: none;
     outline: none;
     background-color: var(--white);
@@ -68,7 +68,7 @@
     cursor: pointer;
 }
 
-/* Top header menus */
+/* Top main-header menus */
 .topnav-menue {
     margin-left: 2rem;
 }
@@ -79,7 +79,7 @@
 }
 
 /* Products Menu bar */
-#menubar {
+.menu-box {
     background-color: var(--white);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -119,7 +119,7 @@
     background-color: var(--background-color);
 }
 
-.icon {
+.hamburger-icon {
     display: none;
 }
 
@@ -131,7 +131,7 @@
 
 /* carousel */
 
-.offersCarousel{
+.main-carousel{
     position: relative;
     z-index: -1;
 }
@@ -150,14 +150,14 @@
 
 
 /* best selling products */
-.bestSellingProducts-card{
+.best_selling_box--card{
     width: 20em;
 }
 
 
 /* Products to bag */
 
-.circles {
+.circle-box {
     height: 220px;
     width: 220px;
     background: linear-gradient(#032e63 0%, #032e63 10%, #032e63 50%, #032e63 100%);
@@ -170,7 +170,7 @@
     margin-top: 1rem;
 }
 
-.circles::before {
+.circle-box::before {
     content: "";
     height: 220px;
     width: 220px;
@@ -179,27 +179,24 @@
     filter: blur(18px);
 }
 
-.price {
+.circle_box--price {
     font-size: 0.9em;
 }
 
-.pro {
+.circle_box--img {
     position: absolute;
     width: 7em;
 }
 
 /* deal of the day */
-.dealOfTheDay{
+.day_deal--card{
     width: 17em;
-}
-.bg{
-    width: 100%;
 }
 
 
 
 /* Shop by category */
-#category-img{
+.category-img{
     height: 35vh;
 }
 .category-card h4{
@@ -221,63 +218,47 @@
     height: auto;
 }
 
-/* Top Deals */
-#topDeals{
-    background-color: var(--white);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.top-deals{
-    width: 12em;
-    height: 35vh;
-}
 
 
 /* Footer */
-.bg-primary-color {
-    background-color: var(--button-color);
-}
 
-.bg-blue {
+.footer {
     background-color: var(--nav-color);
 }
-
 .footer-container {
     display: flex;
 }
 
-.text-white {
-    color: #F0EFF4
-}
 @media only screen and (max-width: 853px) {
   .topnav-menue{
     width: 50%;
   }
-  .search input::placeholder{
+  .search-box input::placeholder{
     font-size: 0.6rem;
   }
   }
 
 @media screen and (max-width: 768px) {
 
-    .header {
+    .main-header {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
     }
-    .search {
+    .search-box {
         width: 100%;
         margin-left: 0%;
         padding: 0%;
         margin-top: 1rem;
     }
-    .search input::placeholder{
+    .search-box input::placeholder{
       font-size: 0.9rem;
     }
     .button {
         margin-left: 0%;
     }
 
-    .icon {
+    .hamburger-icon {
         display: block;
         color: var(--white);
         font-size: 2rem;
@@ -309,17 +290,18 @@
         transition: all 2s ease-in;
     }
 
-    #circle {
+    .menu_box--circle {
         border-radius: 50%;
         border: 2px solid;
         width: 7rem;
         height: 7rem;
-        border-color: var(--background-color);
+        border-color: #f0eff4;
         text-align: center;
         margin-top: 1rem;
         padding: 0.4rem;
+        
     }
-    .p-img{
+    .product-img{
         width: 5em;
     }
     .carousel-image{
@@ -331,19 +313,19 @@
 
 
 @media screen and (max-width: 600px) {
-    .p-img{
+    .product-img{
         width: 3.5em;
     }
-    .p-price,.p-name{
+    .product-price,.product-name{
         font-size: 0.7em;
     }
-    .dealOfTheDay{
+    .day_deal--card{
         width: 100%;
     }
-    .dealOfTheDay img{
+    .day_deal--card img{
         width: 50%;
     }
-    .dealOfTheDay-heading{
+    .day_deal-heading{
         font-size: 1.5em;
     }
     #topDeals{
@@ -355,54 +337,54 @@
 
 
 @media screen and (max-width: 1400px) {
-    .circles {
+    .circle-box {
         width: 180px;
         height: 180px;
     }
-    .circles::before{
+    .circle-box::before{
         width: 180px;
         height: 180px;
     }
-    .pro {
+    .circle_box--img {
         width: 5em;
     }
-    .price {
+    .circle_box--price {
         font-size: 0.7em;
     }
 }
 
 @media screen and (max-width: 450px) {
-    .circles {
+    .circle-box {
         width: 120px;
         height: 120px;
     }
-    .circles::before{
+    .circle-box::before{
         width: 120px;
         height: 120px;
     }
-    .pro {
+    .circle_box--img {
         width: 3em;
     }
-    .price {
+    .circle_box--price {
         font-size: 0.4em;
     }
-    #bestSellingProducts{
+    .best_selling--box{
         flex-direction: column !important;
     }
-    #heading{
+    .best_selling--heading{
         font-size: 1.3em;
         font-weight: bold;
     }
-    .p-name, .p-price{
+    .product-name, .product-price{
         font-size: 1em;
     }
-    .bestSellingProducts-card{
+    .best_selling_box--card{
         width: 100%;
     }
-    .p-img{
+    .product-img{
         width: 50%;
     }
-    #category-img{
+    .category-img{
         width: 100%;
         height: 25vh;
     } 
@@ -415,7 +397,7 @@
     .half-circle{
         height: 10vh;
     }
-    #heading-category{
+    .category_box--heading{
         font-size: 1.5rem;
     }
     
@@ -424,39 +406,33 @@
 
 
 @media only screen and (max-width: 256px) {
-    #navContainer{
+    #menu_box--container{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
     .category-card h5{
         font-size: 0.7rem;
     }
     .category-card h4{
-        font-size: 0.8rem;
-      
+        font-size: 0.8rem; 
     }
-   
-
 }
 
 
-/* Footer */
+
 
 @media only screen and (max-width: 991px) {
-    .display-none-for-responsive {
+    .footer-items-container {
         display: none !important;
     }
     .footer-container {
         flex-direction: column;
     }
-    .cursor-pointer-for-footer {
+    .footer div div {
         cursor: pointer !important;
     }
-
 }
-
 
 
 
