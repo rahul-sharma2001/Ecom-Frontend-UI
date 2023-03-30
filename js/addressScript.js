@@ -274,13 +274,13 @@ function loadAddress(addressObj) {
                                         <div class="fs-7 font-weight-bold my-1 text-drak-gray">${addressObj.name}</div>
                                         
                                         <div
-                                            class="address-tag m-1 px-2 mt-2">
+                                            class="address-type m-1 px-2 mt-2">
                                             ${addressObj.typeOfAddress}
                                         </div>
         
                                         ${addressObj.defaultAddress
             ?
-            '<div class="address-tag m-1 px-2 mt-2">Default</div>'
+            '<div class="address-type m-1 px-2 mt-2">Default</div>'
             :
             ""
         }

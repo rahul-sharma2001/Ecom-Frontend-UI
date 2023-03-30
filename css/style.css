@@ -80,7 +80,7 @@
 
 /* -------------------------address------------------------------- */
 
-.address-tag {
+.address-type {
     font-size: 0.6rem;
     border: 1px solid var(--green);
     border-radius: 100px;
@@ -191,13 +191,13 @@ input:focus {
 
 /* -------------------all page footer---------------------- */
 
-/* .footer {
+.footer {
     background-color: var(--nav-color);
 }
 
 .footer-container {
     display: flex;
-} */
+}
 
 
 /* ----------------------model----------------------- */
@@ -221,7 +221,7 @@ input:focus {
     width: 450px !important;
 }
 
-.model-address-tag {
+.model-address-type {
     font-size: 0.6rem;
     cursor: pointer;
     border: 1px solid #424553;
@@ -242,7 +242,7 @@ input:focus {
         border-right: none !important;
     }
 
-    /* .footer-items-container {
+    .footer-items-container {
         display: none !important;
     }
 
@@ -252,7 +252,7 @@ input:focus {
 
     .footer div div {
         cursor: pointer !important;
-    } */
+    }
 }
 
 @media only screen and (max-width: 776px) {
